@@ -1,0 +1,1635 @@
+Index: BLUE_GAME/.idea/codeStyles/codeStyleConfig.xml
+===================================================================
+--- BLUE_GAME/.idea/codeStyles/codeStyleConfig.xml	(date 1573121031000)
++++ BLUE_GAME/.idea/codeStyles/codeStyleConfig.xml	(date 1573121031000)
+@@ -1,5 +0,0 @@
+-<component name="ProjectCodeStyleConfiguration">
+-  <state>
+-    <option name="USE_PER_PROJECT_SETTINGS" value="true" />
+-  </state>
+-</component>
+\ No newline at end of file
+Index: BLUE_GAME/.idea/codeStyles/Project.xml
+===================================================================
+--- BLUE_GAME/.idea/codeStyles/Project.xml	(date 1573121031000)
++++ BLUE_GAME/.idea/codeStyles/Project.xml	(date 1573121031000)
+@@ -1,122 +0,0 @@
+-<component name="ProjectCodeStyleConfiguration">
+-  <code_scheme name="Project" version="173">
+-    <JetCodeStyleSettings>
+-      <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
+-    </JetCodeStyleSettings>
+-    <codeStyleSettings language="XML">
+-      <indentOptions>
+-        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+-      </indentOptions>
+-      <arrangement>
+-        <rules>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>xmlns:android</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>xmlns:.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*:id</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*:name</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>name</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>style</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>ANDROID_ATTRIBUTE_ORDER</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>.*</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-        </rules>
+-      </arrangement>
+-    </codeStyleSettings>
+-    <codeStyleSettings language="kotlin">
+-      <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
+-    </codeStyleSettings>
+-  </code_scheme>
+-</component>
+\ No newline at end of file
+Index: BLUE_GAME/.idea/gradle.xml
+===================================================================
+--- BLUE_GAME/.idea/gradle.xml	(date 1573121031000)
++++ BLUE_GAME/.idea/gradle.xml	(date 1573121031000)
+@@ -1,19 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="GradleSettings">
+-    <option name="linkedExternalProjectsSettings">
+-      <GradleProjectSettings>
+-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="modules">
+-          <set>
+-            <option value="$PROJECT_DIR$" />
+-            <option value="$PROJECT_DIR$/app" />
+-          </set>
+-        </option>
+-        <option name="resolveModulePerSourceSet" value="false" />
+-        <option name="testRunner" value="PLATFORM" />
+-      </GradleProjectSettings>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: BLUE_GAME/.idea/misc.xml
+===================================================================
+--- BLUE_GAME/.idea/misc.xml	(date 1573121031000)
++++ BLUE_GAME/.idea/misc.xml	(date 1573121031000)
+@@ -1,9 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/build/classes" />
+-  </component>
+-  <component name="ProjectType">
+-    <option name="id" value="Android" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: BLUE_GAME/.idea/runConfigurations.xml
+===================================================================
+--- BLUE_GAME/.idea/runConfigurations.xml	(date 1573121031000)
++++ BLUE_GAME/.idea/runConfigurations.xml	(date 1573121031000)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RunConfigurationProducerService">
+-    <option name="ignoredProducers">
+-      <set>
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.AllInPackageGradleConfigurationProducer" />
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestClassGradleConfigurationProducer" />
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestMethodGradleConfigurationProducer" />
+-      </set>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: BLUE_GAME/.idea/vcs.xml
+===================================================================
+--- BLUE_GAME/.idea/vcs.xml	(date 1573121031000)
++++ BLUE_GAME/.idea/vcs.xml	(date 1573121031000)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: BLUE_GAME/app/src/androidTest/java/kr/hs/emirim/mirimhee/blue_game/ExampleInstrumentedTest.kt
+===================================================================
+--- BLUE_GAME/app/src/androidTest/java/kr/hs/emirim/mirimhee/blue_game/ExampleInstrumentedTest.kt	(date 1573121031000)
++++ BLUE_GAME/app/src/androidTest/java/kr/hs/emirim/mirimhee/blue_game/ExampleInstrumentedTest.kt	(date 1573121031000)
+@@ -1,24 +0,0 @@
+-package kr.hs.emirim.mirimhee.blue_game
+-
+-import androidx.test.platform.app.InstrumentationRegistry
+-import androidx.test.ext.junit.runners.AndroidJUnit4
+-
+-import org.junit.Test
+-import org.junit.runner.RunWith
+-
+-import org.junit.Assert.*
+-
+-/**
+- * Instrumented test, which will execute on an Android device.
+- *
+- * See [testing documentation](http://d.android.com/tools/testing).
+- */
+-@RunWith(AndroidJUnit4::class)
+-class ExampleInstrumentedTest {
+-    @Test
+-    fun useAppContext() {
+-        // Context of the app under test.
+-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+-        assertEquals("kr.hs.emirim.mirimhee.blue_game", appContext.packageName)
+-    }
+-}
+Index: BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/dashboard/DashboardFragment.kt
+===================================================================
+--- BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/dashboard/DashboardFragment.kt	(date 1573121031000)
++++ BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/dashboard/DashboardFragment.kt	(date 1573121031000)
+@@ -1,31 +0,0 @@
+-package kr.hs.emirim.mirimhee.blue_game.ui.dashboard
+-
+-import android.os.Bundle
+-import android.view.LayoutInflater
+-import android.view.View
+-import android.view.ViewGroup
+-import android.widget.TextView
+-import androidx.fragment.app.Fragment
+-import androidx.lifecycle.Observer
+-import androidx.lifecycle.ViewModelProviders
+-import kr.hs.emirim.mirimhee.blue_game.R
+-
+-class DashboardFragment : Fragment() {
+-
+-    private lateinit var dashboardViewModel: DashboardViewModel
+-
+-    override fun onCreateView(
+-        inflater: LayoutInflater,
+-        container: ViewGroup?,
+-        savedInstanceState: Bundle?
+-    ): View? {
+-        dashboardViewModel =
+-            ViewModelProviders.of(this).get(DashboardViewModel::class.java)
+-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
+-        val textView: TextView = root.findViewById(R.id.text_dashboard)
+-        dashboardViewModel.text.observe(this, Observer {
+-            textView.text = it
+-        })
+-        return root
+-    }
+-}
+\ No newline at end of file
+Index: BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/dashboard/DashboardViewModel.kt
+===================================================================
+--- BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/dashboard/DashboardViewModel.kt	(date 1573121031000)
++++ BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/dashboard/DashboardViewModel.kt	(date 1573121031000)
+@@ -1,13 +0,0 @@
+-package kr.hs.emirim.mirimhee.blue_game.ui.dashboard
+-
+-import androidx.lifecycle.LiveData
+-import androidx.lifecycle.MutableLiveData
+-import androidx.lifecycle.ViewModel
+-
+-class DashboardViewModel : ViewModel() {
+-
+-    private val _text = MutableLiveData<String>().apply {
+-        value = "This is dashboard Fragment"
+-    }
+-    val text: LiveData<String> = _text
+-}
+\ No newline at end of file
+Index: BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/home/HomeFragment.kt
+===================================================================
+--- BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/home/HomeFragment.kt	(date 1573121031000)
++++ BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/home/HomeFragment.kt	(date 1573121031000)
+@@ -1,31 +0,0 @@
+-package kr.hs.emirim.mirimhee.blue_game.ui.home
+-
+-import android.os.Bundle
+-import android.view.LayoutInflater
+-import android.view.View
+-import android.view.ViewGroup
+-import android.widget.TextView
+-import androidx.fragment.app.Fragment
+-import androidx.lifecycle.Observer
+-import androidx.lifecycle.ViewModelProviders
+-import kr.hs.emirim.mirimhee.blue_game.R
+-
+-class HomeFragment : Fragment() {
+-
+-    private lateinit var homeViewModel: HomeViewModel
+-
+-    override fun onCreateView(
+-        inflater: LayoutInflater,
+-        container: ViewGroup?,
+-        savedInstanceState: Bundle?
+-    ): View? {
+-        homeViewModel =
+-            ViewModelProviders.of(this).get(HomeViewModel::class.java)
+-        val root = inflater.inflate(R.layout.fragment_home, container, false)
+-        val textView: TextView = root.findViewById(R.id.text_home)
+-        homeViewModel.text.observe(this, Observer {
+-            textView.text = it
+-        })
+-        return root
+-    }
+-}
+\ No newline at end of file
+Index: BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/home/HomeViewModel.kt
+===================================================================
+--- BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/home/HomeViewModel.kt	(date 1573121031000)
++++ BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/home/HomeViewModel.kt	(date 1573121031000)
+@@ -1,13 +0,0 @@
+-package kr.hs.emirim.mirimhee.blue_game.ui.home
+-
+-import androidx.lifecycle.LiveData
+-import androidx.lifecycle.MutableLiveData
+-import androidx.lifecycle.ViewModel
+-
+-class HomeViewModel : ViewModel() {
+-
+-    private val _text = MutableLiveData<String>().apply {
+-        value = "This is home Fragment"
+-    }
+-    val text: LiveData<String> = _text
+-}
+\ No newline at end of file
+Index: BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/notifications/NotificationsFragment.kt
+===================================================================
+--- BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/notifications/NotificationsFragment.kt	(date 1573121031000)
++++ BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/notifications/NotificationsFragment.kt	(date 1573121031000)
+@@ -1,31 +0,0 @@
+-package kr.hs.emirim.mirimhee.blue_game.ui.notifications
+-
+-import android.os.Bundle
+-import android.view.LayoutInflater
+-import android.view.View
+-import android.view.ViewGroup
+-import android.widget.TextView
+-import androidx.fragment.app.Fragment
+-import androidx.lifecycle.Observer
+-import androidx.lifecycle.ViewModelProviders
+-import kr.hs.emirim.mirimhee.blue_game.R
+-
+-class NotificationsFragment : Fragment() {
+-
+-    private lateinit var notificationsViewModel: NotificationsViewModel
+-
+-    override fun onCreateView(
+-        inflater: LayoutInflater,
+-        container: ViewGroup?,
+-        savedInstanceState: Bundle?
+-    ): View? {
+-        notificationsViewModel =
+-            ViewModelProviders.of(this).get(NotificationsViewModel::class.java)
+-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
+-        val textView: TextView = root.findViewById(R.id.text_notifications)
+-        notificationsViewModel.text.observe(this, Observer {
+-            textView.text = it
+-        })
+-        return root
+-    }
+-}
+\ No newline at end of file
+Index: BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/notifications/NotificationsViewModel.kt
+===================================================================
+--- BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/notifications/NotificationsViewModel.kt	(date 1573121031000)
++++ BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/ui/notifications/NotificationsViewModel.kt	(date 1573121031000)
+@@ -1,13 +0,0 @@
+-package kr.hs.emirim.mirimhee.blue_game.ui.notifications
+-
+-import androidx.lifecycle.LiveData
+-import androidx.lifecycle.MutableLiveData
+-import androidx.lifecycle.ViewModel
+-
+-class NotificationsViewModel : ViewModel() {
+-
+-    private val _text = MutableLiveData<String>().apply {
+-        value = "This is notifications Fragment"
+-    }
+-    val text: LiveData<String> = _text
+-}
+\ No newline at end of file
+Index: BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/MainActivity.kt
+===================================================================
+--- BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/MainActivity.kt	(date 1573121031000)
++++ BLUE_GAME/app/src/main/java/kr/hs/emirim/mirimhee/blue_game/MainActivity.kt	(date 1573121031000)
+@@ -1,29 +0,0 @@
+-package kr.hs.emirim.mirimhee.blue_game
+-
+-import android.os.Bundle
+-import com.google.android.material.bottomnavigation.BottomNavigationView
+-import androidx.appcompat.app.AppCompatActivity
+-import androidx.navigation.findNavController
+-import androidx.navigation.ui.AppBarConfiguration
+-import androidx.navigation.ui.setupActionBarWithNavController
+-import androidx.navigation.ui.setupWithNavController
+-
+-class MainActivity : AppCompatActivity() {
+-
+-    override fun onCreate(savedInstanceState: Bundle?) {
+-        super.onCreate(savedInstanceState)
+-        setContentView(R.layout.activity_main)
+-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
+-
+-        val navController = findNavController(R.id.nav_host_fragment)
+-        // Passing each menu ID as a set of Ids because each
+-        // menu should be considered as top level destinations.
+-        val appBarConfiguration = AppBarConfiguration(
+-            setOf(
+-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+-            )
+-        )
+-        setupActionBarWithNavController(navController, appBarConfiguration)
+-        navView.setupWithNavController(navController)
+-    }
+-}
+Index: BLUE_GAME/app/src/main/res/drawable/ic_dashboard_black_24dp.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/drawable/ic_dashboard_black_24dp.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/drawable/ic_dashboard_black_24dp.xml	(date 1573121031000)
+@@ -1,9 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24.0"
+-    android:viewportHeight="24.0">
+-    <path
+-        android:fillColor="#FF000000"
+-        android:pathData="M3,13h8L11,3L3,3v10zM3,21h8v-6L3,15v6zM13,21h8L21,11h-8v10zM13,3v6h8L21,3h-8z" />
+-</vector>
+Index: BLUE_GAME/app/src/main/res/drawable/ic_home_black_24dp.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/drawable/ic_home_black_24dp.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/drawable/ic_home_black_24dp.xml	(date 1573121031000)
+@@ -1,9 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24.0"
+-    android:viewportHeight="24.0">
+-    <path
+-        android:fillColor="#FF000000"
+-        android:pathData="M10,20v-6h4v6h5v-8h3L12,3 2,12h3v8z" />
+-</vector>
+Index: BLUE_GAME/app/src/main/res/drawable/ic_launcher_background.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/drawable/ic_launcher_background.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/drawable/ic_launcher_background.xml	(date 1573121031000)
+@@ -1,170 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path
+-        android:fillColor="#008577"
+-        android:pathData="M0,0h108v108h-108z" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M9,0L9,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,0L19,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,0L29,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,0L39,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,0L49,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,0L59,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,0L69,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,0L79,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M89,0L89,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M99,0L99,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,9L108,9"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,19L108,19"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,29L108,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,39L108,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,49L108,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,59L108,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,69L108,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,79L108,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,89L108,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,99L108,99"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,29L89,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,39L89,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,49L89,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,59L89,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,69L89,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,79L89,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,19L29,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,19L39,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,19L49,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,19L59,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,19L69,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,19L79,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-</vector>
+Index: BLUE_GAME/app/src/main/res/drawable/ic_notifications_black_24dp.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/drawable/ic_notifications_black_24dp.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/drawable/ic_notifications_black_24dp.xml	(date 1573121031000)
+@@ -1,9 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24.0"
+-    android:viewportHeight="24.0">
+-    <path
+-        android:fillColor="#FF000000"
+-        android:pathData="M12,22c1.1,0 2,-0.9 2,-2h-4c0,1.1 0.89,2 2,2zM18,16v-5c0,-3.07 -1.64,-5.64 -4.5,-6.32L13.5,4c0,-0.83 -0.67,-1.5 -1.5,-1.5s-1.5,0.67 -1.5,1.5v0.68C7.63,5.36 6,7.92 6,11v5l-2,2v1h16v-1l-2,-2z" />
+-</vector>
+Index: BLUE_GAME/app/src/main/res/drawable-v24/ic_launcher_foreground.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/drawable-v24/ic_launcher_foreground.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/drawable-v24/ic_launcher_foreground.xml	(date 1573121031000)
+@@ -1,34 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:aapt="http://schemas.android.com/aapt"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path
+-        android:fillType="evenOdd"
+-        android:pathData="M32,64C32,64 38.39,52.99 44.13,50.95C51.37,48.37 70.14,49.57 70.14,49.57L108.26,87.69L108,109.01L75.97,107.97L32,64Z"
+-        android:strokeWidth="1"
+-        android:strokeColor="#00000000">
+-        <aapt:attr name="android:fillColor">
+-            <gradient
+-                android:endX="78.5885"
+-                android:endY="90.9159"
+-                android:startX="48.7653"
+-                android:startY="61.0927"
+-                android:type="linear">
+-                <item
+-                    android:color="#44000000"
+-                    android:offset="0.0" />
+-                <item
+-                    android:color="#00000000"
+-                    android:offset="1.0" />
+-            </gradient>
+-        </aapt:attr>
+-    </path>
+-    <path
+-        android:fillColor="#FFFFFF"
+-        android:fillType="nonZero"
+-        android:pathData="M66.94,46.02L66.94,46.02C72.44,50.07 76,56.61 76,64L32,64C32,56.61 35.56,50.11 40.98,46.06L36.18,41.19C35.45,40.45 35.45,39.3 36.18,38.56C36.91,37.81 38.05,37.81 38.78,38.56L44.25,44.05C47.18,42.57 50.48,41.71 54,41.71C57.48,41.71 60.78,42.57 63.68,44.05L69.11,38.56C69.84,37.81 70.98,37.81 71.71,38.56C72.44,39.3 72.44,40.45 71.71,41.19L66.94,46.02ZM62.94,56.92C64.08,56.92 65,56.01 65,54.88C65,53.76 64.08,52.85 62.94,52.85C61.8,52.85 60.88,53.76 60.88,54.88C60.88,56.01 61.8,56.92 62.94,56.92ZM45.06,56.92C46.2,56.92 47.13,56.01 47.13,54.88C47.13,53.76 46.2,52.85 45.06,52.85C43.92,52.85 43,53.76 43,54.88C43,56.01 43.92,56.92 45.06,56.92Z"
+-        android:strokeWidth="1"
+-        android:strokeColor="#00000000" />
+-</vector>
+Index: BLUE_GAME/app/src/main/res/layout/activity_main.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/layout/activity_main.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/layout/activity_main.xml	(date 1573121031000)
+@@ -1,33 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    android:id="@+id/container"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:paddingTop="?attr/actionBarSize">
+-
+-    <com.google.android.material.bottomnavigation.BottomNavigationView
+-        android:id="@+id/nav_view"
+-        android:layout_width="0dp"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="0dp"
+-        android:layout_marginEnd="0dp"
+-        android:background="?android:attr/windowBackground"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintLeft_toLeftOf="parent"
+-        app:layout_constraintRight_toRightOf="parent"
+-        app:menu="@menu/bottom_nav_menu" />
+-
+-    <fragment
+-        android:id="@+id/nav_host_fragment"
+-        android:name="androidx.navigation.fragment.NavHostFragment"
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent"
+-        app:defaultNavHost="true"
+-        app:layout_constraintBottom_toTopOf="@id/nav_view"
+-        app:layout_constraintLeft_toLeftOf="parent"
+-        app:layout_constraintRight_toRightOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:navGraph="@navigation/mobile_navigation" />
+-
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: BLUE_GAME/app/src/main/res/layout/fragment_dashboard.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/layout/fragment_dashboard.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/layout/fragment_dashboard.xml	(date 1573121031000)
+@@ -1,19 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent">
+-
+-    <TextView
+-        android:id="@+id/text_dashboard"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="8dp"
+-        android:layout_marginTop="8dp"
+-        android:layout_marginEnd="8dp"
+-        android:textAlignment="center"
+-        android:textSize="20sp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: BLUE_GAME/app/src/main/res/layout/fragment_home.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/layout/fragment_home.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/layout/fragment_home.xml	(date 1573121031000)
+@@ -1,19 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent">
+-
+-    <TextView
+-        android:id="@+id/text_home"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="8dp"
+-        android:layout_marginTop="8dp"
+-        android:layout_marginEnd="8dp"
+-        android:textAlignment="center"
+-        android:textSize="20sp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: BLUE_GAME/app/src/main/res/layout/fragment_notifications.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/layout/fragment_notifications.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/layout/fragment_notifications.xml	(date 1573121031000)
+@@ -1,19 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent">
+-
+-    <TextView
+-        android:id="@+id/text_notifications"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="8dp"
+-        android:layout_marginTop="8dp"
+-        android:layout_marginEnd="8dp"
+-        android:textAlignment="center"
+-        android:textSize="20sp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: BLUE_GAME/app/src/main/res/menu/bottom_nav_menu.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/menu/bottom_nav_menu.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/menu/bottom_nav_menu.xml	(date 1573121031000)
+@@ -1,19 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+-
+-    <item
+-        android:id="@+id/navigation_home"
+-        android:icon="@drawable/ic_home_black_24dp"
+-        android:title="@string/title_home" />
+-
+-    <item
+-        android:id="@+id/navigation_dashboard"
+-        android:icon="@drawable/ic_dashboard_black_24dp"
+-        android:title="@string/title_dashboard" />
+-
+-    <item
+-        android:id="@+id/navigation_notifications"
+-        android:icon="@drawable/ic_notifications_black_24dp"
+-        android:title="@string/title_notifications" />
+-
+-</menu>
+Index: BLUE_GAME/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(date 1573121031000)
+@@ -1,5 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-</adaptive-icon>
+\ No newline at end of file
+Index: BLUE_GAME/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(date 1573121031000)
+@@ -1,5 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-</adaptive-icon>
+\ No newline at end of file
+Index: BLUE_GAME/app/src/main/res/navigation/mobile_navigation.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/navigation/mobile_navigation.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/navigation/mobile_navigation.xml	(date 1573121031000)
+@@ -1,25 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:id="@+id/mobile_navigation"
+-    app:startDestination="@+id/navigation_home">
+-
+-    <fragment
+-        android:id="@+id/navigation_home"
+-        android:name="kr.hs.emirim.mirimhee.blue_game.ui.home.HomeFragment"
+-        android:label="@string/title_home"
+-        tools:layout="@layout/fragment_home" />
+-
+-    <fragment
+-        android:id="@+id/navigation_dashboard"
+-        android:name="kr.hs.emirim.mirimhee.blue_game.ui.dashboard.DashboardFragment"
+-        android:label="@string/title_dashboard"
+-        tools:layout="@layout/fragment_dashboard" />
+-
+-    <fragment
+-        android:id="@+id/navigation_notifications"
+-        android:name="kr.hs.emirim.mirimhee.blue_game.ui.notifications.NotificationsFragment"
+-        android:label="@string/title_notifications"
+-        tools:layout="@layout/fragment_notifications" />
+-</navigation>
+\ No newline at end of file
+Index: BLUE_GAME/app/src/main/res/values/colors.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/values/colors.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/values/colors.xml	(date 1573121031000)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-    <color name="colorPrimary">#008577</color>
+-    <color name="colorPrimaryDark">#00574B</color>
+-    <color name="colorAccent">#D81B60</color>
+-</resources>
+Index: BLUE_GAME/app/src/main/res/values/dimens.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/values/dimens.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/values/dimens.xml	(date 1573121031000)
+@@ -1,5 +0,0 @@
+-<resources>
+-    <!-- Default screen margins, per the Android Design guidelines. -->
+-    <dimen name="activity_horizontal_margin">16dp</dimen>
+-    <dimen name="activity_vertical_margin">16dp</dimen>
+-</resources>
+Index: BLUE_GAME/app/src/main/res/values/strings.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/values/strings.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/values/strings.xml	(date 1573121031000)
+@@ -1,6 +0,0 @@
+-<resources>
+-    <string name="app_name">BLUE_GAME</string>
+-    <string name="title_home">Home</string>
+-    <string name="title_dashboard">Dashboard</string>
+-    <string name="title_notifications">Notifications</string>
+-</resources>
+Index: BLUE_GAME/app/src/main/res/values/styles.xml
+===================================================================
+--- BLUE_GAME/app/src/main/res/values/styles.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/res/values/styles.xml	(date 1573121031000)
+@@ -1,11 +0,0 @@
+-<resources>
+-
+-    <!-- Base application theme. -->
+-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+-        <!-- Customize your theme here. -->
+-        <item name="colorPrimary">@color/colorPrimary</item>
+-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+-        <item name="colorAccent">@color/colorAccent</item>
+-    </style>
+-
+-</resources>
+Index: BLUE_GAME/app/src/main/AndroidManifest.xml
+===================================================================
+--- BLUE_GAME/app/src/main/AndroidManifest.xml	(date 1573121031000)
++++ BLUE_GAME/app/src/main/AndroidManifest.xml	(date 1573121031000)
+@@ -1,23 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-    package="kr.hs.emirim.mirimhee.blue_game">
+-
+-    <application
+-        android:allowBackup="true"
+-        android:icon="@mipmap/ic_launcher"
+-        android:label="@string/app_name"
+-        android:roundIcon="@mipmap/ic_launcher_round"
+-        android:supportsRtl="true"
+-        android:theme="@style/AppTheme">
+-        <activity
+-            android:name=".MainActivity"
+-            android:label="@string/app_name">
+-            <intent-filter>
+-                <action android:name="android.intent.action.MAIN" />
+-
+-                <category android:name="android.intent.category.LAUNCHER" />
+-            </intent-filter>
+-        </activity>
+-    </application>
+-
+-</manifest>
+\ No newline at end of file
+Index: BLUE_GAME/app/src/test/java/kr/hs/emirim/mirimhee/blue_game/ExampleUnitTest.kt
+===================================================================
+--- BLUE_GAME/app/src/test/java/kr/hs/emirim/mirimhee/blue_game/ExampleUnitTest.kt	(date 1573121031000)
++++ BLUE_GAME/app/src/test/java/kr/hs/emirim/mirimhee/blue_game/ExampleUnitTest.kt	(date 1573121031000)
+@@ -1,17 +0,0 @@
+-package kr.hs.emirim.mirimhee.blue_game
+-
+-import org.junit.Test
+-
+-import org.junit.Assert.*
+-
+-/**
+- * Example local unit test, which will execute on the development machine (host).
+- *
+- * See [testing documentation](http://d.android.com/tools/testing).
+- */
+-class ExampleUnitTest {
+-    @Test
+-    fun addition_isCorrect() {
+-        assertEquals(4, 2 + 2)
+-    }
+-}
+Index: BLUE_GAME/app/.gitignore
+===================================================================
+--- BLUE_GAME/app/.gitignore	(date 1573121031000)
++++ BLUE_GAME/app/.gitignore	(date 1573121031000)
+@@ -1,1 +0,0 @@
+-/build
+Index: BLUE_GAME/app/build.gradle
+===================================================================
+--- BLUE_GAME/app/build.gradle	(date 1573121031000)
++++ BLUE_GAME/app/build.gradle	(date 1573121031000)
+@@ -1,42 +0,0 @@
+-apply plugin: 'com.android.application'
+-
+-apply plugin: 'kotlin-android'
+-
+-apply plugin: 'kotlin-android-extensions'
+-
+-android {
+-    compileSdkVersion 29
+-    buildToolsVersion "29.0.0"
+-    defaultConfig {
+-        applicationId "kr.hs.emirim.mirimhee.blue_game"
+-        minSdkVersion 17
+-        targetSdkVersion 29
+-        versionCode 1
+-        versionName "1.0"
+-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+-    }
+-    buildTypes {
+-        release {
+-            minifyEnabled false
+-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+-        }
+-    }
+-}
+-
+-dependencies {
+-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+-    implementation 'androidx.appcompat:appcompat:1.1.0'
+-    implementation 'androidx.core:core-ktx:1.1.0'
+-    implementation 'com.google.android.material:material:1.0.0'
+-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+-    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+-    implementation 'androidx.navigation:navigation-fragment:2.1.0'
+-    implementation 'androidx.navigation:navigation-ui:2.1.0'
+-    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+-    implementation 'androidx.navigation:navigation-fragment-ktx:2.1.0'
+-    implementation 'androidx.navigation:navigation-ui-ktx:2.1.0'
+-    testImplementation 'junit:junit:4.12'
+-    androidTestImplementation 'androidx.test:runner:1.2.0'
+-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+-}
+Index: BLUE_GAME/app/proguard-rules.pro
+===================================================================
+--- BLUE_GAME/app/proguard-rules.pro	(date 1573121031000)
++++ BLUE_GAME/app/proguard-rules.pro	(date 1573121031000)
+@@ -1,21 +0,0 @@
+-# Add project specific ProGuard rules here.
+-# You can control the set of applied configuration files using the
+-# proguardFiles setting in build.gradle.
+-#
+-# For more details, see
+-#   http://developer.android.com/guide/developing/tools/proguard.html
+-
+-# If your project uses WebView with JS, uncomment the following
+-# and specify the fully qualified class name to the JavaScript interface
+-# class:
+-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+-#   public *;
+-#}
+-
+-# Uncomment this to preserve the line number information for
+-# debugging stack traces.
+-#-keepattributes SourceFile,LineNumberTable
+-
+-# If you keep the line number information, uncomment this to
+-# hide the original source file name.
+-#-renamesourcefileattribute SourceFile
+Index: BLUE_GAME/gradle/wrapper/gradle-wrapper.properties
+===================================================================
+--- BLUE_GAME/gradle/wrapper/gradle-wrapper.properties	(date 1573121031000)
++++ BLUE_GAME/gradle/wrapper/gradle-wrapper.properties	(date 1573121031000)
+@@ -1,6 +0,0 @@
+-#Thu Nov 07 18:52:02 KST 2019
+-distributionBase=GRADLE_USER_HOME
+-distributionPath=wrapper/dists
+-zipStoreBase=GRADLE_USER_HOME
+-zipStorePath=wrapper/dists
+-distributionUrl=https\://services.gradle.org/distributions/gradle-5.4.1-all.zip
+Index: BLUE_GAME/.gitignore
+===================================================================
+--- BLUE_GAME/.gitignore	(date 1573121031000)
++++ BLUE_GAME/.gitignore	(date 1573121031000)
+@@ -1,14 +0,0 @@
+-*.iml
+-.gradle
+-/local.properties
+-/.idea/caches
+-/.idea/libraries
+-/.idea/modules.xml
+-/.idea/workspace.xml
+-/.idea/navEditor.xml
+-/.idea/assetWizardSettings.xml
+-.DS_Store
+-/build
+-/captures
+-.externalNativeBuild
+-.cxx
+Index: BLUE_GAME/build.gradle
+===================================================================
+--- BLUE_GAME/build.gradle	(date 1573121031000)
++++ BLUE_GAME/build.gradle	(date 1573121031000)
+@@ -1,28 +0,0 @@
+-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+-
+-buildscript {
+-    ext.kotlin_version = '1.3.41'
+-    repositories {
+-        google()
+-        jcenter()
+-        
+-    }
+-    dependencies {
+-        classpath 'com.android.tools.build:gradle:3.5.0'
+-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+-        // NOTE: Do not place your application dependencies here; they belong
+-        // in the individual module build.gradle files
+-    }
+-}
+-
+-allprojects {
+-    repositories {
+-        google()
+-        jcenter()
+-        
+-    }
+-}
+-
+-task clean(type: Delete) {
+-    delete rootProject.buildDir
+-}
+Index: BLUE_GAME/gradle.properties
+===================================================================
+--- BLUE_GAME/gradle.properties	(date 1573121031000)
++++ BLUE_GAME/gradle.properties	(date 1573121031000)
+@@ -1,21 +0,0 @@
+-# Project-wide Gradle settings.
+-# IDE (e.g. Android Studio) users:
+-# Gradle settings configured through the IDE *will override*
+-# any settings specified in this file.
+-# For more details on how to configure your build environment visit
+-# http://www.gradle.org/docs/current/userguide/build_environment.html
+-# Specifies the JVM arguments used for the daemon process.
+-# The setting is particularly useful for tweaking memory settings.
+-org.gradle.jvmargs=-Xmx1536m
+-# When configured, Gradle will run in incubating parallel mode.
+-# This option should only be used with decoupled projects. More details, visit
+-# http://www.gradle.org/docs/current/userguide/multi_project_builds.html#sec:decoupled_projects
+-# org.gradle.parallel=true
+-# AndroidX package structure to make it clearer which packages are bundled with the
+-# Android operating system, and which are packaged with your app's APK
+-# https://developer.android.com/topic/libraries/support-library/androidx-rn
+-android.useAndroidX=true
+-# Automatically convert third-party libraries to use AndroidX
+-android.enableJetifier=true
+-# Kotlin code style for this project: "official" or "obsolete":
+-kotlin.code.style=official
+Index: BLUE_GAME/gradlew.bat
+===================================================================
+--- BLUE_GAME/gradlew.bat	(date 1573121031000)
++++ BLUE_GAME/gradlew.bat	(date 1573121031000)
+@@ -1,84 +0,0 @@
+-@if "%DEBUG%" == "" @echo off
+-@rem ##########################################################################
+-@rem
+-@rem  Gradle startup script for Windows
+-@rem
+-@rem ##########################################################################
+-
+-@rem Set local scope for the variables with windows NT shell
+-if "%OS%"=="Windows_NT" setlocal
+-
+-set DIRNAME=%~dp0
+-if "%DIRNAME%" == "" set DIRNAME=.
+-set APP_BASE_NAME=%~n0
+-set APP_HOME=%DIRNAME%
+-
+-@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
+-set DEFAULT_JVM_OPTS=
+-
+-@rem Find java.exe
+-if defined JAVA_HOME goto findJavaFromJavaHome
+-
+-set JAVA_EXE=java.exe
+-%JAVA_EXE% -version >NUL 2>&1
+-if "%ERRORLEVEL%" == "0" goto init
+-
+-echo.
+-echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
+-echo.
+-echo Please set the JAVA_HOME variable in your environment to match the
+-echo location of your Java installation.
+-
+-goto fail
+-
+-:findJavaFromJavaHome
+-set JAVA_HOME=%JAVA_HOME:"=%
+-set JAVA_EXE=%JAVA_HOME%/bin/java.exe
+-
+-if exist "%JAVA_EXE%" goto init
+-
+-echo.
+-echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME%
+-echo.
+-echo Please set the JAVA_HOME variable in your environment to match the
+-echo location of your Java installation.
+-
+-goto fail
+-
+-:init
+-@rem Get command-line arguments, handling Windows variants
+-
+-if not "%OS%" == "Windows_NT" goto win9xME_args
+-
+-:win9xME_args
+-@rem Slurp the command line arguments.
+-set CMD_LINE_ARGS=
+-set _SKIP=2
+-
+-:win9xME_args_slurp
+-if "x%~1" == "x" goto execute
+-
+-set CMD_LINE_ARGS=%*
+-
+-:execute
+-@rem Setup the command line
+-
+-set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
+-
+-@rem Execute Gradle
+-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %CMD_LINE_ARGS%
+-
+-:end
+-@rem End local scope for the variables with windows NT shell
+-if "%ERRORLEVEL%"=="0" goto mainEnd
+-
+-:fail
+-rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of
+-rem the _cmd.exe /c_ return code!
+-if  not "" == "%GRADLE_EXIT_CONSOLE%" exit 1
+-exit /b 1
+-
+-:mainEnd
+-if "%OS%"=="Windows_NT" endlocal
+-
+-:omega
+Index: BLUE_GAME/settings.gradle
+===================================================================
+--- BLUE_GAME/settings.gradle	(date 1573121031000)
++++ BLUE_GAME/settings.gradle	(date 1573121031000)
+@@ -1,2 +0,0 @@
+-include ':app'
+-rootProject.name='BLUE_GAME'
+Index: MY_BLUE/.idea/workspace.xml
+===================================================================
+--- MY_BLUE/.idea/workspace.xml	(date 1573121031000)
++++ MY_BLUE/.idea/workspace.xml	(date 1573121031000)
+@@ -1,295 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="AndroidLayouts">
+-    <shared>
+-      <config />
+-    </shared>
+-  </component>
+-  <component name="AndroidLogFilters">
+-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+-  </component>
+-  <component name="ChangeListManager">
+-    <list default="true" id="22a6977e-92fc-46b4-b6f5-b7bad070022d" name="Default Changelist" comment="">
+-      <change afterPath="$PROJECT_DIR$/../.idea/render.experimental.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/kr/hs/emirim/mirimhee/punchpower/MainActivity.kt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/kr/hs/emirim/mirimhee/punchpower/ResultActivity.kt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/kr/hs/emirim/mirimhee/punchpower/seoultoilet.kt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/boxing.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/layout/activity_result.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/layout/activity_seoultoilet.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../testandriod/app/src/main/res/layout/list_item.xml" afterDir="false" />
+-    </list>
+-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+-    <option name="SHOW_DIALOG" value="false" />
+-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-    <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="DefaultGradleProjectSettings">
+-    <option name="isMigrated" value="true" />
+-  </component>
+-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_API_25" />
+-  <component name="ExternalProjectsData">
+-    <projectState path="$PROJECT_DIR$">
+-      <ProjectState />
+-    </projectState>
+-  </component>
+-  <component name="ExternalProjectsManager">
+-    <system id="GRADLE">
+-      <state>
+-        <projects_view />
+-      </state>
+-    </system>
+-  </component>
+-  <component name="FileEditorManager">
+-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+-  </component>
+-  <component name="Git.Settings">
+-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+-  </component>
+-  <component name="IdeDocumentHistory">
+-    <option name="CHANGED_PATHS">
+-      <list>
+-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+-        <option value="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" />
+-      </list>
+-    </option>
+-  </component>
+-  <component name="ProjectConfigurationFiles">
+-    <option name="files">
+-      <list>
+-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+-        <option value="$PROJECT_DIR$/.idea/gradle.xml" />
+-        <option value="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
+-      </list>
+-    </option>
+-  </component>
+-  <component name="ProjectFrameBounds">
+-    <option name="x" value="-7" />
+-    <option name="width" value="1337" />
+-    <option name="height" value="1047" />
+-  </component>
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+-  <component name="ProjectView">
+-    <navigator proportions="" version="1">
+-      <foldersAlwaysOnTop value="true" />
+-    </navigator>
+-    <panes>
+-      <pane id="PackagesPane" />
+-      <pane id="Scope" />
+-      <pane id="AndroidView" />
+-      <pane id="ProjectPane" />
+-    </panes>
+-  </component>
+-  <component name="PropertiesComponent">
+-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+-    <property name="not.eligible.for.single.variant.sync" value="true" />
+-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+-  </component>
+-  <component name="RunDashboard">
+-    <option name="ruleStates">
+-      <list>
+-        <RuleState>
+-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+-        </RuleState>
+-        <RuleState>
+-          <option name="name" value="StatusDashboardGroupingRule" />
+-        </RuleState>
+-      </list>
+-    </option>
+-  </component>
+-  <component name="RunManager">
+-    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+-      <option name="TEST_OBJECT" value="class" />
+-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+-      <method v="2">
+-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+-      <module name="app" />
+-      <option name="DEPLOY" value="true" />
+-      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+-      <option name="DEPLOY_AS_INSTANT" value="false" />
+-      <option name="ARTIFACT_NAME" value="" />
+-      <option name="PM_INSTALL_OPTIONS" value="" />
+-      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+-      <option name="MODE" value="default_activity" />
+-      <option name="CLEAR_LOGCAT" value="false" />
+-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+-      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+-      <option name="PREFERRED_AVD" value="" />
+-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+-      <option name="DEBUGGER_TYPE" value="Auto" />
+-      <Auto>
+-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+-        <option name="SHOW_STATIC_VARS" value="true" />
+-        <option name="WORKING_DIR" value="" />
+-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+-      </Auto>
+-      <Hybrid>
+-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+-        <option name="SHOW_STATIC_VARS" value="true" />
+-        <option name="WORKING_DIR" value="" />
+-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+-      </Hybrid>
+-      <Java />
+-      <Native>
+-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+-        <option name="SHOW_STATIC_VARS" value="true" />
+-        <option name="WORKING_DIR" value="" />
+-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+-      </Native>
+-      <Profilers>
+-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+-      </Profilers>
+-      <option name="DEEP_LINK" value="" />
+-      <option name="ACTIVITY_CLASS" value="" />
+-      <method v="2">
+-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+-      </method>
+-    </configuration>
+-  </component>
+-  <component name="SvnConfiguration">
+-    <configuration />
+-  </component>
+-  <component name="TaskManager">
+-    <task active="true" id="Default" summary="Default task">
+-      <changelist id="22a6977e-92fc-46b4-b6f5-b7bad070022d" name="Default Changelist" comment="" />
+-      <created>1572948695388</created>
+-      <option name="number" value="Default" />
+-      <option name="presentableId" value="Default" />
+-      <updated>1572948695388</updated>
+-    </task>
+-    <task id="LOCAL-00001" summary="nn">
+-      <created>1573120197346</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1573120197346</updated>
+-    </task>
+-    <option name="localTasksCounter" value="2" />
+-    <servers />
+-  </component>
+-  <component name="TodoView">
+-    <todo-panel id="selected-file">
+-      <is-autoscroll-to-source value="true" />
+-    </todo-panel>
+-    <todo-panel id="all">
+-      <are-packages-shown value="true" />
+-      <is-autoscroll-to-source value="true" />
+-    </todo-panel>
+-  </component>
+-  <component name="ToolWindowManager">
+-    <frame x="-7" y="0" width="1337" height="1047" extended-state="0" />
+-    <layout>
+-      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25371966" />
+-      <window_info id="Structure" order="2" side_tool="true" />
+-      <window_info id="Favorites" order="3" side_tool="true" />
+-      <window_info id="Build Variants" order="4" side_tool="true" />
+-      <window_info id="Image Layers" order="5" />
+-      <window_info id="Designer" order="6" />
+-      <window_info id="Resources Explorer" order="7" />
+-      <window_info id="Capture Tool" order="8" />
+-      <window_info anchor="bottom" id="Find" />
+-      <window_info anchor="bottom" id="Run" order="0" weight="0.32968238" />
+-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.32968238" />
+-      <window_info anchor="bottom" id="TODO" order="2" weight="0.32968238" />
+-      <window_info anchor="bottom" id="Debug" order="3" />
+-      <window_info anchor="bottom" id="Terminal" order="4" />
+-      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
+-      <window_info anchor="bottom" id="Version Control" order="6" />
+-      <window_info anchor="bottom" id="Build" order="7" weight="0.32968238" />
+-      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
+-      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+-      <window_info anchor="right" id="Capture Analysis" order="1" />
+-      <window_info anchor="right" id="Gradle" order="2" />
+-      <window_info anchor="right" id="Theme Preview" order="3" />
+-      <window_info anchor="right" id="Preview" order="4" />
+-      <window_info anchor="right" id="Palette&#9;" order="5" />
+-    </layout>
+-  </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="nn" />
+-    <option name="LAST_COMMIT_MESSAGE" value="nn" />
+-  </component>
+-  <component name="editorHistoryManager">
+-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="474">
+-          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+-      <provider editor-type-id="text-editor">
+-        <state relative-caret-position="420">
+-          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+-        </state>
+-      </provider>
+-      <provider selected="true" editor-type-id="android-designer2" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml">
+-      <provider editor-type-id="text-editor" />
+-      <provider selected="true" editor-type-id="nav-designer" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="456">
+-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_notifications_black_24dp.xml">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="152">
+-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+-      <provider editor-type-id="text-editor" />
+-      <provider selected="true" editor-type-id="android-designer2" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_notifications.xml">
+-      <provider editor-type-id="text-editor">
+-        <state relative-caret-position="342">
+-          <caret line="18" column="52" lean-forward="true" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+-        </state>
+-      </provider>
+-      <provider selected="true" editor-type-id="android-designer2" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_dashboard.xml">
+-      <provider editor-type-id="text-editor" />
+-      <provider selected="true" editor-type-id="android-designer2" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="266">
+-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+-        </state>
+-      </provider>
+-      <provider editor-type-id="android-designer2" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+-      <provider editor-type-id="android-manifest" />
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="418">
+-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+-        </state>
+-      </provider>
+-    </entry>
+-  </component>
+-</project>
+\ No newline at end of file
+diff --git BLUE_GAME/app/src/main/res/mipmap-hdpi/ic_launcher.png BLUE_GAME/app/src/main/res/mipmap-hdpi/ic_launcher.png
+deleted file mode 100644
+index 898f3ed59ac9f3248734a00e5902736c9367d455..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git BLUE_GAME/app/src/main/res/mipmap-hdpi/ic_launcher_round.png BLUE_GAME/app/src/main/res/mipmap-hdpi/ic_launcher_round.png
+deleted file mode 100644
+index dffca3601eba7bf5f409bdd520820e2eb5122c75..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git BLUE_GAME/app/src/main/res/mipmap-mdpi/ic_launcher.png BLUE_GAME/app/src/main/res/mipmap-mdpi/ic_launcher.png
+deleted file mode 100644
+index 64ba76f75e9ce021aa3d95c213491f73bcacb597..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git BLUE_GAME/app/src/main/res/mipmap-mdpi/ic_launcher_round.png BLUE_GAME/app/src/main/res/mipmap-mdpi/ic_launcher_round.png
+deleted file mode 100644
+index dae5e082342fcdeee5db8a6e0b27028e2d2808f5..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git BLUE_GAME/app/src/main/res/mipmap-xhdpi/ic_launcher.png BLUE_GAME/app/src/main/res/mipmap-xhdpi/ic_launcher.png
+deleted file mode 100644
+index e5ed46597ea8447d91ab1786a34e30f1c26b18bd..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git BLUE_GAME/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png BLUE_GAME/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png
+deleted file mode 100644
+index 14ed0af35023e4f1901cf03487b6c524257b8483..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git BLUE_GAME/app/src/main/res/mipmap-xxhdpi/ic_launcher.png BLUE_GAME/app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+deleted file mode 100644
+index b0907cac3bfd8fbfdc46e1108247f0a1055387ec..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git BLUE_GAME/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png BLUE_GAME/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png
+deleted file mode 100644
+index d8ae03154975f397f8ed1b84f2d4bf9783ecfa26..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git BLUE_GAME/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png BLUE_GAME/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+deleted file mode 100644
+index 2c18de9e66108411737e910f5c1972476f03ddbf..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git BLUE_GAME/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png BLUE_GAME/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+deleted file mode 100644
+index beed3cdd2c32af5114a7dc70b9ef5b698eb8797e..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git BLUE_GAME/gradle/wrapper/gradle-wrapper.jar BLUE_GAME/gradle/wrapper/gradle-wrapper.jar
+deleted file mode 100644
+index f6b961fd5a86aa5fbfe90f707c3138408be7c718..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git BLUE_GAME/gradlew BLUE_GAME/gradlew
+deleted file mode 100644
+index 518efffcd428f627f08e9fe4d1b7f045f7612b24..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
