@@ -116,8 +116,10 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#F0F0F0"/>
+        android:layout_width="332dp"
+        android:layout_height="473dp"
+        android:background="#F0F0F0"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="129dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
