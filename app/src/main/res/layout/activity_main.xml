@@ -7,16 +7,6 @@
     android:background="@drawable/gradation_1"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.191" />
-
     <Button
         android:id="@+id/day_recommend_button"
         style="?android:attr/borderlessButtonStyle"
@@ -37,8 +27,8 @@
         android:layout_marginBottom="28dp"
         android:background="@drawable/round_1"
         android:text="육상시설"
-        android:textSize="16sp"
         android:textColor="#4A4A4A"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,10 +40,10 @@
         android:layout_width="110dp"
         android:layout_height="45dp"
         android:layout_marginBottom="28dp"
-        android:textSize="16sp"
         android:background="@drawable/round_1"
         android:text="수상시설"
         android:textColor="#4A4A4A"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/land_sports_button"
@@ -67,11 +57,12 @@
         android:layout_marginBottom="28dp"
         android:background="@drawable/round_1"
         android:text="전체시설"
-        android:textSize="16sp"
         android:textColor="#4A4A4A"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 
     <Button
         android:id="@+id/View_Details_button"
@@ -88,6 +79,16 @@
         app:layout_constraintEnd_toEndOf="@+id/day_recommend_button"
         app:layout_constraintStart_toStartOf="@+id/day_recommend_button" />
 
+    <ImageButton
+        android:id="@+id/SearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:background="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@+id/seach_text"
+        app:layout_constraintStart_toStartOf="@+id/seach_text"
+        app:layout_constraintTop_toTopOf="@+id/seach_text" />
+
     <TextView
         android:id="@+id/seach_text"
         android:layout_width="335dp"
@@ -103,23 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageButton
-        android:id="@+id/SearchButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="42dp"
-        android:background="@drawable/ic_search"
-        app:layout_constraintBottom_toBottomOf="@+id/seach_text"
-        app:layout_constraintStart_toStartOf="@+id/seach_text"
-        app:layout_constraintTop_toTopOf="@+id/seach_text" />
 
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="332dp"
-        android:layout_height="473dp"
-        android:background="#F0F0F0"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="129dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

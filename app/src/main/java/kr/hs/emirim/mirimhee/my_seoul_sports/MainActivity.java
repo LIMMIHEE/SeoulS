@@ -1,9 +1,12 @@
 package kr.hs.emirim.mirimhee.my_seoul_sports;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -32,6 +35,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // 전화걸기
+        Button call_btn = (Button)findViewById((R.id.call_button));
+        call_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setAction((Intent.ACTION_DIAL));
+                intent.setData(Uri.parse("tel:123142"));
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+        // 파이어 베이스
         mSportsDatabase = FirebaseDatabase.getInstance().getReference("Sports");
 
         Seachtext =(TextView) findViewById(R.id.seach_text);
@@ -40,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
         REcycleView = (RecyclerView) findViewById(R.id.recyclerView);
         REcycleView.setHasFixedSize(true);
         REcycleView.setLayoutManager(new LinearLayoutManager(this));
-
         SearchimgButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,8 +69,26 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    ////////////////////////파이어 베이스
     private void firebaseSportsSearch() {
-        FirebaseRecyclerAdapter<Sports,SportsViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Sports, SportsViewHolder>(
+
+        FirebaseRecyclerAdapter<Sports,SportsViewHolder> firebaseRecyclerAdapter =
+                /*
+            new FirebaseRecyclerAdapter<Sports, SportsViewHolder>() {
+                @Override
+                protected void onBindViewHolder(@NonNull SportsViewHolder holder, int position, @NonNull Sports model) {
+
+
+                }
+
+                @NonNull
+                @Override
+                public SportsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                    return null;
+                }
+            };
+*/
+                new FirebaseRecyclerAdapter<Sports, SportsViewHolder>(
                 Sports.class,
                 R.layout.list_layout,
                 SportsViewHolder.class,
@@ -62,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                     viewHolder.setDetails(name.getName(), name.getNumber(), name.getNumber());
             }
         };
-            REcycleView.setAdapter(firebaseRecyclerAdapter);
+        REcycleView.setAdapter(firebaseRecyclerAdapter);
     }
 
 
