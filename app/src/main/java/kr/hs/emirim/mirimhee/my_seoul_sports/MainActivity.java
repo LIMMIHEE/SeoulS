@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     ////////////////////////파이어 베이스
     private void firebaseSportsSearch() {
 
-        FirebaseRecyclerAdapter<Sports,SportsViewHolder> firebaseRecyclerAdapter =
+  //      FirebaseRecyclerAdapter<Sports,SportsViewHolder> firebaseRecyclerAdapter =
                 /*
             new FirebaseRecyclerAdapter<Sports, SportsViewHolder>() {
                 @Override
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             };
 */
-                new FirebaseRecyclerAdapter<Sports, SportsViewHolder>(
+ /*               new FirebaseRecyclerAdapter<Sports, SportsViewHolder>(
                 Sports.class,
                 R.layout.list_layout,
                 SportsViewHolder.class,
@@ -101,8 +101,8 @@ public class MainActivity extends AppCompatActivity {
         };
         REcycleView.setAdapter(firebaseRecyclerAdapter);
     }
-
-
+*/
+/*
     public static class  SportsViewHolder extends  RecyclerView.ViewHolder {
 
         View eView;
@@ -126,6 +126,6 @@ public class MainActivity extends AppCompatActivity {
        // Glide.with(getApplicationContext()).load(spname).into(sports_name);
 
     }
-
+*/
     }
 }
