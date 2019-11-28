@@ -21,14 +21,21 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    private ArrayList<MainData> arrayList;
+    private  MainAdapter mainAdapter;
+    private  LinearLayoutManager linearLayoutManager;
 
     private TextView Seachtext;
     private ImageButton SearchimgButton;
 
-    private RecyclerView REcycleView;
-    private DatabaseReference mSportsDatabase;
+    private RecyclerView recycleView;
+    private  RecyclerView.Adapter mAdapter;
+    private  RecyclerView.LayoutManager mLayoutManager;
 
 
     @Override
@@ -47,85 +54,42 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ArrayList<MainData> exampleList = new ArrayList<>();
+        exampleList.add(new MainData(R.drawable.ic_directions_run_, "Line 1", "Line 2"));
+        exampleList.add(new MainData(R.drawable.ic_rowing_, "Line 3", "Line 4"));
+        exampleList.add(new MainData(R.drawable.ic_subject_, "Line 5", "Line 6"));
+
+    //리싸이클러 뷰
+//        recycleView = (RecyclerView)findViewById(R.id.recycler_view_);
+//        linearLayoutManager = new LinearLayoutManager(this);
+//        recycleView.setLayoutManager(linearLayoutManager);
+//
+//        arrayList = new ArrayList<>();
+//        mainAdapter = new MainAdapter(arrayList);
+//        recycleView.setAdapter(mainAdapter);
 
 
 
 
         // 파이어 베이스
-        mSportsDatabase = FirebaseDatabase.getInstance().getReference("Sports");
-
-        Seachtext =(TextView) findViewById(R.id.seach_text);
-        SearchimgButton = (ImageButton) findViewById(R.id.SearchButton);
-
-        REcycleView = (RecyclerView) findViewById(R.id.recyclerView);
-        REcycleView.setHasFixedSize(true);
-        REcycleView.setLayoutManager(new LinearLayoutManager(this));
-        SearchimgButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                firebaseSportsSearch();
-            }
-        });
+//        mSportsDatabase = FirebaseDatabase.getInstance().getReference("Sports");
+//
+//        Seachtext =(TextView) findViewById(R.id.seach_text);
+//        SearchimgButton = (ImageButton) findViewById(R.id.SearchButton);
+//
+//        REcycleView = (RecyclerView) findViewById(R.id.recyclerView);
+//        REcycleView.setHasFixedSize(true);
+//        REcycleView.setLayoutManager(new LinearLayoutManager(this));
+//        SearchimgButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                firebaseSportsSearch();
+//            }
+//        });
 
     }
 
     ////////////////////////파이어 베이스
-    private void firebaseSportsSearch() {
 
-  //      FirebaseRecyclerAdapter<Sports,SportsViewHolder> firebaseRecyclerAdapter =
-                /*
-            new FirebaseRecyclerAdapter<Sports, SportsViewHolder>() {
-                @Override
-                protected void onBindViewHolder(@NonNull SportsViewHolder holder, int position, @NonNull Sports model) {
-
-
-                }
-
-                @NonNull
-                @Override
-                public SportsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                    return null;
-                }
-            };
-*/
- /*               new FirebaseRecyclerAdapter<Sports, SportsViewHolder>(
-                Sports.class,
-                R.layout.list_layout,
-                SportsViewHolder.class,
-                mSportsDatabase
-        ) {
-
-            protected void populateViewHolder(SportsViewHolder viewHolder, Sports name, int position){
-                    viewHolder.setDetails(name.getName(), name.getNumber(), name.getNumber());
-            }
-        };
-        REcycleView.setAdapter(firebaseRecyclerAdapter);
-    }
-*/
-/*
-    public static class  SportsViewHolder extends  RecyclerView.ViewHolder {
-
-        View eView;
-
-
-        public SportsViewHolder(@NonNull View itemView) {
-            super(itemView);
-            eView = itemView;
-        }
-    public void setDetails(String spname, String spwhat, String spnumber){
-
-        TextView  sports_name = (TextView) eView.findViewById(R.id.where);
-        TextView  sports_what = (TextView) eView.findViewById(R.id.whatsports);
-        TextView  sports_number = (TextView) eView.findViewById(R.id.number);
-
-        sports_name.setText(spname);
-        sports_what.setText(spwhat);
-        sports_number.setText(spnumber);
-
-
-       // Glide.with(getApplicationContext()).load(spname).into(sports_name);
-
-    }
-*/
     }
 }
