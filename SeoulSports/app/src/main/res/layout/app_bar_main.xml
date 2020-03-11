@@ -9,32 +9,24 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.PopupOverlay"
-        app:liftOnScroll="true"
-        android:backgroundTint="@android:color/white"
-        >
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:expandedTitleGravity="bottom"
-            />
-           <ImageView
-               android:layout_width="match_parent"
-               android:layout_height="350dp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:elevation="0dp"
+            app:navigationIcon="@drawable/ic_menu_black"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-               />
+    </com.google.android.material.appbar.AppBarLayout>
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#FFFFFF"
-                app:elevation="0dp"
-                android:navigationIcon="@drawable/ic_menu_black"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <include
+        layout="@layout/content_main"
+        android:background="#FFFFFF" />
 
-        </com.google.android.material.appbar.AppBarLayout>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
