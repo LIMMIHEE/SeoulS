@@ -7,9 +7,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="478dp"
+        android:layout_width="429dp"
+        android:layout_height="152dp"
+        android:layout_marginBottom="520dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,13 +20,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/Detalis_Sports_img"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/card_corner_radius"
-            android:scaleType="centerCrop"
-            android:src="@drawable/jeremy" />
+            <ImageView
+                android:id="@+id/Detalis_Sports_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_corner_radius"
+                android:scaleType="centerCrop"
+                android:src="@drawable/jeremy" />
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -47,17 +47,16 @@
 
     <Button
         android:id="@+id/BackBtn"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="60dp"
         android:layout_height="54dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="25dp"
         android:background="@drawable/ic_keyboard_arrow_left_black"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="?android:attr/borderlessButtonStyle"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/simple_name"
@@ -94,7 +93,7 @@
         android:id="@+id/Sports_Name"
         android:layout_width="280dp"
         android:layout_height="54dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"
         android:gravity="center"
         android:text="TextView"

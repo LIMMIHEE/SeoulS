@@ -126,7 +126,7 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/CardImage"
+                            android:id="@+id/Detalis_Sports_img"
                             android:layout_width="106dp"
                             android:layout_height="match_parent"
                             android:background="@drawable/card_corner_radius"
