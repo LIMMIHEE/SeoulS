@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Athletics_sports"></activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB9GL8OqtKbYDAKd3H6S06KIUhRUN3bbXQ" />
+        <activity android:name=".Exercise_page"></activity>
+        <activity android:name=".experience_companys" />
+        <activity android:name=".Athletics_sports" />
         <activity android:name=".AquaticSports" />
         <activity android:name=".Details_info" />
         <activity android:name=".MainActivity">

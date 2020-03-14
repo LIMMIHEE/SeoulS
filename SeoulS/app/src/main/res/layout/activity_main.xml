@@ -86,12 +86,12 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/all_sports_btn"
+                android:id="@+id/park_sports_btn"
                 android:layout_width="117dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/main_sports_btn"
-                android:text="#전체"
+                android:text="#공원별 스포츠 "
                 android:textStyle="bold" />
         </LinearLayout>
 

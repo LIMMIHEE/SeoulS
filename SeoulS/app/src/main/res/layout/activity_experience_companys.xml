@@ -5,31 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="429dp"
-        android:layout_height="152dp"
-        android:layout_marginBottom="520dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/Call_Btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="88dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/ic_call_black_"
+        android:paddingLeft="-10dp"
+        android:paddingTop="67dp"
+        android:text="전화걸기"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BackBtn">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/Detalis_Sports_img"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/card_corner_radius"
-                android:scaleType="centerCrop"
-                android:src="@drawable/jeremy" />
-
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/BackBtn"
@@ -37,20 +25,20 @@
         android:layout_width="60dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="543dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="522dp"
         android:background="@drawable/ic_keyboard_arrow_left_black"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/mapView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/simple_name"
-        android:layout_width="313dp"
-        android:layout_height="43dp"
+        android:layout_width="185dp"
+        android:layout_height="72dp"
         android:layout_marginStart="53dp"
-        android:layout_marginTop="269dp"
-        android:text="이름"
+        android:layout_marginTop="120dp"
+        android:text="공원이름"
         android:textSize="19dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -61,17 +49,17 @@
         android:layout_height="44dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="32dp"
-        android:text="강단설명"
+        android:text="회사이름"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simple_name" />
 
     <TextView
         android:id="@+id/Detalis_info"
-        android:layout_width="309dp"
-        android:layout_height="138dp"
+        android:layout_width="318dp"
+        android:layout_height="240dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="32dp"
-        android:text="대충 설명"
+        android:text="이용정보나 요금"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simple_info" />
 
@@ -88,18 +76,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="35dp"
-        android:background="@drawable/btn_bg_ex"
-        android:text="체험 가능한 장소 보러가기"
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="318dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BackBtn" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
