@@ -22,8 +22,8 @@
     <Button
         android:id="@+id/BackBtn"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_width="60dp"
-        android:layout_height="0dp"
+        android:layout_width="55dp"
+        android:layout_height="49dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="522dp"

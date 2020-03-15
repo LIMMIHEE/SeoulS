@@ -1,20 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Exercise_page">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="112dp"
-        android:layout_height="103dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/btn_re_mian_red"
-        android:padding="20dp"
-        android:text="TextView"
+    <Button
+        android:id="@+id/BackBtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="55dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="522dp"
+        android:background="@drawable/ic_keyboard_arrow_left_black"
+        app:layout_constraintBottom_toTopOf="@+id/mapView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/Park_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/park_info_btn"
+            android:layout_width="124dp"
+            android:layout_height="114dp"
+            android:layout_marginStart="20dp"
+
+            android:layout_marginTop="60dp"
+            android:background="@drawable/btn_re_mian_red"
+            android:gravity="center"
+            android:letterSpacing="0.2"
+            android:padding="20dp"
+            android:text="잠실\n한강\n공원"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+</LinearLayout>

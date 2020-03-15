@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         ALLBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, experience_companys.class);
+                Intent intent = new Intent(MainActivity.this, Exercise_page.class);
                 startActivity(intent);
             }
         });
