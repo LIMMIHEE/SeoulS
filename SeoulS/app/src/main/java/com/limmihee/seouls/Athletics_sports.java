@@ -2,6 +2,7 @@ package com.limmihee.seouls;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,7 @@ public class Athletics_sports extends AppCompatActivity implements AthleticsSpor
 //    public void setOnItamClickListener(OnItamClickListener listener){
 //        mListner = listener;
 //    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,10 @@ public class Athletics_sports extends AppCompatActivity implements AthleticsSpor
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(Athletics_sports.this, Details_info.class);
+                ((Details_info)Details_info.mContext).Set_Layout("테니스","Tennis",
+                        "설명","설명2");
+
+
                 startActivity(intent);
             }
         });
