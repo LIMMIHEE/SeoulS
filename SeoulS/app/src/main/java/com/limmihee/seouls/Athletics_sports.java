@@ -8,6 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.gms.maps.MapView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Athletics_sports extends AppCompatActivity implements AthleticsSports {
 //    private OnItamClickListener mListner;
 //    public interface OnItamClickListener{
@@ -16,6 +20,7 @@ public class Athletics_sports extends AppCompatActivity implements AthleticsSpor
 //    public void setOnItamClickListener(OnItamClickListener listener){
 //        mListner = listener;
 //    }
+
 
 
     @Override
@@ -27,6 +32,7 @@ public class Athletics_sports extends AppCompatActivity implements AthleticsSpor
         Arhletics_main_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+
                 Intent intent = new Intent(Athletics_sports.this, MainActivity.class);
                 startActivity(intent);
             }
@@ -36,14 +42,13 @@ public class Athletics_sports extends AppCompatActivity implements AthleticsSpor
         Card_View.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+
                 Intent intent = new Intent(Athletics_sports.this, Details_info.class);
-                ((Details_info)Details_info.mContext).Set_Layout("테니스","Tennis",
-                        "설명","설명2");
-
-
                 startActivity(intent);
             }
         });
     }
+
+
 
 }
