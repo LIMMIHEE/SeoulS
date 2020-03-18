@@ -1,42 +1,34 @@
 {
   "project_info": {
-    "project_number": "896481573353",
-    "firebase_url": "https://seouls.firebaseio.com",
-    "project_id": "seouls",
-    "storage_bucket": "seouls.appspot.com"
+    "project_number": "865433995099",
+    "firebase_url": "https://han-river-30b98.firebaseio.com",
+    "project_id": "han-river-30b98",
+    "storage_bucket": "han-river-30b98.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:896481573353:android:7fccca90581832fbb97378",
+        "mobilesdk_app_id": "1:865433995099:android:1dfca34707b7e02acebc7e",
         "android_client_info": {
           "package_name": "com.limmihee.seouls"
         }
       },
       "oauth_client": [
         {
-          "client_id": "896481573353-62h71brvj7auahhavv65be8p9uclgkc3.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.limmihee.seouls",
-            "certificate_hash": "a67a206707fa290eb6ab0e3d6e7318783d38f050"
-          }
-        },
-        {
-          "client_id": "896481573353-v903rbjmbo1amvk4nbdhf8sti8uocntc.apps.googleusercontent.com",
+          "client_id": "865433995099-je219vl7fnootl6djfdohs6atnmuldqs.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB9GL8OqtKbYDAKd3H6S06KIUhRUN3bbXQ"
+          "current_key": "AIzaSyCT7y99Dr5B0P-cUW7REKiIEwKwLL9NFC0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "896481573353-v903rbjmbo1amvk4nbdhf8sti8uocntc.apps.googleusercontent.com",
+              "client_id": "865433995099-je219vl7fnootl6djfdohs6atnmuldqs.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

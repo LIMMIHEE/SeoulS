@@ -13,6 +13,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Athletics_sports extends AppCompatActivity implements AthleticsSports {
+
 //    private OnItamClickListener mListner;
 //    public interface OnItamClickListener{
 //        void OnItamListener(int position);
@@ -32,8 +33,7 @@ public class Athletics_sports extends AppCompatActivity implements AthleticsSpor
         Arhletics_main_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-
-                Intent intent = new Intent(Athletics_sports.this, MainActivity.class);
+               Intent intent = new Intent(Athletics_sports.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +42,6 @@ public class Athletics_sports extends AppCompatActivity implements AthleticsSpor
         Card_View.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-
                 Intent intent = new Intent(Athletics_sports.this, Details_info.class);
                 startActivity(intent);
             }
