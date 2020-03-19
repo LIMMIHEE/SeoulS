@@ -7,7 +7,6 @@ public class Sports_DB {
         private String Detail_info;
         private String photo_name;
 
-
         public  Sports_DB(){
 
         }

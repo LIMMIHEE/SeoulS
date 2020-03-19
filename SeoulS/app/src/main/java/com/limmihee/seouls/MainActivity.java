@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //databaseReference.child("현재운동").setValue("테니스");
         {
 //        databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("테니스");
 //        sports_db= new Sports_DB();
