@@ -1,5 +1,6 @@
 package com.limmihee.seouls;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -12,18 +13,49 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Exercise_page extends AppCompatActivity {
     private static final float FONT_SIZE = 19;
      LinearLayout container;
-    int cont=2;
+
+
+    ArrayList<String> companies_Name =new ArrayList<>();
+
+    FirebaseDatabase firebaseDatabase ;
+    DatabaseReference databaseReference ;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise_page);
 
         container=(LinearLayout) findViewById(R.id.Park_info);
-        textview("강남");
-        textview("세글자");
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference();
+        databaseReference.child("육상").child("테니스").child("체험장소").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                companies_Name=dataSnapshot.getValue(ArrayList.class);
+
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        textview(companies_Name.get(0));
+//        textview(companies_Name.get(2));
         textview("마포?");
 
 

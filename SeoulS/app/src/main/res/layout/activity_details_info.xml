@@ -35,17 +35,17 @@
         android:id="@+id/BackBtn"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="60dp"
-        android:layout_height="0dp"
+        android:layout_height="54dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="543dp"
         android:background="@drawable/ic_keyboard_arrow_left_black"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/Com_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/simple_name"
+        android:id="@+id/simple_info"
         android:layout_width="313dp"
         android:layout_height="43dp"
         android:layout_marginStart="53dp"
@@ -56,14 +56,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/simple_info"
+        android:id="@+id/Com_Pay"
         android:layout_width="315dp"
         android:layout_height="44dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="32dp"
         android:text="강단설명"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/simple_name" />
+        app:layout_constraintTop_toBottomOf="@+id/simple_info" />
 
     <TextView
         android:id="@+id/Detalis_info"
@@ -73,10 +73,10 @@
         android:layout_marginTop="32dp"
         android:text="대충 설명"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/simple_info" />
+        app:layout_constraintTop_toBottomOf="@+id/Com_Pay" />
 
     <TextView
-        android:id="@+id/Sports_Name"
+        android:id="@+id/Com_Name"
         android:layout_width="280dp"
         android:layout_height="54dp"
         android:layout_marginTop="8dp"
@@ -89,7 +89,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Com_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="50dp"

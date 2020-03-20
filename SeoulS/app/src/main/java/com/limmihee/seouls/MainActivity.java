@@ -10,9 +10,14 @@ import android.widget.Button;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     public Sports_DB sports_db;
+    experience_point experience_point;
+    public companies companies_DB;
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -23,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
 
         //databaseReference.child("현재운동").setValue("테니스");
         {
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("테니스");
+//            experience_point = new experience_point();
+//            experience_point.setName("");
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("테니스").child("체험장소");
+//            companies_DB= new companies();
+//            ArrayList <String> C_Name = new ArrayList<String>();
+//            C_Name.add("뚝섬 한강공원");C_Name.add("잠원 한강공원");C_Name.add("이촌 한강공원");
+//            C_Name.add("망원 한강공원");C_Name.add("광나루 한강공원");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
 //        databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("테니스");
 //        sports_db= new Sports_DB();
 //        sports_db.setName("테니스");
@@ -33,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
 //                    "심리전 게임이라고 불릴 만큼 정신적인 부분도 상강히 중요한 스포츠 이다. ");
 //        databaseReference.setValue(sports_db);
 //
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("배드민턴").child("체험장소");
+//            companies_DB= new companies();
+//            ArrayList <String> C_Name = new ArrayList<String>();
+//            C_Name.add("뚝섬 한강공원");C_Name.add("반포 한강공원");C_Name.add("이촌 한강공원");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
 //        databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("배드민턴");
 //        sports_db= new Sports_DB();
 //        sports_db.setName("배드민턴");
@@ -43,6 +64,12 @@ public class MainActivity extends AppCompatActivity {
 //           "콕의 속도 또한 상당히 빨라 구속이 빠른 경기로 기네스북에 등제되어 있는 스포츠이기도 하다.  ");
 //            databaseReference.setValue(sports_db);
 //
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("양궁").child("체험장소");
+//            companies_DB= new companies();
+//            C_Name = new ArrayList<String>();
+//            C_Name.add("난지 한강공원");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
 //        databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("양궁");
 //        sports_db= new Sports_DB();
 //        sports_db.setName("양궁");
@@ -53,6 +80,12 @@ public class MainActivity extends AppCompatActivity {
 //                " 풍토나 풍습에 따라 다양하게 변형되어 있다.");
 //            databaseReference.setValue(sports_db);
 //
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("야구").child("체험장소");
+//            companies_DB= new companies();
+//            C_Name = new ArrayList<String>();
+//            C_Name.add("망원 한강공원");C_Name.add("난지 한강공원");C_Name.add("광나루 한강공원");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
 //        databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("야구");
 //        sports_db= new Sports_DB();
 //        sports_db.setName("야구");
@@ -63,6 +96,13 @@ public class MainActivity extends AppCompatActivity {
 //                "분이 되어 있는 스포츠 이다.");
 //            databaseReference.setValue(sports_db);
 //
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("배구").child("체험장소");
+//            companies_DB= new companies();
+//            C_Name = new ArrayList<String>();
+//            C_Name.add("잠실 한강공원");C_Name.add("잠원 한강공원");C_Name.add("이촌 한강공원");
+//            C_Name.add("양화 한강공원");C_Name.add("망원 한강공원");C_Name.add("광나루 한강공원");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
 //        databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("배구");
 //        sports_db= new Sports_DB();
 //        sports_db.setName("배구");
@@ -73,6 +113,13 @@ public class MainActivity extends AppCompatActivity {
 //                "팀 코트에 떨어트릴 경우 점수를 얻게 된다. ");
 //            databaseReference.setValue(sports_db);
 //
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("족구").child("체험장소");
+//            companies_DB= new companies();
+//            C_Name = new ArrayList<String>();
+//            C_Name.add("잠실 한강공원");C_Name.add("뚝섬 한강공원");C_Name.add("이촌 한강공원");
+//            C_Name.add("난지 한강공원");C_Name.add("강서 한강공원");C_Name.add("광나루 한강공원");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
 //        databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("족구");
 //        sports_db= new Sports_DB();
 //        sports_db.setName("족구");
@@ -83,6 +130,14 @@ public class MainActivity extends AppCompatActivity {
 //                "발과 머리 만 사용해 공격과 수비를 주고 받는 스포츠이다.");
 //            databaseReference.setValue(sports_db);
 //
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("축구").child("체험장소");
+//            companies_DB= new companies();
+//            C_Name = new ArrayList<String>();
+//            C_Name.add("잠원 한강공원");C_Name.add("뚝섬 한강공원");C_Name.add("반포 한강공원");
+//            C_Name.add("양화 한강공원");
+//            C_Name.add("이촌 한강공원");C_Name.add("망원 한강공원");C_Name.add("광나루 한강공원");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
 //        databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("축구");
 //        sports_db= new Sports_DB();
 //        sports_db.setName("축구");
@@ -93,6 +148,14 @@ public class MainActivity extends AppCompatActivity {
 //                "활동 구역이 제한되어 있으며. 다른 선수들은 경기장안에서 공을 고의로 만지면 핸드볼 반칙이 된다.");
 //            databaseReference.setValue(sports_db);
 //
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("농구").child("체험장소");
+//            companies_DB= new companies();
+//            C_Name = new ArrayList<String>();
+//            C_Name.add("잠원 한강공원");C_Name.add("뚝섬 한강공원");C_Name.add("반포 한강공원");
+//            C_Name.add("양화 한강공원");
+//            C_Name.add("이촌 한강공원");C_Name.add("망원 한강공원");C_Name.add("난지 한강공원");C_Name.add("광나루 한강공원");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
 //        databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("농구");
 //        sports_db= new Sports_DB();
 //        sports_db.setName("농구");
@@ -103,6 +166,13 @@ public class MainActivity extends AppCompatActivity {
 //                "다른 팀의 바구니 안에 던져 넣는 스포츠 이다.");
 //            databaseReference.setValue(sports_db);
 //
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("인라인").child("체험장소");
+//            companies_DB= new companies();
+//            C_Name = new ArrayList<String>();
+//
+//            C_Name.add("이촌 한강공원");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
 //        databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("인라인");
 //        sports_db= new Sports_DB();
 //        sports_db.setName("인라인");

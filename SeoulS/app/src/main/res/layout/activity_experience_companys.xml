@@ -33,44 +33,44 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/simple_name"
+        android:id="@+id/simple_info"
         android:layout_width="185dp"
         android:layout_height="72dp"
         android:layout_marginStart="53dp"
         android:layout_marginTop="120dp"
-        android:text="공원이름"
+        android:text="각종정보"
         android:textSize="19dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/simple_info"
-        android:layout_width="315dp"
-        android:layout_height="44dp"
+        android:id="@+id/Com_Pay"
+        android:layout_width="316dp"
+        android:layout_height="73dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="32dp"
-        android:text="회사이름"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/simple_name" />
-
-    <TextView
-        android:id="@+id/Detalis_info"
-        android:layout_width="318dp"
-        android:layout_height="240dp"
-        android:layout_marginStart="52dp"
         android:layout_marginTop="32dp"
         android:text="이용정보나 요금"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simple_info" />
 
     <TextView
-        android:id="@+id/Sports_Name"
+        android:id="@+id/Detalis_info"
+        android:layout_width="317dp"
+        android:layout_height="214dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="32dp"
+        android:text="기준이나 그런서"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Com_Pay" />
+
+    <TextView
+        android:id="@+id/Com_Name"
         android:layout_width="280dp"
         android:layout_height="54dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"
         android:gravity="center"
-        android:text="TextView"
+        android:text="name"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
