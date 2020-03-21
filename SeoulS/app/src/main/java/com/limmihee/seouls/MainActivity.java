@@ -14,9 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    experience_point experience_point;
 
     public Sports_DB sports_db;
-    experience_point experience_point;
+    experience_point Experience_point;
     public companies companies_DB;
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -28,6 +29,50 @@ public class MainActivity extends AppCompatActivity {
 
         //databaseReference.child("현재체험장소").setValue("뿌뿌");
         {
+            {
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("테니스").child("체험장소").child("뚝섬 한강공원");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("뚝섬 한강공원");
+//                Experience_point.setPay("1회 2시간, 5000원 월정기권 75,000원");
+//                Experience_point.setSimple_info("예약 홈페이지 주소의 경우 http://www.한강테니스장.com 입니다.");
+//                Experience_point.setDetail_info("월 정기권의 경우 이용시간이 06:00시 ~ 09:00에 한하며 2시간 이내 사용해야합니다.");
+//                Experience_point.setPhone_num("01054950798");
+//                databaseReference.setValue(Experience_point);
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("테니스").child("체험장소").child("잠원 한강공원");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("잠원 한강공원");
+//                Experience_point.setPay("1회 2시간, 5000원 월정기권 75,000원");
+//                Experience_point.setSimple_info("예약 홈페이지 주소의 경우 http://www.한강잠원망원테니스.kr 입니다.");
+//                Experience_point.setDetail_info("월 정기권의 경우 이용시간이 06:00시 ~ 09:00에 한하며 2시간 이내 사용해야합니다.");
+//                Experience_point.setPhone_num("01045123743");
+//                databaseReference.setValue(Experience_point);
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("테니스").child("체험장소").child("이촌 한강공원");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("이촌 한강공원");
+//                Experience_point.setPay("1회 2시간, 5000원 월정기권 75,000원");
+//                Experience_point.setSimple_info("예약 홈페이지 주소의 경우 http://www.한강테니스장.com 입니다.");
+//                Experience_point.setDetail_info("월 정기권의 경우 이용시간이 06:00시 ~ 09:00에 한하며 2시간 이내 사용해야합니다.");
+//                Experience_point.setPhone_num("01054950798");
+//                databaseReference.setValue(Experience_point);
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("테니스").child("체험장소").child("망원 한강공원");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("망원 한강공원");
+//                Experience_point.setPay("1회 2시간, 5000원 월정기권 75,000원");
+//                Experience_point.setSimple_info("예약 홈페이지 주소의 경우 http://www.한강잠원망원테니스.kr 입니다.");
+//                Experience_point.setDetail_info("월 정기권의 경우 이용시간이 06:00시 ~ 09:00에 한하며 2시간 이내 사용해야합니다.");
+//                Experience_point.setPhone_num("01045123743");
+//                databaseReference.setValue(Experience_point);
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("테니스").child("체험장소").child("광나루 한강공원");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("광나루 한강공원");
+//                Experience_point.setPay("1회 2시간, 5000원 월정기권 75,000원");
+//                Experience_point.setSimple_info("예약 홈페이지 주소의 경우 http://www.한강잠원망원테니스.kr 입니다.");
+//                Experience_point.setDetail_info("월 정기권의 경우 이용시간이 06:00시 ~ 09:00에 한하며 2시간 이내 사용해야합니다.");
+//                Experience_point.setPhone_num("01054950798");
+//                databaseReference.setValue(Experience_point);
+
+            }
+
 //            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("테니스");
 //            experience_point = new experience_point();
 //            experience_point.setName("");
@@ -48,6 +93,33 @@ public class MainActivity extends AppCompatActivity {
 //                    "심리전 게임이라고 불릴 만큼 정신적인 부분도 상강히 중요한 스포츠 이다. ");
 //        databaseReference.setValue(sports_db);
 //
+            {
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("배드민턴").child("체험장소").child("뚝섬 한강공원");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("뚝섬 한강공원");
+//                Experience_point.setPay("1회 2시간, 1000원 월정기권 30,000원");
+//                Experience_point.setSimple_info("뚝섬 한강공원의 배드민턴 장은 총 3가지 입니다.");
+//                Experience_point.setDetail_info("뚝섬 한강공원은 배드민턴 이외의 육상 스포츠 4가지를 즐길 수 있습니다.");
+//                Experience_point.setPhone_num("0237800521");
+//                databaseReference.setValue(Experience_point);
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("배드민턴").child("체험장소").child("반포 한강공원");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("반포 한강공원");
+//                Experience_point.setPay("1회 2시간, 1000원 월정기권 30,000원");
+//                Experience_point.setSimple_info("-");
+//                Experience_point.setDetail_info("뚝섬 한강공원은 배드민턴 이외의 육상 스포츠 2가지를 즐길 수 있습니다.");
+//                Experience_point.setPhone_num("0237800521");
+//                databaseReference.setValue(Experience_point);
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("배드민턴").child("체험장소").child("이촌 한강공원");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("이촌 한강공원");
+//                Experience_point.setPay("1회 2시간, 1000원 월정기권 30,000원");
+//                Experience_point.setSimple_info("-");
+//                Experience_point.setDetail_info("뚝섬 한강공원은 배드민턴 이외의 육상 스포츠 6가지를 즐길 수 있습니다.");
+//                Experience_point.setPhone_num("0237800521");
+//                databaseReference.setValue(Experience_point);
+
+            }
 //            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("배드민턴").child("체험장소");
 //            companies_DB= new companies();
 //            ArrayList <String> C_Name = new ArrayList<String>();
@@ -64,6 +136,9 @@ public class MainActivity extends AppCompatActivity {
 //           "콕의 속도 또한 상당히 빨라 구속이 빠른 경기로 기네스북에 등제되어 있는 스포츠이기도 하다.  ");
 //            databaseReference.setValue(sports_db);
 //
+            {
+                
+            }
 //            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("양궁").child("체험장소");
 //            companies_DB= new companies();
 //            C_Name = new ArrayList<String>();

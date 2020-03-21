@@ -34,7 +34,7 @@ public class Exercise_page extends AppCompatActivity {
 
     //companies companies;
     ArrayList<String> companies_Name =new ArrayList<>();
-    //String [] companies_Name ;
+    String  DB_input ;
 
     FirebaseDatabase firebaseDatabase ;
     DatabaseReference databaseReference ;
@@ -59,6 +59,7 @@ public class Exercise_page extends AppCompatActivity {
                         int i = Companies.size();
                         for(int j=0; j<i; j++){
                             textview(Companies.get(j));
+
                         }
                         Get_this_id++;
                     }
