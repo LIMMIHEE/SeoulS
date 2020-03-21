@@ -23,30 +23,6 @@
         android:id="@+id/Park_info"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/park_info_btn"
-            android:layout_width="124dp"
-            android:layout_height="114dp"
-            android:layout_marginStart="20dp"
-
-            android:layout_marginTop="60dp"
-            android:background="@drawable/btn_re_mian_red"
-            android:gravity="center"
-            android:letterSpacing="0.2"
-            android:padding="20dp"
-            android:text="잠실\n한강\n공원"
-            android:textSize="19sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-    </LinearLayout>
+        android:orientation="vertical"/>
 
 </LinearLayout>

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //databaseReference.child("현재운동").setValue("테니스");
+        //databaseReference.child("현재체험장소").setValue("뿌뿌");
         {
 //            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("테니스");
 //            experience_point = new experience_point();
