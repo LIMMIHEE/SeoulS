@@ -137,7 +137,15 @@ public class MainActivity extends AppCompatActivity {
 //            databaseReference.setValue(sports_db);
 //
             {
-                
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("양궁").child("체험장소").child("난지 한강공원");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("난지 한강공원");
+//                Experience_point.setPay("1회 이용자 5,000원, 1일 이용 5,000원 월정기권 40,000원");
+//                Experience_point.setSimple_info("1회 이용의 경우 코스 체험으로 20발이 주어지며. 1일의 경우 75발 이내, 3시간 이내로 개인장비를 소지해야 합니다. " +
+//                        "이는 월별이용자와 같습니다.");
+//                Experience_point.setDetail_info("뚝섬 한강공원은 배드민턴 이외의 육상 스포츠 3가지를 즐길 수 있습니다.");
+//                Experience_point.setPhone_num("0237800611");
+//               databaseReference.setValue(Experience_point);
             }
 //            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("양궁").child("체험장소");
 //            companies_DB= new companies();
@@ -155,6 +163,41 @@ public class MainActivity extends AppCompatActivity {
 //                " 풍토나 풍습에 따라 다양하게 변형되어 있다.");
 //            databaseReference.setValue(sports_db);
 //
+            {
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("야구").child("체험장소").child("망원 한강공원");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("망원 한강공원");
+//                Experience_point.setPay("[어린이 야구장] 1회 2시간, 8000원 / 월 정기 사용제 120,000원");
+//                Experience_point.setSimple_info("어린이 야구장으로, 만 13세 미만 어린이만 사용가능 합니다.");
+//                Experience_point.setDetail_info("망원 한강공원은 배드민턴 이외의 육상 스포츠 4가지를 즐길 수 있습니다.");
+//                Experience_point.setPhone_num("0237800601");
+//                databaseReference.setValue(Experience_point);
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("야구").child("체험장소").child("난지 한강공원");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("난지 한강공원");
+//                Experience_point.setPay("1회 3시간, 20000원 / 월 정기 사용제 X");
+//                Experience_point.setSimple_info("-");
+//                Experience_point.setDetail_info("난지 한강공원은 배드민턴 이외의 육상 스포츠 3가지를 즐길 수 있습니다.");
+//                Experience_point.setPhone_num("0237800611");
+//                databaseReference.setValue(Experience_point);
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("야구").child("체험장소").child("광나루 한강공원");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("광나루 한강공원");
+//                Experience_point.setPay("[성인] 1회 3시간, 20000원 / 주말 및 휴일 26,000원 / 월 정기 사용제 X ");
+//                Experience_point.setSimple_info("[어린이 야구] 1회 2시간, 8000원 / 월 정기 120,000원 | 만 13세 미만 어린이 사용가능");
+//                Experience_point.setDetail_info("광나루 한강공원은 배드민턴 이외의 육상 스포츠 5가지를 즐길 수 있습니다.");
+//                Experience_point.setPhone_num("0237800501");
+//                databaseReference.setValue(Experience_point);
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("야구").child("체험장소").child("망원 한강공원");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("망원 한강공원");
+//                Experience_point.setPay("[어린이 야구]  1회 2시간, 8000원 / 월 정기 120,000원 ");
+//                Experience_point.setSimple_info("만 13세 미만 어린이 사용가능");
+//                Experience_point.setDetail_info("망원 한강공원은 배드민턴 이외의 육상 스포츠 5가지를 즐길 수 있습니다.");
+//                Experience_point.setPhone_num("0237800601");
+//                databaseReference.setValue(Experience_point);
+
+            }
 //            databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("야구").child("체험장소");
 //            companies_DB= new companies();
 //            C_Name = new ArrayList<String>();
