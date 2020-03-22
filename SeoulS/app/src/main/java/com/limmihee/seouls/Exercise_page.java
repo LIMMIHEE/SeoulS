@@ -94,50 +94,20 @@ public class Exercise_page extends AppCompatActivity {
 
     }
 
-    public void textview(String a){
-
+    public void textview(String AName){
+        final String Name=AName;
         //TextView 생성
         TextView view1 = new TextView(this);
         view1.setId(Get_this_id);
         view1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                databaseReference.child("현재운동").addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        sports_name_Fire=dataSnapshot.getValue(String.class);
-
-                        databaseReference.child("육상").child(sports_name_Fire).child("체험장소").child("companies_Name").addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                GenericTypeIndicator<List<String>> t = new GenericTypeIndicator<List<String>>() {};
-                                List<String> Companies = dataSnapshot.getValue(t);
-                                int i = Companies.size();
-                                for(int j=0; j<i; j++){
-                                    if(Get_this_id==j){
-                                        databaseReference.child("현재체험장소").setValue(Companies.get(j));
-                                    }
-                                }
-
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
+                databaseReference.child("현재체험장소").setValue(Name);
                 Intent intent = new Intent(Exercise_page.this, experience_companys.class);
                 startActivity(intent);
             }
         });
-        view1.setText(a);
+        view1.setText(AName);
         view1.setBackgroundResource(R.drawable.btn_re_mian_red);
         view1.setTextSize(FONT_SIZE);
         view1.setPadding(20, 20, 20, 20);
