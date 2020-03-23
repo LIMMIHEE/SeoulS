@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //databaseReference.child("현재체험장소").setValue("뿌뿌");
+//        databaseReference.child("현재운동분야").setValue("뿌뿌");
         {
             {
 //                databaseReference = FirebaseDatabase.getInstance().getReference().child("육상").child("테니스").child("체험장소").child("뚝섬 한강공원");
@@ -539,11 +539,12 @@ public class MainActivity extends AppCompatActivity {
 //            databaseReference.setValue(sports_db);
     }
 
-
+        databaseReference = firebaseDatabase.getReference();
         Button aqua_main_btn = (Button) findViewById(R.id.aqua_sports_btn);
         aqua_main_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                databaseReference.child("현재운동분야").setValue("수상");
                 Intent intent = new Intent(MainActivity.this, AquaticSports.class);
                 startActivity(intent);
             }
@@ -553,6 +554,7 @@ public class MainActivity extends AppCompatActivity {
         Arhletics_main_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                databaseReference.child("현재운동분야").setValue("육상");
                 Intent intent = new Intent(MainActivity.this, Athletics_sports.class);
                 startActivity(intent);
             }
