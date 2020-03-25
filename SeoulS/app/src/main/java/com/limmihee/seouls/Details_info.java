@@ -20,6 +20,7 @@ public class Details_info extends AppCompatActivity {
     Current_usage_sports usage_sports;
 
     String sports_name_Fire;
+    String sports_Field_Fire;
 
     FirebaseDatabase firebaseDatabase ;
     DatabaseReference databaseReference ;
@@ -57,25 +58,37 @@ public class Details_info extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 sports_name_Fire=dataSnapshot.getValue(String.class);
 
-                databaseReference=firebaseDatabase.getReference().child("육상").child(sports_name_Fire);
-                databaseReference.addValueEventListener(new ValueEventListener() {
 
+                databaseReference.child("현재운동분야").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        name=dataSnapshot.child("name").getValue().toString();
-                        photo=dataSnapshot.child("photo_name").getValue().toString();
-                        simple_info+=dataSnapshot.child("simple_info").getValue().toString();
-                        event=dataSnapshot.child("event").getValue().toString();
-                        detail_info=dataSnapshot.child("detail_info").getValue().toString();
+                        sports_Field_Fire = dataSnapshot.getValue(String.class);
+                        databaseReference=firebaseDatabase.getReference().child(sports_Field_Fire).child(sports_name_Fire);
+                        databaseReference.addValueEventListener(new ValueEventListener() {
 
-                        int  getID = getDraw_id("drawable",photo);
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                name=dataSnapshot.child("name").getValue().toString();
+                                photo=dataSnapshot.child("photo_name").getValue().toString();
+                                simple_info+=dataSnapshot.child("simple_info").getValue().toString();
+                                event=dataSnapshot.child("event").getValue().toString();
+                                detail_info=dataSnapshot.child("detail_info").getValue().toString();
 
-                        Sports_name.setText(name);
-                        Spl_name.setText(event);
-                        Spl_info.setText(simple_info);
-                        Details_info_.setText(detail_info);
-                        SP_img.setImageResource(getID);
+                                int  getID = getDraw_id("drawable",photo);
 
+                                Sports_name.setText(name);
+                                Spl_name.setText(event);
+                                Spl_info.setText(simple_info);
+                                Details_info_.setText(detail_info);
+                                SP_img.setImageResource(getID);
+
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                            }
+                        });
                     }
 
                     @Override
@@ -83,6 +96,7 @@ public class Details_info extends AppCompatActivity {
 
                     }
                 });
+
             }
 
             @Override

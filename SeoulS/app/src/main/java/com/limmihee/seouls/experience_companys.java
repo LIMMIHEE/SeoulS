@@ -52,7 +52,7 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
     String detail_info;
 
     private String Map_name="체험장소";
-
+    String sports_Field_Fire;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,20 +75,34 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         Now_com=dataSnapshot.getValue().toString();
-                        databaseReference.child("육상").child(Sports_Name).child("체험장소").child(Now_com).addListenerForSingleValueEvent(new ValueEventListener() {
+
+                        databaseReference.child("현재운동분야").addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                name = dataSnapshot.child("name").getValue().toString();
-                                detail_info = dataSnapshot.child("detail_info").getValue().toString();
-                                call_num= dataSnapshot.child("phone_num").getValue().toString();
-                                simple_info_S = dataSnapshot.child("simple_info").getValue().toString();
-                                Pay= dataSnapshot.child("pay").getValue().toString();
+                                sports_Field_Fire = dataSnapshot.getValue(String.class);
 
-                                Sports_name.setText(name);
-                                Spl_Pay.setText(Pay);
-                                simple_info.setText(simple_info_S);
-                                Details_info_.setText(detail_info);
+
+                                databaseReference.child(sports_Field_Fire).child(Sports_Name).child("체험장소").child(Now_com).addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        name = dataSnapshot.child("name").getValue().toString();
+                                        detail_info = dataSnapshot.child("detail_info").getValue().toString();
+                                        call_num= dataSnapshot.child("phone_num").getValue().toString();
+                                        simple_info_S = dataSnapshot.child("simple_info").getValue().toString();
+                                        Pay= dataSnapshot.child("pay").getValue().toString();
+
+                                        Sports_name.setText(name);
+                                        Spl_Pay.setText(Pay);
+                                        simple_info.setText(simple_info_S);
+                                        Details_info_.setText(detail_info);
 //                                Call_btn.setText(call_num);
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                    }
+                                });
                             }
 
                             @Override
@@ -96,6 +110,7 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
 
                             }
                         });
+
 
 
                     }

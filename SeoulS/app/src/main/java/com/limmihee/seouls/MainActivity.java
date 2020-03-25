@@ -538,7 +538,314 @@ public class MainActivity extends AppCompatActivity {
 //        sports_db.setDetail_info("해당 장소에서 즐길 수 있는 인라인은 일반적인 스케이트 입니다.");
 //            databaseReference.setValue(sports_db);
     }
+        {
+            {
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("잠실 한강공원").child("체험장소").child("프라이어스이노베이션");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("프라이어스이노베이션");
+//                Experience_point.setPay("모터보트 : 4인 기준 30,000원 \n바나나보트:20,000원\n플라이피쉬,수상스키, 웨이크보드 : 25,000원");
+//                Experience_point.setSimple_info("모터보트, 바나나보트, 수상스키, 웨이크 보드");
+//                Experience_point.setDetail_info("이용시간은 일출 전 30분 ~ 일몰 후 30분 입니다. ( 보통 오전 6시~ 저녁 8시 ) \n 잠실 한강공원에는 수상레저체험 가능한 장소가 1군데 더 있습니다.");
+//                Experience_point.setPhone_num("01034526272");
+//                databaseReference.setValue(Experience_point);
+//
+//                databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("잠실 한강공원").child("체험장소").child("에이티씨개발");
+//                Experience_point = new experience_point();
+//                Experience_point.setName("에이티씨개발");
+//                Experience_point.setPay("요트 : 25,000원 \n파워보트 : 85,000원 ");
+//                Experience_point.setSimple_info("요트, 파워보트");
+//                Experience_point.setDetail_info("이용시간은 일출 전 30분 ~ 23:00 \n 잠실 한강공원에는 수상레저체험 가능한 장소가 1군데 더 있습니다.");
+//                Experience_point.setPhone_num("024239595");
+//                databaseReference.setValue(Experience_point);
 
+            }
+
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("잠실 한강공원");
+//            experience_point = new experience_point();
+//            experience_point.setName("");
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("잠실 한강공원").child("체험장소");
+//            companies_DB= new companies();
+//            ArrayList <String> C_Name = new ArrayList<String>();
+//            C_Name.add("프라이어스이노베이션");C_Name.add("에이티씨개발");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
+//
+//        databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("잠실 한강공원");
+//        sports_db= new Sports_DB();
+//        sports_db.setName("잠실 한강공원");
+//        sports_db.setEvent("최저 20,000원 최대 85,000원 ");
+//        sports_db.setPhoto_name("water_sports_1");
+//        sports_db.setSimple_info("체험 가능 회사 : 프라이어스이노베이션, 에이티씨개발 ");
+//        sports_db.setDetail_info("체험 가능한 프로그램은 각 \n프라이노베이션 :: 보터보트, 바나나보트, 수상스키, 웨이크보드 " +
+//                "\n에이티씨개발 :: 요트, 파워보트 입니다. 해당 공원에서는 다른 육상 스포츠 2가지 또한 체험 가능합니다.");
+//        databaseReference.setValue(sports_db);
+
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("뚝섬 한강공원");
+//            sports_db= new Sports_DB();
+//            sports_db.setName("뚝섬 한강공원");
+//            sports_db.setEvent("최저 (소인)10,000원 최대 20,000원");
+//            sports_db.setPhoto_name("water_sports_2");
+//            sports_db.setSimple_info("체험 가능 회사 : 아리랑하우스");
+//            sports_db.setDetail_info("체험 가능한 프로그램 각 \n 아리랑하우스:: 요트, 조정");
+//            databaseReference.setValue(sports_db);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("뚝섬 한강공원");
+//            experience_point = new experience_point();
+//            experience_point.setName("");
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("뚝섬 한강공원").child("체험장소");
+//            companies_DB= new companies();
+//            ArrayList <String> C_Name = new ArrayList<String>();
+//            C_Name.add("아리랑하우스");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("뚝섬 한강공원").child("체험장소").child("아리랑하우스");
+//            Experience_point = new experience_point();
+//            Experience_point.setName("아리랑하우스");
+//            Experience_point.setPay("요트 : 20,000원 ( 대인 ) 대인  10,000원 ( 소인 )");
+//            Experience_point.setSimple_info("요트, 조정");
+//            Experience_point.setDetail_info("이용시간은 일출 전 30분 ~ 23:00 입니다.  \n 뚝섬 한강공원에는 수상 레저 체험 가능한 장소는 없지만 5가지의 육상 스포츠를 체험 가능합니다.");
+//            Experience_point.setPhone_num("024475555");
+//            databaseReference.setValue(Experience_point);
+//
+//            ////////////
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("잠원 한강공원");
+//            sports_db= new Sports_DB();
+//            sports_db.setName("잠원 한강공원");
+//            sports_db.setEvent("최저 20,000원 최대 50,000원");
+//            sports_db.setPhoto_name("water_sports_3");
+//            sports_db.setSimple_info("체험 가능 회사 : 삼세룡, 화창레저산업, ON수상레저");
+//            sports_db.setDetail_info("체험 가능한 프로그램 각 \n 삼세룡:: 모터보트, 수상스키, 웨이크보드, 땅콩보트, 바나나 보트\n" +
+//                    "화창레져산업:: 모터보트, 수상스키, 웨이크보드, 땅콩보트, 바나나보트\n" +
+//                    "ON수상레저:: 수상스키, 웨이크보드, 밴드웨건, 바나나보트, 플라이피쉬");
+//            databaseReference.setValue(sports_db);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("잠원 한강공원");
+//            experience_point = new experience_point();
+//            experience_point.setName("");
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("잠원 한강공원").child("체험장소");
+//            companies_DB= new companies();
+//            C_Name = new ArrayList<String>();
+//            C_Name.add("삼세룡(리버시티)");C_Name.add("화창레저산업");C_Name.add("ON수상레저");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("잠원 한강공원").child("체험장소").child("삼세룡(리버시티)");
+//            Experience_point = new experience_point();
+//            Experience_point.setName("삼세룡(리버시티)");
+//            Experience_point.setPay("모터보트 : 50,000원 / 5인 기준 \n 수상스키 : 25,000원 \n 웨이크보드 : 27,000원\n 웨이크보드 : 27,000원 \n 땅콩보트, 바나나보트 : 20,000원 / 1인 기준");
+//            Experience_point.setSimple_info("모터보트 ,  수상스키, 웨이크보느, 땅콩보트, 바나나보트");
+//            Experience_point.setDetail_info("이용시간은 일출 전 30분 ~ 일몰 후 30분 ( 보통 오전 6시~저녁 8시 ) 입니다.  \n 잠원 한강공원에는 수상 레저 체험 가능한 장소는 2군데가 더 있습니다.");
+//            Experience_point.setPhone_num("0234423313");
+//            databaseReference.setValue(Experience_point);
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("잠원 한강공원").child("체험장소").child("화창레저산업");
+//            Experience_point = new experience_point();
+//            Experience_point.setName("화창레저산업");
+//            Experience_point.setPay("모터보트 : 50,000원 / 5인 기준 \n 수상스키 ,웨이크보드 : 25,000원\n 웨이크보드 : 27,000원 \n 땅콩보트, 바나나보트 : 50,000원 / 1회");
+//            Experience_point.setSimple_info("모터보트 ,  수상스키, 웨이크보느, 땅콩보트, 바나나보트");
+//            Experience_point.setDetail_info("이용시간은 일출 전 30분 ~ 일몰 후 30분 ( 보통 오전 6시~저녁 8시 ) 입니다.  \n 잠원 한강공원에는 수상 레저 체험 가능한 장소는 2군데가 더 있습니다.");
+//            Experience_point.setPhone_num("0234770333");
+//            databaseReference.setValue(Experience_point);
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("잠원 한강공원").child("체험장소").child("ON수상레저");
+//            Experience_point = new experience_point();
+//            Experience_point.setName("ON수상레저");
+//            Experience_point.setPay("수상스키 ,웨이크보드 : 25,000원\n 밴드웨건, 바나나보트 : 20,000원 ");
+//            Experience_point.setSimple_info("수상스키, 웨이크보드, 밴드웨건, 바나나보트, 플라이피쉬");
+//            Experience_point.setDetail_info("이용시간은 일출 전 30분 ~ 일몰 후 30분 ( 보통 오전 6시~저녁 8시 ) 입니다.  \n 잠원 한강공원에는 수상 레저 체험 가능한 장소는 2군데가 더 있습니다.");
+//            Experience_point.setPhone_num("0234421582");
+//            databaseReference.setValue(Experience_point);
+//
+//            ///////////
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("반포 한강공원");
+//            sports_db= new Sports_DB();
+//            sports_db.setName("반포 한강공원");
+//            sports_db.setEvent("최소 (소인) 20,000원 최대 30,000원");
+//            sports_db.setPhoto_name("water_sports_4");
+//            sports_db.setSimple_info("체험 가능 회사 : 요트에베뉴, 튜브스터코리아");
+//            sports_db.setDetail_info("체험 가능한 프로그램 각 \n 요트에베뉴:: 요트\n" +
+//                    "튜브스터코리아:: 튜브스터");
+//            databaseReference.setValue(sports_db);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("반포 한강공원");
+//            experience_point = new experience_point();
+//            experience_point.setName("");
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("반포 한강공원").child("체험장소");
+//            companies_DB= new companies();
+//             C_Name = new ArrayList<String>();
+//            C_Name.add("요트에베뉴");C_Name.add("튜브스터코리아");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("반포 한강공원").child("체험장소").child("요트에베뉴");
+//            Experience_point = new experience_point();
+//            Experience_point.setName("요트에베뉴");
+//            Experience_point.setPay("요트 : ( 대인 ) 30,000원  | ( 소인 ) 20,000원");
+//            Experience_point.setSimple_info("요트 체험 가능합니다.");
+//            Experience_point.setDetail_info("이용시간은 일출 전 30분 ~ 23:00 입니다.  \n 반포 한강공원에는 수상 레저 체험 가능한 장소는 1군데가 더 있습니다.");
+//            Experience_point.setPhone_num("01090615616");
+//            databaseReference.setValue(Experience_point);
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("반포 한강공원").child("체험장소").child("튜브스터코리아");
+//            Experience_point = new experience_point();
+//            Experience_point.setName("튜브스터코리아");
+//            Experience_point.setPay("튜브스터 : 30,000원 / 최대 6인 탑승");
+//            Experience_point.setSimple_info("튜브스터 체험 가능합니다.");
+//            Experience_point.setDetail_info("이용시간은 일출 전 30분 ~ 23:00 입니다.  \n 반포 한강공원에는 수상 레저 체험 가능한 장소는 1군데가 더 있습니다.");
+//            Experience_point.setPhone_num("07042801362");
+//            databaseReference.setValue(Experience_point);
+//
+//            ///////
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("이촌 한강공원");
+//            sports_db= new Sports_DB();
+//            sports_db.setName("이촌 한강공원");
+//            sports_db.setEvent("25,000원 고정");
+//            sports_db.setPhoto_name("water_sports_5");
+//            sports_db.setSimple_info("체험 가능 회사 : 세븐마린레저");
+//            sports_db.setDetail_info("체험 가능한 프로그램 수상스키, 웨이크보드 : 25,000원");
+//            databaseReference.setValue(sports_db);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("이촌 한강공원");
+//            experience_point = new experience_point();
+//            experience_point.setName("");
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("이촌 한강공원").child("체험장소");
+//            companies_DB= new companies();
+//            C_Name = new ArrayList<String>();
+//            C_Name.add("세븐마린레저");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("이촌 한강공원").child("체험장소").child("세븐마린레저");
+//            Experience_point = new experience_point();
+//            Experience_point.setName("세븐마린레저");
+//            Experience_point.setPay("수상스키, 웨이크보드 : 25,000원");
+//            Experience_point.setSimple_info("수상스키, 웨이크보드 체험이 가능합니다.");
+//            Experience_point.setDetail_info("이용시간은 일출 전 30분 ~ 일몰 후 30분 ( 보통 오전 6시~저녁 8시 ) 입니다.  \n 이촌 한강공원에는 수상 레저 체험 가능한 장소는 이곳 뿐이지만, " +
+//                    "육상 스포츠의 경우 7가지를 체험하는 것이 가능합니다.");
+//            Experience_point.setPhone_num("01097531910");
+//            databaseReference.setValue(Experience_point);
+//
+//            //////
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("여의도 한강공원");
+//            sports_db= new Sports_DB();
+//            sports_db.setName("여의도 한강공원");
+//            sports_db.setEvent("최저 4,000원 최대 100,000원");
+//            sports_db.setPhoto_name("water_sports_6");
+//            sports_db.setSimple_info("체험 가능 회사 : 서울마리나, 파라다이스, 한강레저스포츠");
+//            sports_db.setDetail_info("체험 가능한 프로그램 각 \n서울마리나:: 요트, 딩기요트\n파라다이스:: 수상스키, 웨이크보드, 바나나보트, 땅콩보트" +
+//                    "\n한강레저스포츠:: 모터보트, 수상오토바이, 수상스키, 웨이크보드, 바나나보트, 웨터보트, 블롭점프");
+//            databaseReference.setValue(sports_db);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("여의도 한강공원");
+//            experience_point = new experience_point();
+//            experience_point.setName("");
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("여의도 한강공원").child("체험장소");
+//            companies_DB= new companies();
+//            C_Name = new ArrayList<String>();
+//            C_Name.add("서울마리나");C_Name.add("파라다이스");C_Name.add("한강레저스포츠");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("여의도 한강공원").child("체험장소").child("서울마리나");
+//            Experience_point = new experience_point();
+//            Experience_point.setName("서울마리나");
+//            Experience_point.setPay("딩기요트 : 4,000원 ( 1시간 )( 자세사항 아래 참조 ) \n 요트 : 15,000원 ( 사전예약필수 )");
+//            Experience_point.setSimple_info("딩기요트, 요트 체험 가능");
+//            Experience_point.setDetail_info("이용시간은 일출 전 30분 ~ 일몰 후 30분 ( 보통 오전 6시~저녁 8시 ) 입니다.  \n" +
+//                    "딩기요트의 경우 초보자라면 5시간 이상의 교육 후 이용가능 합니다 ( 교육비 50,000원 )" +
+//                    "\n 여의도 한강공원에는 수상 레저 체험 가능한 장소는 2곳 더 있습니다.");
+//            Experience_point.setPhone_num("0237808427");
+//            databaseReference.setValue(Experience_point);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("여의도 한강공원").child("체험장소").child("파라다이스");
+//            Experience_point = new experience_point();
+//            Experience_point.setName("파라다이스");
+//            Experience_point.setPay("수상스키, 웨이크보드 : 25,000원 \n 땅콩보트, 바나나보트 : 15,000원");
+//            Experience_point.setSimple_info("수상스키, 웨이크보드, 땅콩보트, 바나나 보트 ");
+//            Experience_point.setDetail_info("이용시간은 일출 전 30분 ~ 일몰 후 30분 ( 보통 오전 6시~저녁 8시 ) 입니다."+
+//                    "\n 여의도 한강공원에는 수상 레저 체험 가능한 장소는 2곳 더 있습니다.");
+//            Experience_point.setPhone_num("0237800740");
+//            databaseReference.setValue(Experience_point);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("여의도 한강공원").child("체험장소").child("한강레저스포츠");
+//            Experience_point = new experience_point();
+//            Experience_point.setName("한강레저스포츠");
+//            Experience_point.setPay("모터보트 : 30,000원 / 3인 기준   수상오토바이 : 50,000원 / 2인 기준\n 수상스키, 웨이크보드: 25,000원   바나나보트: 40,000원 / 1화" +
+//                    "\n 워터보드 : 100,000원 ( 강습료 포함 150,000원 ) \n 블롭점프 : 10,000원");
+//            Experience_point.setSimple_info("보터보트, 수상오타바이, 수상스키, 웨이크보드, 바나나보트, 워터보드, 블롭점프");
+//            Experience_point.setDetail_info("이용시간은 일출 전 30분 ~ 일몰 후 30분 ( 보통 오전 6시~저녁 8시 ) 입니다."+
+//                    "\n 여의도 한강공원에는 수상 레저 체험 가능한 장소는 2곳 더 있습니다.");
+//            Experience_point.setPhone_num("0232716948");
+//            databaseReference.setValue(Experience_point);
+//
+//
+//            /////
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("양화 한강공원");
+//            sports_db= new Sports_DB();
+//            sports_db.setName("양화 한강공원");
+//            sports_db.setEvent("최저 20,000원 최대 40,000원");
+//            sports_db.setPhoto_name("water_sports_7");
+//            sports_db.setSimple_info("체험 가능 회사 : 한강레저스포츠");
+//            sports_db.setDetail_info("체험 가능한 프로그램 : 모터보트, 카약, 카누, 수상스키, 웨이크 보드, 바나나보트, 오리보트");
+//            databaseReference.setValue(sports_db);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("양화 한강공원");
+//            experience_point = new experience_point();
+//            experience_point.setName("");
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("양화 한강공원").child("체험장소");
+//            companies_DB= new companies();
+//            C_Name = new ArrayList<String>();
+//            C_Name.add("한강레저스포츠");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("양화 한강공원").child("체험장소").child("한강레저스포츠");
+//            Experience_point = new experience_point();
+//            Experience_point.setName("한강레저스포츠");
+//            Experience_point.setPay("모터보트 : 30,000원 / 3인 기준 \n 카약, 카누 : 25,000원 \n 수상스키, 웨이크보드 : 25,000원 \n 바나나보트 : 1회 40,000원    오리보트 : 20,000원");
+//            Experience_point.setSimple_info("모터보트, 카약, 카누, 수상스키, 웨이크 보드, 바나나보트, 오리보트");
+//            Experience_point.setDetail_info("이용시간은 일출 전 30분 ~ 일몰 후 30분 ( 보통 오전 6시~저녁 8시 ) 입니다.  \n " +
+//                    "양화 한강공원에는 수상 레저 체험 가능한 장소 이곳 뿐이지만 육상 스포츠 3가지를 즐길 수 있습니다.");
+//            Experience_point.setPhone_num("01093635009");
+//            databaseReference.setValue(Experience_point);
+//
+//            //////
+//
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("망원 한강공원");
+//            sports_db= new Sports_DB();
+//            sports_db.setName("망원 한강공원");
+//            sports_db.setEvent("최저 15,000원 최대 39,000원");
+//            sports_db.setPhoto_name("jeremy");
+//            sports_db.setSimple_info("체험 가능 회사 : 에이글로벌");
+//            sports_db.setDetail_info("체험 가능한 프로그램 : 모터보트, 수상스키, 웨이크 보드, 윈드 서핑, 바나나보트");
+//            databaseReference.setValue(sports_db);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("망원 한강공원");
+//            experience_point = new experience_point();
+//            experience_point.setName("");
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("망원 한강공원").child("체험장소");
+//            companies_DB= new companies();
+//            C_Name = new ArrayList<String>();
+//            C_Name.add("에이글로벌");
+//            companies_DB.setCompanies_Name(C_Name);
+//            databaseReference.setValue(companies_DB);
+//
+//            databaseReference = FirebaseDatabase.getInstance().getReference().child("수상").child("망원 한강공원").child("체험장소").child("에이글로벌");
+//            Experience_point = new experience_point();
+//            Experience_point.setName("에이글로벌");
+//            Experience_point.setPay("모터보트 : 30,000원 / 4인 기준 \n 카수상스키, 웨이크보드 : 25,000원 ( 강습 60,000원 ) \n 바나나보트 : 15,000원 / 1인당 ( 최대 5인 ) " +
+//                    "윈드서핑 : 39,000원 / 4시간  ( 강습 60,000원 / 2시간 )");
+//            Experience_point.setSimple_info("모터보트, 수상스키, 웨이크 보드, 윈드 서핑, 바나나보트");
+//            Experience_point.setDetail_info("이용시간은 일출 전 30분 ~ 일몰 후 30분 ( 보통 오전 6시~저녁 8시 ) 입니다.  \n " +
+//                    "망원 한강공원에는 수상 레저 체험 가능한 장소 이곳 뿐이지만 육상 스포츠 5가지를 즐길 수 있습니다.");
+//            Experience_point.setPhone_num("023376663");
+//            databaseReference.setValue(Experience_point);
+
+        }
         databaseReference = firebaseDatabase.getReference();
         Button aqua_main_btn = (Button) findViewById(R.id.aqua_sports_btn);
         aqua_main_btn.setOnClickListener(new View.OnClickListener(){

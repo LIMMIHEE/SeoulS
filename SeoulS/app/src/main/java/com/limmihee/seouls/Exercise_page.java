@@ -1,5 +1,6 @@
 package com.limmihee.seouls;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -35,6 +36,7 @@ public class Exercise_page extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase ;
     DatabaseReference databaseReference ;
 
+    String sports_Field_Fire;
     String sports_name_Fire;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,17 +49,29 @@ public class Exercise_page extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 sports_name_Fire=dataSnapshot.getValue(String.class);
 
-                databaseReference.child("육상").child(sports_name_Fire).child("체험장소").child("companies_Name").addListenerForSingleValueEvent(new ValueEventListener() {
+                databaseReference.child("현재운동분야").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        GenericTypeIndicator<List<String>> t = new GenericTypeIndicator<List<String>>() {};
-                        List<String> Companies = dataSnapshot.getValue(t);
-                        int i = Companies.size();
-                        for(int j=0; j<i; j++){
-                            textview(Companies.get(j));
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        sports_Field_Fire = dataSnapshot.getValue(String.class);
 
-                        }
-                        Get_this_id++;
+                        databaseReference.child(sports_Field_Fire).child(sports_name_Fire).child("체험장소").child("companies_Name").addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                GenericTypeIndicator<List<String>> t = new GenericTypeIndicator<List<String>>() {};
+                                List<String> Companies = dataSnapshot.getValue(t);
+                                int i = Companies.size();
+                                for(int j=0; j<i; j++){
+                                    textview(Companies.get(j));
+
+                                }
+                                Get_this_id++;
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+                        });
                     }
 
                     @Override
@@ -65,13 +79,14 @@ public class Exercise_page extends AppCompatActivity {
 
                     }
                 });
-            }
+                    }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });
+                    }
+                });
+
         container=(LinearLayout) findViewById(R.id.Park_info);
 
 

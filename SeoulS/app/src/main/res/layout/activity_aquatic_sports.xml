@@ -61,6 +61,7 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/Apuar_sports"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -83,7 +84,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/card_corner_radius"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/jeremy" />
+                            android:src="@drawable/water_sports_1" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -117,6 +118,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/Apuar_sports_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -139,7 +141,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/card_corner_radius"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/jeremy" />
+                            android:src="@drawable/water_sports_2" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -152,7 +154,7 @@
 
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="뚝섬 한강공원"
+                                android:text="잠실 한강공원"
                                 android:textSize="21sp"
                                 android:textStyle="bold" />
 
@@ -173,6 +175,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/Apuar_sports_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -195,7 +198,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/card_corner_radius"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/jeremy" />
+                            android:src="@drawable/water_sports_3" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -229,6 +232,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/Apuar_sports_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -251,7 +255,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/card_corner_radius"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/jeremy" />
+                            android:src="@drawable/water_sports_4" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -285,6 +289,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/Apuar_sports_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -307,7 +312,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/card_corner_radius"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/water_sports_1" />
+                            android:src="@drawable/water_sports_5" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -339,7 +344,9 @@
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
+                android:id="@+id/Apuar_sports_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -362,7 +369,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/card_corner_radius"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/water_sports_1" />
+                            android:src="@drawable/water_sports_6" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -394,7 +401,9 @@
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
+                android:id="@+id/Apuar_sports_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -417,7 +426,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/card_corner_radius"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/water_sports_3" />
+                            android:src="@drawable/water_sports_7" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -449,7 +458,9 @@
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
+                android:id="@+id/Apuar_sports_7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -472,7 +483,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/card_corner_radius"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/water_sports_4" />
+                            android:src="@drawable/jeremy" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
