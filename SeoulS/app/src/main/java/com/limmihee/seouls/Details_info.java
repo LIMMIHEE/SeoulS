@@ -70,7 +70,7 @@ public class Details_info extends AppCompatActivity {
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 name=dataSnapshot.child("name").getValue().toString();
                                 photo=dataSnapshot.child("photo_name").getValue().toString();
-                                simple_info+=dataSnapshot.child("simple_info").getValue().toString();
+                                simple_info=dataSnapshot.child("simple_info").getValue().toString();
                                 event=dataSnapshot.child("event").getValue().toString();
                                 detail_info=dataSnapshot.child("detail_info").getValue().toString();
 

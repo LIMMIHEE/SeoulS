@@ -42,7 +42,7 @@ public class AquaticSports extends AppCompatActivity {
         Card_View_1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                databaseReference.child("현재운동").setValue("잠원 한강공원");
+                databaseReference.child("현재운동").setValue("뚝섬 한강공원");
                 Intent intent = new Intent(AquaticSports.this, Details_info.class);
                 startActivity(intent);
             }
