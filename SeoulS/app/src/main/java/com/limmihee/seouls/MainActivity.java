@@ -945,7 +945,7 @@ public class MainActivity extends AppCompatActivity {
                         String icon = object.getString("icon");
 
                         JSONObject temlp = json.getJSONObject("main");
-                        Double Temprature = temlp.getDouble("temp");
+                        Double Temprature = temlp.getDouble("temp") - 273.15;
 
 
                         setText(view_City, "서울");
