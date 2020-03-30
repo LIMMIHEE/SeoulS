@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
     TextView view_City;
     TextView view_temp;
-    TextView view_Name;
     ImageView view_wether;
 
     @Override
@@ -56,8 +55,7 @@ public class MainActivity extends AppCompatActivity {
         view_City.setText("");
         view_temp= (TextView)findViewById(R.id.Temperature);
         view_temp.setText("");
-        view_Name = (TextView) findViewById(R.id.WhatName);
-        view_Name.setText("");
+
         view_wether=(ImageView) findViewById(R.id.wether_img) ;
 
 
@@ -941,7 +939,7 @@ public class MainActivity extends AppCompatActivity {
                         JSONArray array = json.getJSONArray("weather");
                         JSONObject object = array.getJSONObject(0);
 
-                        String description = object.getString("description");
+
                         String icon = object.getString("icon");
 
                         JSONObject temlp = json.getJSONObject("main");
@@ -949,10 +947,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                         setText(view_City, "서울");
-
                         String temps = Math.round(Temprature)+" ℃";
                         setText(view_temp, temps);
-                        setText(view_Name, description);
                         setImage(view_wether,icon);
 
                     } catch (JSONException e) {

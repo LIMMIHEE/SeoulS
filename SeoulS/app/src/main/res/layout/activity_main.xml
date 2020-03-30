@@ -64,13 +64,6 @@
                     android:text="TextView"
                     android:textColor="#FFFFFF" />
 
-                <TextView
-                    android:id="@+id/WhatName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="TextView"
-                    android:textColor="#FFFFFF" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>

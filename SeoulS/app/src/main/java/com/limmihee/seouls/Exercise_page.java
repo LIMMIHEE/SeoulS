@@ -32,6 +32,7 @@ public class Exercise_page extends AppCompatActivity {
     //companies companies;
     ArrayList<String> companies_Name =new ArrayList<>();
     String  DB_input ;
+    String Now_sports;
 
     FirebaseDatabase firebaseDatabase ;
     DatabaseReference databaseReference ;
@@ -53,8 +54,12 @@ public class Exercise_page extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         sports_Field_Fire = dataSnapshot.getValue(String.class);
-
+                        Now_sports = dataSnapshot.getValue(String.class);
                         databaseReference.child(sports_Field_Fire).child(sports_name_Fire).child("체험장소").child("companies_Name").addListenerForSingleValueEvent(new ValueEventListener() {
+
+
+
+
                             @Override
                             public void onDataChange(DataSnapshot dataSnapshot) {
                                 GenericTypeIndicator<List<String>> t = new GenericTypeIndicator<List<String>>() {};
@@ -101,7 +106,27 @@ public class Exercise_page extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
+        Button menu_btn = (Button) findViewById(R.id.Menu_btn);
+        menu_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Now_sports=="육상"){
+                    Intent intent = new Intent(Exercise_page.this, Athletics_sports.class);
+                    startActivity(intent);
+                }else{
+                    Intent intent = new Intent(Exercise_page.this, AquaticSports.class);
+                    startActivity(intent);
+                }
+            }
+        });
+        Button main_btn = (Button) findViewById(R.id.main_btn);
+        main_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Intent intent = new Intent(Exercise_page.this, MainActivity.class);
+                    startActivity(intent);
+            }
+        });
 
     }
 

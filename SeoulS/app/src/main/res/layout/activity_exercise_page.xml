@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,21 +9,54 @@
     <Button
         android:id="@+id/BackBtn"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_width="55dp"
-        android:layout_height="49dp"
+        android:layout_width="65dp"
+        android:layout_height="64dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="522dp"
+        android:layout_marginBottom="571dp"
         android:background="@drawable/ic_keyboard_arrow_left_black"
-        app:layout_constraintBottom_toTopOf="@+id/mapView"
+        app:layout_constraintBottom_toTopOf="@+id/main_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/Menu_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="39dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="595dp"
+        android:layout_weight="1"
+        android:background="@drawable/menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Park_info_"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BackBtn" />
+
+    <Button
+        android:id="@+id/main_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="49dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Park_info_"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BackBtn" />
+
     <LinearLayout
         android:id="@+id/Park_info_"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/main_btn"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -37,4 +70,4 @@
         </ScrollView>
     </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
