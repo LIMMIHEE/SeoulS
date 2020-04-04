@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -25,12 +26,16 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import kotlin.random.Random;
+
 public class experience_companys extends AppCompatActivity implements OnMapReadyCallback {
 
     TextView Sports_name;
     TextView Spl_Pay;
     TextView simple_info;
     TextView Details_info_;
+
+
     Button Call_btn;
 
     FirebaseDatabase firebaseDatabase ;
@@ -39,8 +44,8 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
     private GoogleMap mGoogleMap;
     private MapView mapView;
 
-    private double Map_x=37.56;
-    private double Map_y=126.97;
+    private double Map_x;
+    private double Map_y;
 
     String Sports_Name;
     String Now_com;
@@ -50,6 +55,7 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
     String simple_info_S;
     String Pay;
     String detail_info;
+    Bundle Num;
 
     private String Map_name="체험장소";
     String sports_Field_Fire;
@@ -58,12 +64,16 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_experience_companys);
 
+        Num = savedInstanceState;
+
         Sports_name=(TextView) findViewById(R.id.Com_Name);
         Spl_Pay=(TextView) findViewById(R.id.Com_Pay);
         simple_info=(TextView) findViewById(R.id.simple_info);
         Details_info_=(TextView) findViewById(R.id.Detalis_info);
         Call_btn=(Button)findViewById(R.id.Call_Btn);
-
+//
+//        X_text=(TextView)findViewById(R.id.Map_x);
+//        Y_text=(TextView)findViewById(R.id.Map_y);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
@@ -71,9 +81,11 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Sports_Name=dataSnapshot.getValue().toString();
+
                 databaseReference.child("현재체험장소").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        Map_name=dataSnapshot.getValue().toString();
                         Now_com=dataSnapshot.getValue().toString();
 
                         databaseReference.child("현재운동분야").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -95,6 +107,20 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
                                         Spl_Pay.setText(Pay);
                                         simple_info.setText(simple_info_S);
                                         Details_info_.setText(detail_info);
+
+                                        switch (name){
+                                            case "광나루 한강공원": Map_x=37.548804; Map_y=127.120044 ; break;
+                                            case "난지 한강공원": Map_x= 37.566154; Map_y=126.876389 ; break;
+                                            case "뚝섬 한강공원": Map_x= 37.529179; Map_y=127.071335; break;
+                                            case "망원 한강공원": Map_x= 37.555724; Map_y= 126.894571 ; break;
+                                            case "반포 한강공원": Map_x= 37.509784; Map_y=126.994746 ; break;
+                                            case "양화 한강공원": Map_x= 37.538301; Map_y=126.902270 ; break;
+                                            case "이촌 한강공원": Map_x= 37.515971; Map_y=126.975833; break;
+                                            case "잠원 한강공원": Map_x= 37.521403; Map_y=127.011954 ; break;
+                                        }
+
+                                        onMapReady(mGoogleMap);
+
 //                                Call_btn.setText(call_num);
                                     }
 
@@ -142,26 +168,13 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
             }
         });
 
-        mapView=findViewById(R.id.mapView);
-        mapView.onCreate(savedInstanceState);
-        mapView.getMapAsync(this);
+
     }
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mGoogleMap = googleMap;
 
-        LatLng SEOUL = new LatLng(Map_x, Map_y);
 
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(SEOUL);
-        markerOptions.title(Map_name);
-        markerOptions.snippet("해당 체험 장소");
-        mGoogleMap.addMarker(markerOptions);
 
-        mGoogleMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
-        mGoogleMap.animateCamera(CameraUpdateFactory.zoomTo(20));
-       // Log.d("MAP_DEBUG","onMapReady: map is showing on the screen");
-    }
+
+
 
     public void Call (String Number){
         String tel = "tel:"+Number;
@@ -172,7 +185,14 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
     @Override
     protected  void onStart(){
         super.onStart();
+
+        mapView=findViewById(R.id.mapView);
+        mapView.onCreate(Num);
+        mapView.getMapAsync(this);
+
         mapView.onStart();
+
+
     }
     @Override
     protected  void onResume(){
@@ -205,5 +225,26 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
     public void onLowMemory() {
         super.onLowMemory();
         mapView.onLowMemory();
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mGoogleMap = googleMap;
+
+        CameraUpdate zoom = CameraUpdateFactory.zoomTo(15);
+        googleMap.animateCamera(zoom);
+
+
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(new LatLng(Map_x, Map_y));
+        markerOptions.title(Sports_name.getText().toString());
+        markerOptions.snippet("해당 체험 장소");
+        mGoogleMap.addMarker(markerOptions).showInfoWindow();
+
+        mGoogleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(Map_x, Map_y)));
+        //mGoogleMap.animateCamera(CameraUpdateFactory.zoomTo(14));
+
+
+        // Log.d("MAP_DEBUG","onMapReady: map is showing on the screen");
     }
 }
