@@ -20,6 +20,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.Random;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -37,6 +38,17 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
 
+    String img_name[]={"water_sports_1","water_sports_2","water_sports_3","water_sports_4"
+            ,"water_sports_5","water_sports_6","water_sports_7","jeremy","tennis","badminton","archery","baseball",
+            "volleyball","foot_volleyball","soccer","basketball","inline"};
+    String Sports_names[]={"잠실 한강공원","뚝섬 한강공원","잠원 한강공원","반포 한강공원","이촌 한강공원"
+            ,"여의도 한강공원","양화 한강공원","망원 한강공원","테니스","배드민턴","양궁","야구",
+            "배구","족구","축구","농구","인라인"};
+    String now_sport="";
+    int rand_num;
+
+    TextView rand_sports_name;
+    ImageView rand_sports_img;
 
     TextView view_City;
     TextView view_temp;
@@ -44,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -55,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
         view_wether=(ImageView) findViewById(R.id.wether_img) ;
 
 
+
+        rand_sports();
         api_Key();
 
 //        databaseReference.child("현재운동분야").setValue("뿌뿌");
@@ -905,6 +923,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button rand_btn = (Button) findViewById(R.id.rand_info_btn);
+        rand_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                databaseReference.child("현재운동분야").setValue(now_sport);
+                databaseReference.child("현재운동").setValue(Sports_names[rand_num]);
+                Intent intent = new Intent(MainActivity.this,  Details_info.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -990,6 +1018,27 @@ public class MainActivity extends AppCompatActivity {
               }
             }
         });
+    }
+    public void rand_sports(){
+        Random random = new Random();
+        rand_num = random.nextInt(17)+1;
+        if(rand_num <=8){
+            now_sport="수상";
+        }else{
+            now_sport="육상";
+        }
+
+        rand_sports_name=(TextView)findViewById(R.id.rand_name);
+        rand_sports_name.setText(Sports_names[rand_num]);
+
+        rand_sports_img=(ImageView)findViewById(R.id.rand_img);
+        int Get_img_id =  getDraw_id("drawable",img_name[rand_num]);
+        rand_sports_img.setImageResource(Get_img_id);
+
+    }
+    private int getDraw_id (String type, String name){
+        int getId = getResources().getIdentifier("com.limmihee.seouls:"+type+"/"+name,null,null);
+        return getId;
     }
 //    ImageView imageView = (ImageView) findViewById(R.id.CardImage);
 //    GradientDrawable drawable= (GradientDrawable) getApplicationContext().getDrawable(R.drawable.card_corner_radius);
