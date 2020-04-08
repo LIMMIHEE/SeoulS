@@ -3,7 +3,7 @@ package com.limmihee.seouls;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.AsyncTask;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
@@ -20,11 +20,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.jar.JarException;
 
-import kotlin.math.UMathKt;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -901,15 +897,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button ALLBtn = (Button) findViewById(R.id.park_sports_btn);
+        Button ALLBtn = (Button) findViewById(R.id.Site_btn);
         ALLBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, Exercise_page.class);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://hangang.seoul.go.kr/"));
                 startActivity(intent);
             }
         });
-
 
     }
 
