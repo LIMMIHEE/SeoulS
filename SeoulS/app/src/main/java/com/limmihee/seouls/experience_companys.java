@@ -57,6 +57,8 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
     String detail_info;
     Bundle Num;
 
+    String Map_info="해당 체험 장소는 이곳입니다.";
+
     private String Map_name="체험장소";
     String sports_Field_Fire;
     @Override
@@ -117,6 +119,20 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
                                             case "양화 한강공원": Map_x= 37.538301; Map_y=126.902270 ; break;
                                             case "이촌 한강공원": Map_x= 37.515971; Map_y=126.975833; break;
                                             case "잠원 한강공원": Map_x= 37.521403; Map_y=127.011954 ; break;
+
+                                            case "아리랑하우스": Map_x= 37.528229; Map_y=127.067777; break;
+                                            case "씨에이글로벌": Map_x= 37.553368; Map_y=126.896609 ; break;
+                                            case "요트에베뉴": Map_x= 37.505841; Map_y=126.981121; break;
+                                            case "튜브스터코리아": Map_x= 37.511341; Map_y=126.995309 ; break;
+                                            case "한강레저스포츠": if(Sports_Name=="여의도 한강공원"){
+                                                Map_x= 37.522817;Map_y=126.941650;
+                                            } else{Map_x= 37.528357; Map_y= 126.935157; } break;
+                                            case "서울마리나": Map_x= 37.534764; Map_y=126.911554 ; break;
+                                            case "파라다이스": Map_x= 37.522740; Map_y=126.941621; break;
+                                            case "프라이어스이노베이션": Map_x= 37.518361; Map_y=127.081583; break;
+                                            case "ON수상레저": Map_x= 37.527333; Map_y=127.017861; break;
+                                            case "화창레저산업": Map_x= 37.518964; Map_y=127.008030; break;
+                                            default: Map_x= 0; Map_y=0; Map_info="해당 장소를 찾을 수 없습니다.";break;
                                         }
 
                                         onMapReady(mGoogleMap);
@@ -238,7 +254,7 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(new LatLng(Map_x, Map_y));
         markerOptions.title(Sports_name.getText().toString());
-        markerOptions.snippet("해당 체험 장소");
+        markerOptions.snippet(Map_info);
         mGoogleMap.addMarker(markerOptions).showInfoWindow();
 
         mGoogleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(Map_x, Map_y)));
