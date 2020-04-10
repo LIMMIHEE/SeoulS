@@ -119,6 +119,7 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
                                             case "양화 한강공원": Map_x= 37.538301; Map_y=126.902270 ; break;
                                             case "이촌 한강공원": Map_x= 37.515971; Map_y=126.975833; break;
                                             case "잠원 한강공원": Map_x= 37.521403; Map_y=127.011954 ; break;
+                                            case "잠실 한강공원": Map_x= 37.518019; Map_y=127.081901 ; break;
 
                                             case "아리랑하우스": Map_x= 37.528229; Map_y=127.067777; break;
                                             case "씨에이글로벌": Map_x= 37.553368; Map_y=126.896609 ; break;
