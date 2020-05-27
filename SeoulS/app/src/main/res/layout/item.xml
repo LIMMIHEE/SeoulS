@@ -10,20 +10,35 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="358dp"
+        android:layout_height="380dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="332dp"
+        android:layout_marginTop="348dp"
         android:layout_marginEnd="1dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/slide"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:cardCornerRadius="20dp">
+            android:layout_marginBottom="-50dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="6dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -31,30 +46,19 @@
 
                 <ImageView
                     android:id="@+id/image"
-                    android:layout_width="match_parent"
-                    android:layout_height="230dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
                     android:background="@drawable/main_card_corner"
                     android:scaleType="centerCrop"
                     android:src="@drawable/water_sports_6" />
 
                 <TextView
-                    android:id="@+id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/image"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="13dp"
-                    android:text="네스트"
-                    android:textSize="17sp"
-                    android:textStyle="bold" />
-
-                <TextView
                     android:id="@+id/desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/title"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/image"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginRight="30dp"
                     android:drawablePadding="14dp"
                     android:ellipsize="end"

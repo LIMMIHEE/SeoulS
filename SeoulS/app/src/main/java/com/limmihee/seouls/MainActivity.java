@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Request request = new Request.Builder()
-                .url("https://api.openweathermap.org/data/2.5/weather?q=Korea,seoul&appid=6d227a80ea70b832267d7aebe7cc6668")
+                .url("https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=6d227a80ea70b832267d7aebe7cc6668")
                 .get()
                 .build();
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
