@@ -5,7 +5,10 @@ import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.animation.ArgbEvaluator;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,12 +22,22 @@ public class Ani_test extends AppCompatActivity {
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
 
+    Button recom_btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ani_test);
 
         cardView =findViewById(R.id.slide);
+        recom_btn= (Button) findViewById(R.id.button3);
+        recom_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =  new Intent(Ani_test.this,Recommendation.class);
+                startActivity(intent);
+            }
+        });
 
         models = new ArrayList<>();
         models.add(new Model(R.drawable.water_sports_1,"#나와_맞는_스포츠찾기","테스트를 통해 나와 맞는 스포츠의 장소와 위치를 찾아보세요!"));
@@ -33,6 +46,8 @@ public class Ani_test extends AppCompatActivity {
         models.add(new Model(R.drawable.water_sports_3,"#수상스포츠"," 보드 혹은 스키까지! 다양한 수상 스포츠들에 대해 알아보세요"));
 
         adapter = new Adapter(models , this);
+
+
 
         viewPager = findViewById(R.id.select);
         viewPager.setAdapter(adapter);

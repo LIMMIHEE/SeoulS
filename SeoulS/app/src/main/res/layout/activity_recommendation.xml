@@ -10,13 +10,14 @@
     tools:context=".Recommendation">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="610dp"
+        android:layout_marginTop="30dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
@@ -56,19 +57,19 @@
 
                 <RadioButton
                     android:id="@+id/inside"
-                    android:layout_width="wrap_content"
+                    android:layout_width="121dp"
                     android:layout_height="wrap_content"
                     android:text="실내" />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="121dp"
                     android:layout_height="wrap_content"
                     android:text="외부" />
 
                 <RadioButton
                     android:id="@+id/radioButton3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="121dp"
                     android:layout_height="wrap_content"
                     android:text="어디든 좋다!" />
             </RadioGroup>
@@ -93,21 +94,21 @@
 
                 <RadioButton
                     android:id="@+id/Athletics"
-                    android:layout_width="wrap_content"
+                    android:layout_width="121dp"
                     android:layout_height="wrap_content"
                     android:text="육상" />
 
                 <RadioButton
                     android:id="@+id/Aquatic"
-                    android:layout_width="wrap_content"
+                    android:layout_width="121dp"
                     android:layout_height="wrap_content"
                     android:text="수상" />
 
                 <RadioButton
                     android:id="@+id/noWay"
-                    android:layout_width="wrap_content"
+                    android:layout_width="121dp"
                     android:layout_height="wrap_content"
-                    android:text="어디든 좋다!" />
+                    android:text="둘 다 좋다!" />
             </RadioGroup>
 
             <TextView
@@ -119,7 +120,43 @@
                 android:text="상체운동 하체운동?"
                 android:textColor="#2C2C2C"
                 android:textSize="18dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:text="상체!" />
+
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:text="하체!" />
+
+                <RadioButton
+                    android:id="@+id/radioButton6"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:text="난 전신!!" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="상체운동 하체운동?"
+                android:textColor="#2C2C2C"
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -127,25 +164,31 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/radioButton4"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/radioButton"
+                    android:layout_width="121dp"
                     android:layout_height="wrap_content"
-                    android:text="상체!" />
+                    android:text="RadioButton" />
 
                 <RadioButton
-                    android:id="@+id/radioButton5"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/radioButton7"
+                    android:layout_width="121dp"
                     android:layout_height="wrap_content"
-                    android:text="하체!" />
+                    android:text="RadioButton" />
 
                 <RadioButton
-                    android:id="@+id/radioButton6"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/radioButton8"
+                    android:layout_width="121dp"
                     android:layout_height="wrap_content"
-                    android:text="난 전신!!" />
+                    android:text="RadioButton" />
             </RadioGroup>
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 
 </LinearLayout>
