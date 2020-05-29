@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".All_sports" />
+        <activity android:name=".Recommendation" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
