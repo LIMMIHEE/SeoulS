@@ -34,43 +34,6 @@
             android:text="아래 설문을 통해 자신의 성향과 비슷한 스포츠를 찾아보세요" />
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:text="나에게 맞는 장소는?"
-            android:textColor="#2C2C2C"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-
-        <RadioGroup
-            android:id="@+id/Group1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="30dp"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/g_1_1"
-                android:layout_width="121dp"
-                android:layout_height="wrap_content"
-                android:text="실내" />
-
-            <RadioButton
-                android:id="@+id/g_1_2"
-                android:layout_width="121dp"
-                android:layout_height="wrap_content"
-                android:text="외부" />
-
-            <RadioButton
-                android:id="@+id/g_1_3"
-                android:layout_width="121dp"
-                android:layout_height="wrap_content"
-                android:text="어디든 좋다!" />
-        </RadioGroup>
-
-        <TextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -113,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:text="상체운동 하체운동?"
+            android:text="상체 하체 아니면 전신?"
             android:textColor="#2C2C2C"
             android:textSize="18dp"
             android:textStyle="bold" />
@@ -148,12 +111,19 @@
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:text="도구 사용은?"
+            android:text="공 같은 것 사용은?"
             android:textColor="#2C2C2C"
             android:textSize="18dp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="지키거나 빼앗거나 쳐내서나 하는 용도" />
 
         <RadioGroup
             android:id="@+id/Group4"
@@ -218,10 +188,10 @@
         </RadioGroup>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/Print_Btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="60dp"
             android:background="@drawable/btn_bg_ex"
             android:text="나에게 어울리는 스포츠는...?" />
 
