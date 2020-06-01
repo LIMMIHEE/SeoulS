@@ -9,10 +9,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.util.JsonWriter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -23,6 +25,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -32,6 +37,8 @@ import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+
+import static java.lang.System.out;
 
 public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
@@ -66,11 +73,24 @@ public class MainActivity extends AppCompatActivity {
     Button siteBtn;
     Button AquaBtn;
     Button AthleticsBtn;
+    Button TestBtn;
+    JSONObject jsonObject;
+    String now_part;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        try{
+            jsonObject = new JSONObject(get_Json());
+            now_part  = jsonObject.getString("현재운동분야");
+        }catch (Exception e){
+
+        }
+
+
+        TestBtn = (Button) findViewById(R.id.button8) ;
 
         siteBtn = (Button)  findViewById(R.id.site_move);
         AquaBtn = (Button)  findViewById(R.id.apua);
@@ -86,10 +106,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         models = new ArrayList<>();
-        models.add(new Model(R.drawable.water_sports_1,"#나와_맞는_스포츠찾기","테스트를 통해 나와 맞는 스포츠의 장소와 위치를 찾아보세요!"));
-        models.add(new Model(R.drawable.water_sports_4,"#서울 날씨","4"));
-        models.add(new Model(R.drawable.water_sports_2,"#육상스포츠"," 실내 혹은 실외 등! 다양한 육상 스포츠들에 대해 알아보세요"));
-        models.add(new Model(R.drawable.water_sports_3,"#수상스포츠"," 보드 혹은 스키까지! 다양한 수상 스포츠들에 대해 알아보세요"));
+        models.add(new Model(R.drawable.water_sports_4,"#TEST","Test"));
+//        models.add(new Model(R.drawable.water_sports_1,"#나와_맞는_스포츠찾기","테스트를 통해 나와 맞는 스포츠의 장소와 위치를 찾아보세요!"));
+//        models.add(new Model(R.drawable.water_sports_4,"#서울 날씨","4"));
+//        models.add(new Model(R.drawable.water_sports_2,"#육상스포츠"," 실내 혹은 실외 등! 다양한 육상 스포츠들에 대해 알아보세요"));
+//        models.add(new Model(R.drawable.water_sports_3,"#수상스포츠"," 보드 혹은 스키까지! 다양한 수상 스포츠들에 대해 알아보세요"));
 
         adapter = new Adapter(models , this);
 
@@ -98,6 +119,26 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.select);
         viewPager.setAdapter(adapter);
         viewPager.setPadding(150,0,150,0);
+
+//        String json="sou";
+        try {
+
+            Toast.makeText(MainActivity.this, "클릭함 : "+now_part, Toast.LENGTH_SHORT).show();
+
+            
+            jsonObject.put("현재운동분야","수상");
+
+//            OutputStream out = new OutputStream() {
+//                @Override
+//                public void write(int b) throws IOException {
+//
+//                }
+//            };
+//            JsonWriter jsonWriter = new JsonWriter(new OutputStreamWriter(out, "UTF-8"));
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
 
 
@@ -163,6 +204,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent =  new Intent(MainActivity.this,Athletics_sports.class);
                 startActivity(intent);
+            }
+        });
+        TestBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "클릭함 : "+now_part, Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -272,5 +319,23 @@ public class MainActivity extends AppCompatActivity {
         return getId;
     }
 
+    private String get_Json(){
+        String Json=null;
+        try {
+            InputStream is = getAssets().open("seouls-export.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            Json = new String(buffer,"UTF-8");
+//            JSONObject jsonObject = new JSONObject();
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+        return Json;
+    }
 
 }
