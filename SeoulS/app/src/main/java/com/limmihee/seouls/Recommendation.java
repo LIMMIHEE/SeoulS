@@ -24,6 +24,9 @@ public class Recommendation extends AppCompatActivity {
     Button Print_Btn ;
 
     boolean isVisi=false;
+    boolean isAquaOrAth = false;
+    boolean isBody = false;
+    boolean isUse = false;
 
     ArrayList<String> Reco_list = new ArrayList<>();
     ArrayList<String> remove_list = new ArrayList<>();
@@ -50,7 +53,10 @@ public class Recommendation extends AppCompatActivity {
         Print_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Recommendation.this, "클릭함 : "+Reco_list, Toast.LENGTH_SHORT).show();
+                if(isAquaOrAth==false||isBody==false ||isUse==false  ){
+                    Toast.makeText(Recommendation.this, "클릭함 : "+Reco_list, Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
         // 농구 배구 배드민턴 야구 양궁 인라인 족구 축구 테니스
@@ -65,10 +71,10 @@ public class Recommendation extends AppCompatActivity {
                 @Override
                 public void onCheckedChanged(RadioGroup radioGroup,  int id) {
                     switch (id){
-                        case R.id.g_2_1: Reco_list = new ArrayList<>();for(int i=0; i< athletics.length; i++){Reco_list.add(athletics[i]);} break;
-                        case R.id.g_2_2: Reco_list = new ArrayList<>();for(int i=0; i< aqua.length; i++){Reco_list.add(aqua[i]);} break;
+                        case R.id.g_2_1: Reco_list = new ArrayList<>();for(int i=0; i< athletics.length; i++){Reco_list.add(athletics[i]);} isAquaOrAth=true; break;
+                        case R.id.g_2_2: Reco_list = new ArrayList<>();for(int i=0; i< aqua.length; i++){Reco_list.add(aqua[i]);} isAquaOrAth=true; break;
                         case R.id.g_2_3: Reco_list = new ArrayList<>();for(int i=0; i< athletics.length; i++){Reco_list.add(athletics[i]);}
-                                         for(int i=0; i< aqua.length; i++){Reco_list.add(aqua[i]);} ;break;
+                                         for(int i=0; i< aqua.length; i++){Reco_list.add(aqua[i]);} isAquaOrAth=true; ;break;
                     }
                 }
             });
@@ -85,6 +91,7 @@ public class Recommendation extends AppCompatActivity {
                                 if (isVisi == false) {  remove_list.add(value); }isVisi = false;
                             }
                             for (String name : remove_list){ Reco_list.remove(name); }
+                            isBody=true;
                             break;
                         case R.id.g_3_2:
                             remove_list = new ArrayList<>();
@@ -95,6 +102,7 @@ public class Recommendation extends AppCompatActivity {
                                 if (isVisi == false) {  remove_list.add(value); } isVisi = false;
                             }
                             for (String name : remove_list){ Reco_list.remove(name); }
+                            isBody=true;
                             break;
                         case R.id.g_3_3:
                             remove_list = new ArrayList<>();
@@ -105,6 +113,7 @@ public class Recommendation extends AppCompatActivity {
                                 if (isVisi == false) {  remove_list.add(value); }isVisi = false;
                             }
                             for (String name : remove_list){ Reco_list.remove(name); }
+                            isBody=true;
                             break;
                     }
 
@@ -123,6 +132,7 @@ public class Recommendation extends AppCompatActivity {
                                 if (isVisi == false) {  remove_list.add(value);  }isVisi = false;
                             }
                             for (String name : remove_list){ Reco_list.remove(name); }
+                            isUse=true;
                             break;
                         case R.id.g_4_2:
                             remove_list = new ArrayList<>();
@@ -133,8 +143,9 @@ public class Recommendation extends AppCompatActivity {
                                 if (isVisi == false) {  remove_list.add(value);} isVisi = false;
                             }
                             for (String name : remove_list){ Reco_list.remove(name); }
+                            isUse=true;
                             break;
-                        case R.id.g_4_3:break;
+                        case R.id.g_4_3: isUse=true;break;
                     }
                 }
             });

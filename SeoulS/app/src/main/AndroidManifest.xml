@@ -12,13 +12,7 @@
         android:supportsRtl="true"
         android:hardwareAccelerated="false"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Ani_test">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".Ani_test"/>
         <activity android:name=".Recommendation" />
 
         <meta-data
@@ -31,7 +25,11 @@
         <activity android:name=".AquaticSports" />
         <activity android:name=".Details_info" />
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

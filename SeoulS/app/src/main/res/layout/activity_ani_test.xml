@@ -152,7 +152,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/site_move"
                 android:layout_width="84dp"
                 android:layout_height="84dp"
                 android:layout_margin="10dp"
@@ -161,7 +161,7 @@
                 android:text="사이트" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/apua"
                 android:layout_width="84dp"
                 android:layout_height="84dp"
                 android:layout_margin="10dp"

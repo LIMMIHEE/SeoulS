@@ -1,7 +1,10 @@
 package com.limmihee.seouls;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.viewpager.widget.ViewPager;
 
+import android.animation.ArgbEvaluator;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,6 +23,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import okhttp3.Call;
@@ -29,11 +34,15 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
-    experience_point experience_point;
+    ViewPager viewPager;
+    CardView cardView;
+    Adapter adapter;
+    List<Model> models ;
 
-    public Sports_DB sports_db;
-    experience_point Experience_point;
-    public companies companies_DB;
+
+    Button recom_btn;
+
+
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -54,29 +63,50 @@ public class MainActivity extends AppCompatActivity {
     TextView view_temp;
     ImageView view_wether;
 
+    Button siteBtn;
+    Button AquaBtn;
+    Button AthleticsBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        siteBtn = (Button)  findViewById(R.id.site_move);
+        AquaBtn = (Button)  findViewById(R.id.apua);
+        AthleticsBtn = (Button)  findViewById(R.id.athletics);
         view_City= (TextView)findViewById(R.id.City_name);
         view_City.setText("");
         view_temp= (TextView)findViewById(R.id.Temperature);
         view_temp.setText("");
-
         view_wether=(ImageView) findViewById(R.id.wether_img) ;
+        cardView =findViewById(R.id.slide);
+        recom_btn= (Button) findViewById(R.id.button3);
 
 
 
-        rand_sports();
+        models = new ArrayList<>();
+        models.add(new Model(R.drawable.water_sports_1,"#나와_맞는_스포츠찾기","테스트를 통해 나와 맞는 스포츠의 장소와 위치를 찾아보세요!"));
+        models.add(new Model(R.drawable.water_sports_4,"#서울 날씨","4"));
+        models.add(new Model(R.drawable.water_sports_2,"#육상스포츠"," 실내 혹은 실외 등! 다양한 육상 스포츠들에 대해 알아보세요"));
+        models.add(new Model(R.drawable.water_sports_3,"#수상스포츠"," 보드 혹은 스키까지! 다양한 수상 스포츠들에 대해 알아보세요"));
+
+        adapter = new Adapter(models , this);
+
+
+
+        viewPager = findViewById(R.id.select);
+        viewPager.setAdapter(adapter);
+        viewPager.setPadding(150,0,150,0);
+
+
+
+
+        //rand_sports();
         api_Key();
 
         databaseReference = firebaseDatabase.getReference();
-        Button aqua_main_btn = (Button) findViewById(R.id.aqua_sports_btn);
+        Button aqua_main_btn = (Button) findViewById(R.id.apua);
         aqua_main_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -86,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button Arhletics_main_btn = (Button) findViewById(R.id.athletics_sports_btn);
+        Button Arhletics_main_btn = (Button) findViewById(R.id.athletics);
         Arhletics_main_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -96,25 +126,45 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button ALLBtn = (Button) findViewById(R.id.Site_btn);
-        ALLBtn.setOnClickListener(new View.OnClickListener(){
+//        Button rand_btn = (Button) findViewById(R.id.rand_info_btn);
+//        rand_btn.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v){
+//                databaseReference.child("현재운동분야").setValue(now_sport);
+//                databaseReference.child("현재운동").setValue(Sports_names[rand_num]);
+//                Intent intent = new Intent(MainActivity.this,  Details_info.class);
+//                startActivity(intent);
+//            }
+//        });
+        recom_btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://hangang.seoul.go.kr/"));
-                startActivity(intent);
-            }
-        });
-        Button rand_btn = (Button) findViewById(R.id.rand_info_btn);
-        rand_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                databaseReference.child("현재운동분야").setValue(now_sport);
-                databaseReference.child("현재운동").setValue(Sports_names[rand_num]);
-                Intent intent = new Intent(MainActivity.this,  Details_info.class);
+            public void onClick(View v) {
+                Intent intent =  new Intent(MainActivity.this,Recommendation.class);
                 startActivity(intent);
             }
         });
 
+        siteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://hangang.seoul.go.kr/"));
+                startActivity(intent);
+            }
+        });
+        AquaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =  new Intent(MainActivity.this,AquaticSports.class);
+                startActivity(intent);
+            }
+        });
+        AthleticsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =  new Intent(MainActivity.this,Athletics_sports.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void api_Key() {
@@ -209,10 +259,10 @@ public class MainActivity extends AppCompatActivity {
             now_sport="육상";
         }
 
-        rand_sports_name=(TextView)findViewById(R.id.rand_name);
+        //rand_sports_name=(TextView)findViewById(R.id.rand_name);
         rand_sports_name.setText(Sports_names[rand_num]);
 
-        rand_sports_img=(ImageView)findViewById(R.id.rand_img);
+        //rand_sports_img=(ImageView)findViewById(R.id.rand_img);
         int Get_img_id =  getDraw_id("drawable",img_name[rand_num]);
         rand_sports_img.setImageResource(Get_img_id);
 
