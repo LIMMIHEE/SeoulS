@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView view_City;
     TextView view_temp;
+    TextView view_Humidity;
     ImageView view_wether;
 
     Button siteBtn;
@@ -95,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
         siteBtn = (Button)  findViewById(R.id.site_move);
         AquaBtn = (Button)  findViewById(R.id.apua);
         AthleticsBtn = (Button)  findViewById(R.id.athletics);
+
+        view_Humidity=(TextView)findViewById(R.id.Humidity);
         view_City= (TextView)findViewById(R.id.City_name);
         view_City.setText("");
         view_temp= (TextView)findViewById(R.id.Temperature);
@@ -120,25 +123,6 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         viewPager.setPadding(150,0,150,0);
 
-//        String json="sou";
-        try {
-
-            Toast.makeText(MainActivity.this, "클릭함 : "+now_part, Toast.LENGTH_SHORT).show();
-
-            
-            jsonObject.put("현재운동분야","수상");
-
-//            OutputStream out = new OutputStream() {
-//                @Override
-//                public void write(int b) throws IOException {
-//
-//                }
-//            };
-//            JsonWriter jsonWriter = new JsonWriter(new OutputStreamWriter(out, "UTF-8"));
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }
 
 
 
@@ -245,8 +229,9 @@ public class MainActivity extends AppCompatActivity {
 
                         JSONObject temlp = json.getJSONObject("main");
                         Double Temprature = temlp.getDouble("temp") - 273.15;
+                        String humidity = "습도 : "+temlp.getString("humidity")+"%";
 
-
+                        setText(view_Humidity,humidity);
                         setText(view_City, "서울");
                         String temps = Math.round(Temprature)+" ℃";
                         setText(view_temp, temps);

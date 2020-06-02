@@ -66,32 +66,32 @@
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="66dp"
-                    android:layout_height="65dp"
+                    android:layout_height="97dp"
                     android:layout_marginStart="38dp"
                     android:layout_marginTop="32dp"
                     android:gravity="center"
                     android:text="현재\n날씨"
-                    android:textColor="#FFFFFF"
-                    android:textSize="24sp"
+                    android:textColor="#D2FFFB"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/wether_img"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.4" />
+                    app:layout_constraintVertical_bias="0.682" />
 
                 <TextView
                     android:id="@+id/City_name"
                     android:layout_width="111dp"
                     android:layout_height="70dp"
-                    android:layout_marginTop="140dp"
+                    android:layout_marginTop="88dp"
                     android:gravity="center"
                     android:text="TextView"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp"
+                    android:textSize="24sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.053"
+                    app:layout_constraintHorizontal_bias="0.051"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -99,13 +99,28 @@
                     android:id="@+id/Temperature"
                     android:layout_width="227dp"
                     android:layout_height="37dp"
-                    android:layout_marginTop="196dp"
+                    android:layout_marginTop="193dp"
                     android:gravity="center"
                     android:text="TextView"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.69"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/Humidity"
+                    android:layout_width="227dp"
+                    android:layout_height="37dp"
+                    android:layout_marginTop="220dp"
+                    android:gravity="center"
+                    android:text="TextView"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.689"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>

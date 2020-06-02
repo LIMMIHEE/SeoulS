@@ -16,13 +16,6 @@ public class Athletics_sports extends AppCompatActivity implements AthleticsSpor
     FirebaseDatabase firebaseDatabase ;
     DatabaseReference databaseReference ;
 
-//    private OnItamClickListener mListner;
-//    public interface OnItamClickListener{
-//        void OnItamListener(int position);
-//    }
-//    public void setOnItamClickListener(OnItamClickListener listener){
-//        mListner = listener;
-//    }
 
 
     @Override
