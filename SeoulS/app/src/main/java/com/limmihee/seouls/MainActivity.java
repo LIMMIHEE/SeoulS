@@ -108,20 +108,20 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        models = new ArrayList<>();
-        models.add(new Model(R.drawable.water_sports_4,"#TEST","Test"));
-//        models.add(new Model(R.drawable.water_sports_1,"#나와_맞는_스포츠찾기","테스트를 통해 나와 맞는 스포츠의 장소와 위치를 찾아보세요!"));
-//        models.add(new Model(R.drawable.water_sports_4,"#서울 날씨","4"));
-//        models.add(new Model(R.drawable.water_sports_2,"#육상스포츠"," 실내 혹은 실외 등! 다양한 육상 스포츠들에 대해 알아보세요"));
-//        models.add(new Model(R.drawable.water_sports_3,"#수상스포츠"," 보드 혹은 스키까지! 다양한 수상 스포츠들에 대해 알아보세요"));
-
-        adapter = new Adapter(models , this);
-
-
-
-        viewPager = findViewById(R.id.select);
-        viewPager.setAdapter(adapter);
-        viewPager.setPadding(150,0,150,0);
+//        models = new ArrayList<>();
+//        models.add(new Model(R.drawable.water_sports_4,"#TEST","Test"));
+////        models.add(new Model(R.drawable.water_sports_1,"#나와_맞는_스포츠찾기","테스트를 통해 나와 맞는 스포츠의 장소와 위치를 찾아보세요!"));
+////        models.add(new Model(R.drawable.water_sports_4,"#서울 날씨","4"));
+////        models.add(new Model(R.drawable.water_sports_2,"#육상스포츠"," 실내 혹은 실외 등! 다양한 육상 스포츠들에 대해 알아보세요"));
+////        models.add(new Model(R.drawable.water_sports_3,"#수상스포츠"," 보드 혹은 스키까지! 다양한 수상 스포츠들에 대해 알아보세요"));
+//
+//        adapter = new Adapter(models , this);
+//
+//
+//
+//        viewPager = findViewById(R.id.select);
+//        viewPager.setAdapter(adapter);
+//        viewPager.setPadding(150,0,150,0);
 
 
 

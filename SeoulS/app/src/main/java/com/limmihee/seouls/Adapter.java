@@ -18,6 +18,8 @@ public class Adapter extends PagerAdapter {
     private LayoutInflater layoutInflater;
     private Context context;
 
+    private int num=1;
+
     public Adapter(List<Model> models, Context context) {
         this.models = models;
         this.context = context;
@@ -36,6 +38,7 @@ public class Adapter extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
+
         layoutInflater = LayoutInflater.from(context);
         View view = layoutInflater.inflate(R.layout.item, container, false);
 
@@ -48,6 +51,14 @@ public class Adapter extends PagerAdapter {
         imageView.setImageResource(models.get(position).getImg());
         title.setText(models.get(position).getTitle());
         desc.setText(models.get(position).getDesc());
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
 
         container.addView(view,0);
 
