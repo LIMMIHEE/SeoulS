@@ -24,18 +24,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Random;
 
 import okhttp3.Call;
@@ -44,7 +35,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static java.lang.System.out;
 
 public class MainActivity extends AppCompatActivity {
     CardView cardView;
@@ -111,41 +101,8 @@ public class MainActivity extends AppCompatActivity {
         //rand_sports();
         api_Key();
 
-//        databaseReference = firebaseDatabase.getReference();
-//        Button aqua_main_btn = (Button) findViewById(R.id.apua);
-//        aqua_main_btn.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v){
-////                databaseReference.child("현재운동분야").setValue("수상");
-//                try{
-//                    jsonObject = new JSONObject(get_Json());
-//                    jsonObject.put("현재운동분야","수상");
-//                    Toast.makeText(MainActivity.this, "클릭함 : "+jsonObject.get("현재운동분야"), Toast.LENGTH_SHORT).show();
-//
-//                }catch (Exception e){
-//                    Toast.makeText(MainActivity.this, "실패함 : "+now_part, Toast.LENGTH_SHORT).show();
-//                }
-//                Intent intent = new Intent(MainActivity.this, AquaticSports.class);
-////                startActivity(intent);
-//            }
-//        });
-//
-//        Button Arhletics_main_btn = (Button) findViewById(R.id.athletics);
-//        Arhletics_main_btn.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v){
-////                databaseReference.child("현재운동분야").setValue("육상");
-//                try{
-//                    jsonObject = new JSONObject(get_Json());
-//                    jsonObject.put("현재운동분야","육상");
-//
-//                }catch (Exception e){
-//
-//                }
-//                Intent intent = new Intent(MainActivity.this, Athletics_sports.class);
-////                startActivity(intent);
-//            }
-//        });
+        databaseReference = firebaseDatabase.getReference();
+
 
         recom_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -165,25 +122,15 @@ public class MainActivity extends AppCompatActivity {
         AquaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                databaseReference.child("현재운동분야").setValue("수상");
                 Intent intent =  new Intent(MainActivity.this,AquaticSports.class);
-//                try{
-//                    jsonObject = new JSONObject(get_Json());
-//                    jsonObject.put("현재운동분야","수상");
-//                    jsonObject.put("ㅅㄷㄴㅅ","ㅅㄷㄴㅅ");
-//                    Toast.makeText(MainActivity.this, "클릭함 : "+jsonObject.get("현재운동분야"), Toast.LENGTH_SHORT).show();
-//                    Toast.makeText(MainActivity.this, "클릭함 : "+jsonObject.get("ㅅㄷㄴㅅ"), Toast.LENGTH_SHORT).show();
-//
-//
-//
-//                }catch (Exception e){
-//                    Toast.makeText(MainActivity.this, "실패함 : "+now_part, Toast.LENGTH_SHORT).show();
-//                }
                 startActivity(intent);
             }
         });
         AthleticsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                databaseReference.child("현재운동분야").setValue("육상");
                 Intent intent =  new Intent(MainActivity.this,Athletics_sports.class);
                 startActivity(intent);
             }
@@ -302,23 +249,6 @@ public class MainActivity extends AppCompatActivity {
         return getId;
     }
 
-    private String get_Json(){
-        String Json=null;
-        try {
-            InputStream is = getAssets().open("seouls-export.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            Json = new String(buffer,"UTF-8");
-//            JSONObject jsonObject = new JSONObject();
 
-
-        }catch (Exception e){
-            e.printStackTrace();
-            return null;
-        }
-        return Json;
-    }
 
 }

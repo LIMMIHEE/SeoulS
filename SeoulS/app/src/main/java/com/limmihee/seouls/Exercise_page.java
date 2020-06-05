@@ -56,10 +56,6 @@ public class Exercise_page extends AppCompatActivity {
                         sports_Field_Fire = dataSnapshot.getValue(String.class);
                         Now_sports = dataSnapshot.getValue(String.class);
                         databaseReference.child(sports_Field_Fire).child(sports_name_Fire).child("체험장소").child("companies_Name").addListenerForSingleValueEvent(new ValueEventListener() {
-
-
-
-
                             @Override
                             public void onDataChange(DataSnapshot dataSnapshot) {
                                 GenericTypeIndicator<List<String>> t = new GenericTypeIndicator<List<String>>() {};
