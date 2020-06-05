@@ -136,7 +136,7 @@ public class experience_companys extends AppCompatActivity implements OnMapReady
                                     }
 
                                     onMapReady(mGoogleMap);
-                                    Call_btn.setText(jsonObject4.getString("phone_num"));
+                                    call_num=(jsonObject4.getString("phone_num"));
                                 }catch (Exception e){
                                     Toast.makeText(experience_companys.this, ". : "+e, Toast.LENGTH_SHORT).show();
                                 }

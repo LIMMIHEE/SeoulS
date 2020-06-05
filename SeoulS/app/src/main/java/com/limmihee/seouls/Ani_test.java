@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.animation.ArgbEvaluator;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,8 @@ public class Ani_test extends AppCompatActivity {
     CardView cardView;
     Adapter adapter;
     List<Model> models ;
+    public static Context context;
+    public String this_Sop;
 
     Recommendation recommendation;
     TextView ResultText;
@@ -26,7 +29,7 @@ public class Ani_test extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ani_test);
-
+        context=this;
         ResultText = (TextView)findViewById(R.id.resultBtn);
 
         ArrayList<String> result = ((Recommendation)Recommendation.context).Reco_list;
@@ -36,19 +39,11 @@ public class Ani_test extends AppCompatActivity {
         if(result.isEmpty()){
             ResultText.setText("맞는 스포츠가... 없습니다!");
         }else{
-            String print = "";
             for(String value : result){
-                print += value+" \n ";
-                print +="\n";
-                models.add(new Model(R.drawable.water_sports_4,value,"Test"));
+                models.add(new Model(R.drawable.water_sports_4,value,"Test",value));
             }
-            ResultText.setText(print);
+            ResultText.setText("아래의 스포츠들입니다.\n원하는 스포츠를 클릭해 정보를 알아보세요!");
         }
-
-//        models.add(new Model(R.drawable.water_sports_1,"#나와_맞는_스포츠찾기","테스트를 통해 나와 맞는 스포츠의 장소와 위치를 찾아보세요!"));
-//        models.add(new Model(R.drawable.water_sports_4,"#서울 날씨","4"));
-//        models.add(new Model(R.drawable.water_sports_2,"#육상스포츠"," 실내 혹은 실외 등! 다양한 육상 스포츠들에 대해 알아보세요"));
-//        models.add(new Model(R.drawable.water_sports_3,"#수상스포츠"," 보드 혹은 스키까지! 다양한 수상 스포츠들에 대해 알아보세요"));
 
         adapter = new Adapter(models , this);
 

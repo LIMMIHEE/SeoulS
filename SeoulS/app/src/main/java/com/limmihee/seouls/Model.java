@@ -4,11 +4,13 @@ public class Model {
     private int img;
     private  String title;
     private  String desc;
+    private  String name;
 
-    public Model(int img, String title, String desc) {
+    public Model(int img, String title, String desc,String name) {
         this.img = img;
         this.title = title;
         this.desc = desc;
+        this.name = name;
     }
 
 
@@ -36,6 +38,14 @@ public class Model {
         this.desc = desc;
     }
 
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
 
 }
