@@ -16,6 +16,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.InputStream;
+
 public class Details_info extends AppCompatActivity {
     Current_usage_sports usage_sports;
 
@@ -50,6 +55,10 @@ public class Details_info extends AppCompatActivity {
         Spl_info = (TextView) findViewById(R.id.Com_Pay);
         Details_info_ = (TextView) findViewById(R.id.Detalis_info);
         SP_img =(ImageView) findViewById(R.id.Detalis_Sports_img);
+
+
+
+
 
         firebaseDatabase = FirebaseDatabase.getInstance();
           databaseReference = firebaseDatabase.getReference();
@@ -122,6 +131,14 @@ public class Details_info extends AppCompatActivity {
             }
         });
 
+        try {
+            JSONObject jsonObject = new JSONObject(getJson());
+            JSONArray jsonArray = jsonObject.getJSONArray("현재운동분야");
+
+            //jsonArray.
+        }catch (Exception e){
+
+        }
 //        Spl_name.setText(sp_name);
 //        Spl_info.setText(info);
 //        Details_info_.setText(D_info);
@@ -130,5 +147,27 @@ public class Details_info extends AppCompatActivity {
     private int getDraw_id (String type, String name){
         int getId = getResources().getIdentifier("com.limmihee.seouls:"+type+"/"+name,null,null);
         return getId;
+    }
+
+
+
+    private String getJson(){
+        String json="";
+
+        try {
+            InputStream is = getAssets().open("seouls-export.json");
+            int size = is.available();
+            byte [] buffer = new  byte[size];
+
+            is.read(buffer);
+            is.close();
+
+            json = new String(buffer,"UTF-8");
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return json;
     }
 }

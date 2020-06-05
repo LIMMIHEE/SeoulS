@@ -24,6 +24,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -41,15 +47,10 @@ import okhttp3.Response;
 import static java.lang.System.out;
 
 public class MainActivity extends AppCompatActivity {
-    ViewPager viewPager;
     CardView cardView;
-    Adapter adapter;
-    List<Model> models ;
-
-
     Button recom_btn;
 
-
+    private  static final String FILE_NAME="seouls-export";
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -82,13 +83,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        try{
-            jsonObject = new JSONObject(get_Json());
-            now_part  = jsonObject.getString("현재운동분야");
-        }catch (Exception e){
-
-        }
+        File file = new File(this.getFilesDir(), FILE_NAME);
 
 
         TestBtn = (Button) findViewById(R.id.button8) ;
@@ -108,20 +103,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        models = new ArrayList<>();
-//        models.add(new Model(R.drawable.water_sports_4,"#TEST","Test"));
-////        models.add(new Model(R.drawable.water_sports_1,"#나와_맞는_스포츠찾기","테스트를 통해 나와 맞는 스포츠의 장소와 위치를 찾아보세요!"));
-////        models.add(new Model(R.drawable.water_sports_4,"#서울 날씨","4"));
-////        models.add(new Model(R.drawable.water_sports_2,"#육상스포츠"," 실내 혹은 실외 등! 다양한 육상 스포츠들에 대해 알아보세요"));
-////        models.add(new Model(R.drawable.water_sports_3,"#수상스포츠"," 보드 혹은 스키까지! 다양한 수상 스포츠들에 대해 알아보세요"));
-//
-//        adapter = new Adapter(models , this);
-//
-//
-//
-//        viewPager = findViewById(R.id.select);
-//        viewPager.setAdapter(adapter);
-//        viewPager.setPadding(150,0,150,0);
 
 
 
@@ -130,37 +111,42 @@ public class MainActivity extends AppCompatActivity {
         //rand_sports();
         api_Key();
 
-        databaseReference = firebaseDatabase.getReference();
-        Button aqua_main_btn = (Button) findViewById(R.id.apua);
-        aqua_main_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                databaseReference.child("현재운동분야").setValue("수상");
-                Intent intent = new Intent(MainActivity.this, AquaticSports.class);
-                startActivity(intent);
-            }
-        });
-
-        Button Arhletics_main_btn = (Button) findViewById(R.id.athletics);
-        Arhletics_main_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                databaseReference.child("현재운동분야").setValue("육상");
-                Intent intent = new Intent(MainActivity.this, Athletics_sports.class);
-                startActivity(intent);
-            }
-        });
-
-//        Button rand_btn = (Button) findViewById(R.id.rand_info_btn);
-//        rand_btn.setOnClickListener(new View.OnClickListener(){
+//        databaseReference = firebaseDatabase.getReference();
+//        Button aqua_main_btn = (Button) findViewById(R.id.apua);
+//        aqua_main_btn.setOnClickListener(new View.OnClickListener(){
 //            @Override
 //            public void onClick(View v){
-//                databaseReference.child("현재운동분야").setValue(now_sport);
-//                databaseReference.child("현재운동").setValue(Sports_names[rand_num]);
-//                Intent intent = new Intent(MainActivity.this,  Details_info.class);
-//                startActivity(intent);
+////                databaseReference.child("현재운동분야").setValue("수상");
+//                try{
+//                    jsonObject = new JSONObject(get_Json());
+//                    jsonObject.put("현재운동분야","수상");
+//                    Toast.makeText(MainActivity.this, "클릭함 : "+jsonObject.get("현재운동분야"), Toast.LENGTH_SHORT).show();
+//
+//                }catch (Exception e){
+//                    Toast.makeText(MainActivity.this, "실패함 : "+now_part, Toast.LENGTH_SHORT).show();
+//                }
+//                Intent intent = new Intent(MainActivity.this, AquaticSports.class);
+////                startActivity(intent);
 //            }
 //        });
+//
+//        Button Arhletics_main_btn = (Button) findViewById(R.id.athletics);
+//        Arhletics_main_btn.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v){
+////                databaseReference.child("현재운동분야").setValue("육상");
+//                try{
+//                    jsonObject = new JSONObject(get_Json());
+//                    jsonObject.put("현재운동분야","육상");
+//
+//                }catch (Exception e){
+//
+//                }
+//                Intent intent = new Intent(MainActivity.this, Athletics_sports.class);
+////                startActivity(intent);
+//            }
+//        });
+
         recom_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -180,6 +166,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent =  new Intent(MainActivity.this,AquaticSports.class);
+//                try{
+//                    jsonObject = new JSONObject(get_Json());
+//                    jsonObject.put("현재운동분야","수상");
+//                    jsonObject.put("ㅅㄷㄴㅅ","ㅅㄷㄴㅅ");
+//                    Toast.makeText(MainActivity.this, "클릭함 : "+jsonObject.get("현재운동분야"), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(MainActivity.this, "클릭함 : "+jsonObject.get("ㅅㄷㄴㅅ"), Toast.LENGTH_SHORT).show();
+//
+//
+//
+//                }catch (Exception e){
+//                    Toast.makeText(MainActivity.this, "실패함 : "+now_part, Toast.LENGTH_SHORT).show();
+//                }
                 startActivity(intent);
             }
         });

@@ -2,17 +2,15 @@ package com.limmihee.seouls;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.android.gms.maps.MapView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Athletics_sports extends AppCompatActivity implements AthleticsSports {
+public class Athletics_sports extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase ;
     DatabaseReference databaseReference ;
 
