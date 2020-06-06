@@ -67,7 +67,7 @@ public class Recommendation extends AppCompatActivity {
                 if(isAquaOrAth==false||isBody==false ||isUse==false || isRule==false ){
                     Toast.makeText(Recommendation.this, "모든 선택지를 골라주세요", Toast.LENGTH_SHORT).show();
                 }else{
-                    Intent intent = new Intent(Recommendation.this, Ani_test.class);
+                    Intent intent = new Intent(Recommendation.this, recommend_result.class);
                     startActivity(intent);
                 }
 

@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     Button AquaBtn;
     Button AthleticsBtn;
     Button TestBtn;
+    Button todobtn;
     JSONObject jsonObject;
     String now_part;
 
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         TestBtn = (Button) findViewById(R.id.button8) ;
-
+        todobtn = (Button) findViewById(R.id.Todo_btn);
         siteBtn = (Button)  findViewById(R.id.site_move);
         AquaBtn = (Button)  findViewById(R.id.apua);
         AthleticsBtn = (Button)  findViewById(R.id.athletics);
@@ -139,6 +140,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "클릭함 : "+now_part, Toast.LENGTH_SHORT).show();
+            }
+        });
+        todobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =  new Intent(MainActivity.this,Todo_list.class);
+                startActivity(intent);
             }
         });
     }
