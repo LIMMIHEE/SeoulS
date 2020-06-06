@@ -95,7 +95,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/todo_send"
         android:layout_width="174dp"
         android:layout_height="65dp"
         android:layout_marginStart="44dp"

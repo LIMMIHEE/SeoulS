@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
     Button AthleticsBtn;
     Button TestBtn;
     Button todobtn;
-    JSONObject jsonObject;
     String now_part;
 
     @Override
@@ -92,14 +91,6 @@ public class MainActivity extends AppCompatActivity {
         cardView =findViewById(R.id.slide);
         recom_btn= (Button) findViewById(R.id.button3);
 
-
-
-
-
-
-
-
-        //rand_sports();
         api_Key();
 
         databaseReference = firebaseDatabase.getReference();
@@ -235,23 +226,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void rand_sports(){
-        Random random = new Random();
-        rand_num = random.nextInt(17)+1;
-        if(rand_num <=8){
-            now_sport="수상";
-        }else{
-            now_sport="육상";
-        }
 
-        //rand_sports_name=(TextView)findViewById(R.id.rand_name);
-        rand_sports_name.setText(Sports_names[rand_num]);
-
-        //rand_sports_img=(ImageView)findViewById(R.id.rand_img);
-        int Get_img_id =  getDraw_id("drawable",img_name[rand_num]);
-        rand_sports_img.setImageResource(Get_img_id);
-
-    }
     private int getDraw_id (String type, String name){
         int getId = getResources().getIdentifier("com.limmihee.seouls:"+type+"/"+name,null,null);
         return getId;
