@@ -21,7 +21,8 @@ public class Ani_test extends AppCompatActivity {
     Adapter adapter;
     List<Model> models ;
     public static Context context;
-    public String this_Sop;
+
+    String [][] aqua_Sp = {};
 
     Recommendation recommendation;
     TextView ResultText;
@@ -40,7 +41,7 @@ public class Ani_test extends AppCompatActivity {
             ResultText.setText("맞는 스포츠가... 없습니다!");
         }else{
             for(String value : result){
-                models.add(new Model(R.drawable.water_sports_4,value,"Test",value));
+                models.add(new Model(R.drawable.water_sports_4,value,"Test"));
             }
             ResultText.setText("아래의 스포츠들입니다.\n원하는 스포츠를 클릭해 정보를 알아보세요!");
         }
