@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -33,7 +34,7 @@ public class Todo_list extends AppCompatActivity {
         layout = (LinearLayout) findViewById(R.id.Todo_list);
         todo_add_btn = (Button) findViewById(R.id.Todo_print);
 
-
+        CreateTODO("f","f","2");
 
 
 
@@ -48,13 +49,18 @@ public class Todo_list extends AppCompatActivity {
     }
     private void CreateTODO(String name, String info, String time){
         layoutInflater = LayoutInflater.from(this);
-        View view = layoutInflater.inflate(R.layout.item, container, false);
+        View view = layoutInflater.inflate(R.layout.todo_item,null);
 
         CardView cardView ;
-        TextView name_text;
-        TextView info_text;
-        TextView time_text;
+        TextView name_text= view.findViewById(R.id.name);
+        TextView info_text= view.findViewById(R.id.info_todo);
+        TextView time_text= view.findViewById(R.id.time_todo);
 
+        name_text.setText(name);
+        info_text.setText(info);
+        time_text.setText(time);
+
+        layout.addView(view);
 
     }
 }
