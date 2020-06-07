@@ -52,7 +52,8 @@ public class todo_add extends AppCompatActivity {
                     todo = new TODO(name.getText().toString(),info.getText().toString(),Integer.parseInt(time.getText().toString()));
                     databaseReference.child("TODO").child(name.getText().toString()).setValue(todo);
                 }
-                onBackPressed();
+                Intent intent = new Intent(todo_add.this, Todo_list.class);
+                startActivity(intent);
             }
         });
     }

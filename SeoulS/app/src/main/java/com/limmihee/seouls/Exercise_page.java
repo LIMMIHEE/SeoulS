@@ -29,9 +29,7 @@ public class Exercise_page extends AppCompatActivity {
 
      int Get_this_id=0;
 
-    //companies companies;
-    ArrayList<String> companies_Name =new ArrayList<>();
-    String  DB_input ;
+
     String Now_sports;
 
     FirebaseDatabase firebaseDatabase ;
