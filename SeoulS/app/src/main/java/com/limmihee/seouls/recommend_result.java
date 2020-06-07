@@ -14,7 +14,6 @@ import java.util.List;
 public class recommend_result extends AppCompatActivity {
 
     ViewPager viewPager;
-    CardView cardView;
     Adapter adapter;
     List<Model> models ;
     public static Context context;
