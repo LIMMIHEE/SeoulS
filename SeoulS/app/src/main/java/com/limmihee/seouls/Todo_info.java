@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,7 +18,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Todo_info extends AppCompatActivity {
-    private long StartCountDownTimer;
+    private long StartCountDownTimer=10;
+    //파이어베이스에서 가져오면 안된다. 따로 방법을 갈구 해야할듯.
 
 
     private long CountDownTimer;
@@ -37,6 +39,7 @@ public class Todo_info extends AppCompatActivity {
     TextView todo_name;
     TextView todo_info;
     TextView todo_time;
+    TextView Percent;
 
 
     String TODO_NAME;
@@ -52,6 +55,7 @@ public class Todo_info extends AppCompatActivity {
         Start_btn = (Button) findViewById(R.id.timer_play);
         Pause_btn = (Button) findViewById(R.id.timer_pause);
 
+        Percent = (TextView) findViewById(R.id.Time_Percent);
         todo_name = (TextView) findViewById(R.id.todo_name);
         todo_info = (TextView) findViewById(R.id.todo_info);
         todo_time= (TextView) findViewById(R.id.TODO_time);
@@ -67,7 +71,9 @@ public class Todo_info extends AppCompatActivity {
                         todo_info.setText(dataSnapshot.child("info").getValue().toString());
 //                        todo_time.setText("목표 시간 "+dataSnapshot.child("time").getValue().toString()+"시간");
                         todo_time.setText(dataSnapshot.child("time").getValue().toString());
-                    }
+                        StartCountDownTimer =  Long.parseLong(dataSnapshot.child("time").getValue().toString());
+                        StartCountDownTimer *= 60 *10000;
+                       }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -97,18 +103,21 @@ public class Todo_info extends AppCompatActivity {
         Start_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(IsTimerWork){
-                    pauseTimer();
-                }
+                    StartTimer();
             }
         });
         Pause_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pauseTimer();
+                    pauseTimer();
             }
         });
-        updateCounteDown();
+
+
+//        while (IsTimerWork){
+//            updateCounteDown();
+//        }
+
     }
     private void pauseTimer(){
         mCountDownTimer.cancel();
@@ -133,5 +142,7 @@ public class Todo_info extends AppCompatActivity {
 
     private void updateCounteDown(){
         int minutes = (int)(TimeLeftIWillis / 1000/60);
+        int per = (int) ((int) ( TimeLeftIWillis - StartCountDownTimer)%StartCountDownTimer *100);
+        Percent.setText(per+"%");
     }
 }

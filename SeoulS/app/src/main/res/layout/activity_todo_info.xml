@@ -74,7 +74,8 @@
 
     <ProgressBar
         android:id="@+id/progressBar"
-        style="?android:attr/presentationTheme"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="10"
         android:layout_width="308dp"
         android:layout_height="290dp"
         android:layout_marginTop="36dp"
@@ -85,7 +86,7 @@
         android:progressDrawable="@drawable/progress_style"/>
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/Time_Percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
