@@ -49,8 +49,9 @@ public class Todo_list extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
-                    CreateTODO(dataSnapshot1.child("info").getValue().toString(),
+                    CreateTODO(
                             dataSnapshot1.child("name").getValue().toString(),
+                            dataSnapshot1.child("info").getValue().toString(),
                             dataSnapshot1.child("time").getValue().toString());
                 }
 
@@ -74,7 +75,7 @@ public class Todo_list extends AppCompatActivity {
         });
 
     }
-    private void CreateTODO(String name, String info, String time){
+    private void CreateTODO(final String name, String info, String time){
         layoutInflater = LayoutInflater.from(this);
         View view = layoutInflater.inflate(R.layout.todo_item,null);
 
@@ -86,6 +87,16 @@ public class Todo_list extends AppCompatActivity {
         name_text.setText(name);
         info_text.setText(info);
         time_text.setText(time);
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                databaseReference = firebaseDatabase.getReference().child("현재TODO");
+                databaseReference.setValue(name);
+                Intent intent = new Intent(Todo_list.this,Todo_info.class);
+                startActivity(intent);
+            }
+        });
 
         layout.addView(view);
 

@@ -1,14 +1,20 @@
 package com.limmihee.seouls;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Todo_info extends AppCompatActivity {
     private long StartCountDownTimer;
@@ -26,18 +32,67 @@ public class Todo_info extends AppCompatActivity {
     Button Start_btn;
     Button Pause_btn;
 
+    ProgressBar progressBar;
+
+    TextView todo_name;
+    TextView todo_info;
+    TextView todo_time;
+
+
+    String TODO_NAME;
+    String TODO_Time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo_info);
 
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+        Start_btn = (Button) findViewById(R.id.timer_play);
+        Pause_btn = (Button) findViewById(R.id.timer_pause);
+
+        todo_name = (TextView) findViewById(R.id.todo_name);
+        todo_info = (TextView) findViewById(R.id.todo_info);
+        todo_time= (TextView) findViewById(R.id.TODO_time);
+
+        databaseReference.child("현재TODO").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                TODO_NAME = dataSnapshot.getValue().toString();
+                todo_name.setText(TODO_NAME);
+                databaseReference.child("TODO").child(TODO_NAME).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        todo_info.setText(dataSnapshot.child("info").getValue().toString());
+//                        todo_time.setText("목표 시간 "+dataSnapshot.child("time").getValue().toString()+"시간");
+                        todo_time.setText(dataSnapshot.child("time").getValue().toString());
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        TODO_Time = (String) todo_time.getText();
+        //StartCountDownTimer = Long.parseLong(TODO_Time);
+
+        progressBar.setProgress(10);
+
+        todo_time.setText("목표 시간 "+TODO_Time+"시간");
+
         //StartCountDownTimer = 파이어 베이스 가져오기
         //https://sosolife.tistory.com/518 퍼센트 계산
         //https://www.youtube.com/watch?v=MDuGwI6P-X8
 
-        Start_btn = (Button) findViewById(R.id.timer_play);
-        Pause_btn = (Button) findViewById(R.id.timer_pause);
 
         Start_btn.setOnClickListener(new View.OnClickListener() {
             @Override

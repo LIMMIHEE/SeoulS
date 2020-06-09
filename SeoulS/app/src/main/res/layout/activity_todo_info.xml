@@ -7,7 +7,7 @@
     tools:context=".Todo_info">
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/todo_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -38,7 +38,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView20"
+                    android:id="@+id/todo_info"
                     android:layout_width="314dp"
                     android:layout_height="19dp"
                     android:text="TextView"
@@ -106,4 +106,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/TODO_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="목표 시간 0시간"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
