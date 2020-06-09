@@ -25,6 +25,15 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         app:srcCompat="@drawable/main_circle" />
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="102dp"
+        android:layout_height="102dp"
+        android:layout_marginBottom="275dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/horizontalScrollView"
+        app:srcCompat="@drawable/dot_2" />
+
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"
@@ -172,7 +181,10 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/main_sports_btn"
-                android:text="사이트" />
+                android:text="사이트"
+                android:textColor="#454545"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/apua"
@@ -181,7 +193,10 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/main_sports_btn"
-                android:text="수상" />
+                android:text="수상"
+                android:textColor="#454545"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/athletics"
@@ -190,7 +205,10 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/main_sports_btn"
-                android:text="육상" />
+                android:text="육상"
+                android:textColor="#454545"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/button8"
@@ -199,16 +217,11 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/main_sports_btn"
-                android:text="실내" />
+                android:text="실내"
+                android:textColor="#454545"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
 
-            <Button
-                android:id="@+id/button10"
-                android:layout_width="84dp"
-                android:layout_height="84dp"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/main_sports_btn"
-                android:text="야외" />
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -238,7 +251,14 @@
         android:layout_height="193dp"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="36dp"
-        android:text="임의버튼"
+        android:background="@drawable/todo_btn_style"
+        android:drawableBottom="@drawable/ic_drag"
+        android:gravity="clip_horizontal"
+        android:padding="25dp"
+        android:text="자신의\n목표를\n정해요\n"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
