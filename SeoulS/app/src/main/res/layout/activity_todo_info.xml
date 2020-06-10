@@ -75,15 +75,15 @@
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:progress="10"
         android:layout_width="308dp"
         android:layout_height="290dp"
         android:layout_marginTop="36dp"
+        android:progress="100"
+        android:progressDrawable="@drawable/progress_style"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:progressDrawable="@drawable/progress_style"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Time_Percent"
@@ -114,6 +114,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="목표 시간 0시간"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

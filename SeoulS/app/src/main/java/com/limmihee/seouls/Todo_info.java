@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -17,13 +18,22 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
+import okhttp3.internal.http2.Header;
+
 public class Todo_info extends AppCompatActivity {
-    private long StartCountDownTimer=10;
+    private long StartCountDownTimer=6000;
     //파이어베이스에서 가져오면 안된다. 따로 방법을 갈구 해야할듯.
 
 
     private long CountDownTimer;
+    private int Count_time=0;
     private  long TimeLeftIWillis = StartCountDownTimer;
+
+    Handler handler ;
+    Runnable runnable;
 
     private android.os.CountDownTimer mCountDownTimer;
     private boolean IsTimerWork;
@@ -70,9 +80,9 @@ public class Todo_info extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         todo_info.setText(dataSnapshot.child("info").getValue().toString());
 //                        todo_time.setText("목표 시간 "+dataSnapshot.child("time").getValue().toString()+"시간");
-                        todo_time.setText(dataSnapshot.child("time").getValue().toString());
+                        todo_time.setText("목표 시간 "+dataSnapshot.child("time").getValue().toString()+"시간 중");
                         StartCountDownTimer =  Long.parseLong(dataSnapshot.child("time").getValue().toString());
-                        StartCountDownTimer *= 60 *10000;
+                        StartCountDownTimer *= 3600000;
                        }
 
                     @Override
@@ -93,56 +103,38 @@ public class Todo_info extends AppCompatActivity {
 
         progressBar.setProgress(10);
 
-        todo_time.setText("목표 시간 "+TODO_Time+"시간");
+        //todo_time.setText("목표 시간 "+TODO_Time+"시간");
+        //StartCountDownTimer = 6000;
+        handler = new Handler();
+         runnable = new Runnable() {
+            @Override
+            public void run() {
+                Count_time++;
+                //Percent.setText(StartCountDownTimer+"중 "+Count_time+"%");
+                Percent.setText(Count_time+(Count_time/(StartCountDownTimer*1000)*100)+"%");
+                progressBar.setProgress((int)(Count_time/(StartCountDownTimer*1000)*100));
+                handler.postDelayed(this,1000);
 
-        //StartCountDownTimer = 파이어 베이스 가져오기
-        //https://sosolife.tistory.com/518 퍼센트 계산
-        //https://www.youtube.com/watch?v=MDuGwI6P-X8
+            }
+        };
+         //600,000 = 10분
+        //3,600,000 60분
 
 
         Start_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    StartTimer();
+                    handler.post(runnable);
             }
         });
         Pause_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    pauseTimer();
+                handler.removeCallbacks(runnable);
             }
         });
 
 
-//        while (IsTimerWork){
-//            updateCounteDown();
-//        }
-
-    }
-    private void pauseTimer(){
-        mCountDownTimer.cancel();
-        IsTimerWork = false;
-
-    }
-    private void StartTimer(){
-        mCountDownTimer = new CountDownTimer(TimeLeftIWillis,1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                TimeLeftIWillis = millisUntilFinished;
-                updateCounteDown();
-            }
-
-            @Override
-            public void onFinish() {
-                IsTimerWork=false;
-            }
-        }.start();
-        IsTimerWork=true;
     }
 
-    private void updateCounteDown(){
-        int minutes = (int)(TimeLeftIWillis / 1000/60);
-        int per = (int) ((int) ( TimeLeftIWillis - StartCountDownTimer)%StartCountDownTimer *100);
-        Percent.setText(per+"%");
-    }
 }
