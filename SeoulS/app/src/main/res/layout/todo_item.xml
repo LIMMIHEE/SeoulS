@@ -38,10 +38,11 @@
 
                 <TextView
                     android:id="@+id/name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="204dp"
+                    android:layout_height="34dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="32dp"
+                    android:ellipsize="end"
                     android:text="TextView"
                     android:textColor="#2196F3"
                     android:textSize="24sp"

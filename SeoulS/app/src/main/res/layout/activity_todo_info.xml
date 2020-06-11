@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/todo_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="305dp"
+        android:layout_height="47dp"
         android:layout_marginStart="48dp"
         android:layout_marginBottom="302dp"
         android:text="TextView"
@@ -33,19 +33,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/todo_info"
-                    android:layout_width="314dp"
-                    android:layout_height="19dp"
-                    android:text="TextView"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/todo_info"
+                android:layout_width="305dp"
+                android:layout_height="387dp"
+                android:layout_marginLeft="47dp"
+                android:text="TextView" />
 
         </LinearLayout>
     </ScrollView>
@@ -90,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
-        android:text="10%"
+        android:text="0%"
         android:textSize="42sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,7 +91,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/todo_del"
         android:layout_width="308dp"
         android:layout_height="50dp"
         android:layout_marginBottom="20dp"

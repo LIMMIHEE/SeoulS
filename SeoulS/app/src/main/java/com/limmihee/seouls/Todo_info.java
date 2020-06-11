@@ -1,8 +1,11 @@
 package com.limmihee.seouls;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -43,6 +46,7 @@ public class Todo_info extends AppCompatActivity {
 
     Button Start_btn;
     Button Pause_btn;
+    Button Del_Btn;
 
     ProgressBar progressBar;
 
@@ -64,6 +68,7 @@ public class Todo_info extends AppCompatActivity {
 
         Start_btn = (Button) findViewById(R.id.timer_play);
         Pause_btn = (Button) findViewById(R.id.timer_pause);
+        Del_Btn = (Button) findViewById(R.id.todo_del);
 
         Percent = (TextView) findViewById(R.id.Time_Percent);
         todo_name = (TextView) findViewById(R.id.todo_name);
@@ -104,15 +109,20 @@ public class Todo_info extends AppCompatActivity {
         progressBar.setProgress(10);
 
         //todo_time.setText("목표 시간 "+TODO_Time+"시간");
-        //StartCountDownTimer = 6000;
+        StartCountDownTimer = 6000;
         handler = new Handler();
          runnable = new Runnable() {
             @Override
             public void run() {
                 Count_time++;
+
                 //Percent.setText(StartCountDownTimer+"중 "+Count_time+"%");
-                Percent.setText(Count_time+(Count_time/(StartCountDownTimer*1000)*100)+"%");
-                progressBar.setProgress((int)(Count_time/(StartCountDownTimer*1000)*100));
+//                int persent =(int)(Count_time*1000/(StartCountDownTimer)*100);
+                if(Count_time*1000/StartCountDownTimer*100 >= 100){
+                    handler.removeCallbacks(runnable);
+                }
+                Percent.setText((Count_time*1000/(StartCountDownTimer)*100)+"%");
+                progressBar.setProgress((int)(Count_time*1000/(StartCountDownTimer)*100));
                 handler.postDelayed(this,1000);
 
             }
@@ -133,8 +143,36 @@ public class Todo_info extends AppCompatActivity {
                 handler.removeCallbacks(runnable);
             }
         });
+        Del_Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder dialog = new AlertDialog.Builder(Todo_info.this);
+                dialog .setTitle("목표 삭제")
+                        .setMessage("삭제하시겠습니까?")
+                        .setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        })
+                        .setPositiveButton("삭제하기", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                databaseReference.child("TODO").child((String) todo_name.getText()).removeValue();
+                                Intent intent = new Intent(Todo_info.this,Todo_list.class);
+                                startActivity(intent);
+                            }
+                        }).create().show();
+
+            }
+        });
+
 
 
     }
-
+    @Override
+    public void onBackPressed(){
+        
+        //sss
+    }
 }
