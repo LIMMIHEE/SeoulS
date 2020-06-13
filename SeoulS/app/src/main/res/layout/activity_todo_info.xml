@@ -38,7 +38,8 @@
                 android:layout_width="305dp"
                 android:layout_height="387dp"
                 android:layout_marginLeft="47dp"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textSize="16sp" />
 
         </LinearLayout>
     </ScrollView>
@@ -95,7 +96,10 @@
         android:layout_width="308dp"
         android:layout_height="50dp"
         android:layout_marginBottom="20dp"
+        android:background="@drawable/todo_del_btn"
         android:text="일정 완료 (일정 삭제)"
+        android:textColor="#E13434"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
