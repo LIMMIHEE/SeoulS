@@ -109,7 +109,7 @@ public class Todo_info extends AppCompatActivity {
         progressBar.setProgress(10);
 
         //todo_time.setText("목표 시간 "+TODO_Time+"시간");
-        StartCountDownTimer = 6000;
+        StartCountDownTimer = 600000;
         handler = new Handler();
          runnable = new Runnable() {
             @Override
@@ -118,11 +118,11 @@ public class Todo_info extends AppCompatActivity {
 
                 //Percent.setText(StartCountDownTimer+"중 "+Count_time+"%");
 //                int persent =(int)(Count_time*1000/(StartCountDownTimer)*100);
-                if(Count_time*1000/StartCountDownTimer*100 >= 100){
+                if(Count_time*1000==StartCountDownTimer){
                     handler.removeCallbacks(runnable);
                 }
-                Percent.setText((Count_time*1000/(StartCountDownTimer)*100)+"%");
-                progressBar.setProgress((int)(Count_time*1000/(StartCountDownTimer)*100));
+                Percent.setText((Count_time*1000/60000)+"분");
+//                progressBar.setProgress((int)(Count_time*1000/(StartCountDownTimer)*100));
                 handler.postDelayed(this,1000);
 
             }
