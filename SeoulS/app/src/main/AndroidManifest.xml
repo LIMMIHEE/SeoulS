@@ -12,11 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Todo_info"></activity>
+        <activity android:name=".Start_View">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Todo_info" />
         <activity android:name=".todo_add" />
         <activity android:name=".Todo_list" />
         <activity android:name=".recommend_result" />
-        <activity android:name=".Ani_test" />
+        <activity android:name=".Ani_test">
+        </activity>
         <activity android:name=".Recommendation" />
 
         <meta-data
@@ -28,13 +36,7 @@
         <activity android:name=".Athletics_sports" />
         <activity android:name=".AquaticSports" />
         <activity android:name=".Details_info" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
