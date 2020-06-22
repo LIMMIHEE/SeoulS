@@ -5,7 +5,12 @@ import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.animation.ArgbEvaluator;
+import android.content.Context;
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -36,27 +41,22 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SensorEventListener{
     CardView cardView;
     Button recom_btn;
 
-    private  static final String FILE_NAME="seouls-export";
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
 
-    String img_name[]={"water_sports_1","water_sports_2","water_sports_3","water_sports_4"
-            ,"water_sports_5","water_sports_6","water_sports_7","jeremy","tennis","badminton","archery","baseball",
-            "volleyball","foot_volleyball","soccer","basketball","inline"};
-    String Sports_names[]={"잠실 한강공원","뚝섬 한강공원","잠원 한강공원","반포 한강공원","이촌 한강공원"
-            ,"여의도 한강공원","양화 한강공원","망원 한강공원","테니스","배드민턴","양궁","야구",
-            "배구","족구","축구","농구","인라인"};
-    String now_sport="";
-    int rand_num;
+    SensorManager manager;
+    Sensor sensor;
 
-    TextView rand_sports_name;
-    ImageView rand_sports_img;
+    private int Steps = 0;
+    private int CounterSteps = 0;
 
+
+    TextView Step_count;
     TextView view_City;
     TextView view_temp;
     TextView view_Humidity;
@@ -67,20 +67,25 @@ public class MainActivity extends AppCompatActivity {
     Button AthleticsBtn;
     Button TestBtn;
     Button todobtn;
-    String now_part;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        File file = new File(this.getFilesDir(), FILE_NAME);
+
+        manager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        sensor = manager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
 
 
+        Step_count = (TextView)findViewById(R.id.step_count);
         TestBtn = (Button) findViewById(R.id.button8) ;
         todobtn = (Button) findViewById(R.id.Todo_btn);
         siteBtn = (Button)  findViewById(R.id.site_move);
         AquaBtn = (Button)  findViewById(R.id.apua);
         AthleticsBtn = (Button)  findViewById(R.id.athletics);
+
+        Step_count.setText(Steps+"걸음");
 
         view_Humidity=(TextView)findViewById(R.id.Humidity);
         view_City= (TextView)findViewById(R.id.City_name);
@@ -227,12 +232,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    private int getDraw_id (String type, String name){
-        int getId = getResources().getIdentifier("com.limmihee.seouls:"+type+"/"+name,null,null);
-        return getId;
+    public void onStart() {
+        super.onStart();
+        if(sensor !=null){
+            //센서의 속도 설정
+            manager.registerListener(this,sensor,SensorManager.SENSOR_DELAY_GAME);
+        }
+    }
+    public void onStop(){
+        super.onStop();
+        if(manager!=null){
+            manager.unregisterListener(this);
+        }
     }
 
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        if(event.sensor.getType() == Sensor.TYPE_STEP_COUNTER){
 
+            //stepcountsenersor는 앱이 꺼지더라도 초기화 되지않는다. 그러므로 우리는 초기값을 가지고 있어야한다.
+            if (CounterSteps < 1) {
+                CounterSteps = (int) event.values[0];
+            }
+            //리셋 안된 값 + 현재값 - 리셋 안된 값
+            Steps = (int) event.values[0] - CounterSteps;
+            Step_count.setText(Steps+"걸음");
 
+        }
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+    }
 }
