@@ -60,7 +60,7 @@
                     app:layout_constraintStart_toEndOf="@+id/textView2"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.451"
-                    app:srcCompat="@drawable/archery" />
+                    app:srcCompat="@drawable/d02d" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -85,7 +85,7 @@
                     android:layout_height="70dp"
                     android:layout_marginTop="88dp"
                     android:gravity="center"
-                    android:text="TextView"
+                    android:text="서울"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     android:textStyle="bold"
@@ -100,7 +100,7 @@
                     android:layout_height="37dp"
                     android:layout_marginTop="193dp"
                     android:gravity="center"
-                    android:text="TextView"
+                    android:text="25℃"
                     android:textColor="#FFFFFF"
                     android:textSize="26sp"
                     android:textStyle="bold"
@@ -115,7 +115,7 @@
                     android:layout_height="37dp"
                     android:layout_marginTop="220dp"
                     android:gravity="center"
-                    android:text="TextView"
+                    android:text="습도 : 43%"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -267,10 +267,11 @@
 
     <TextView
         android:id="@+id/step_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="123dp"
+        android:layout_height="29dp"
         android:layout_marginBottom="24dp"
-        android:text="0000걸음"
+        android:gravity="center"
+        android:text="102걸음"
         android:textColor="#353535"
         android:textColorHighlight="#FFFFFF"
         android:textSize="18sp"
