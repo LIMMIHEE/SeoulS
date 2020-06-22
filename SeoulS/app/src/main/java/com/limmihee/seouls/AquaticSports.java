@@ -19,15 +19,6 @@ public class AquaticSports extends AppCompatActivity {
         setContentView(R.layout.activity_aquatic_sports);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
-        Button Arhletics_main_btn = (Button) findViewById(R.id.BackButton);
-        Arhletics_main_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(AquaticSports.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
 
         View Card_View = (View) findViewById(R.id.Apuar_sports);
         Card_View.setOnClickListener(new View.OnClickListener(){

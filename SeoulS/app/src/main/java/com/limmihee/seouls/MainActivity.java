@@ -130,7 +130,8 @@ public class MainActivity extends AppCompatActivity {
         TestBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "클릭함 : "+now_part, Toast.LENGTH_SHORT).show();
+                Intent Calltel = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:02-3780-0777"));
+                startActivity(Calltel);
             }
         });
         todobtn.setOnClickListener(new View.OnClickListener() {

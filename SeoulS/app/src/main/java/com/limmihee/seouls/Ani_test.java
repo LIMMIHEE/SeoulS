@@ -27,12 +27,24 @@ public class Ani_test extends AppCompatActivity {
 
     Recommendation recommendation;
     TextView ResultText;
+    TextView Info_Text;
+    Button main_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ani_test);
         context=this;
         ResultText = (TextView)findViewById(R.id.resultBtn);
+        Info_Text= (TextView)findViewById(R.id.info_text);
+        main_btn = (Button) findViewById(R.id.main_btn);
+
+        main_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Ani_test.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         ArrayList<String> result = ((Recommendation)Recommendation.context).Reco_list;
         models = new ArrayList<>();
@@ -40,11 +52,11 @@ public class Ani_test extends AppCompatActivity {
 
         if(result.isEmpty()){
             ResultText.setText("맞는 스포츠가... 없습니다!");
+            Info_Text.setText("");
         }else{
             for(String value : result){
                 models.add(new Model(R.drawable.water_sports_4,value,"Test"));
             }
-            ResultText.setText("아래의 스포츠들입니다.\n원하는 스포츠를 클릭해 정보를 알아보세요!");
         }
 
         adapter = new Adapter(models , this);
@@ -56,4 +68,9 @@ public class Ani_test extends AppCompatActivity {
         viewPager.setPadding(150,0,150,0);
 
     }
+    @Override public void onBackPressed()
+    {
+        //super.onBackPressed();
+    }
+
 }

@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="443dp"
-        android:layout_height="828dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="410dp"
+        android:layout_height="771dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/main_img" />
 

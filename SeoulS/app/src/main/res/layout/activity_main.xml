@@ -171,31 +171,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/main_sports_btn"
-                android:text="사이트"
-                android:textColor="#454545"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/apua"
-                android:layout_width="84dp"
-                android:layout_height="84dp"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/main_sports_btn"
-                android:text="수상"
-                android:textColor="#454545"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/athletics"
-                android:layout_width="84dp"
-                android:layout_height="84dp"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/main_sports_btn"
-                android:text="육상"
+                android:text="본부\n사이트"
                 android:textColor="#454545"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -207,7 +183,31 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/main_sports_btn"
-                android:text="실내"
+                android:text="본부\n번호"
+                android:textColor="#454545"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/apua"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/main_sports_btn"
+                android:text="수상\n운동"
+                android:textColor="#454545"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/athletics"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/main_sports_btn"
+                android:text="육상\n운동"
                 android:textColor="#454545"
                 android:textSize="15sp"
                 android:textStyle="bold" />

@@ -23,14 +23,6 @@ public class Athletics_sports extends AppCompatActivity {
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
-        Button Arhletics_main_btn = (Button) findViewById(R.id.BackButton);
-        Arhletics_main_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-               Intent intent = new Intent(Athletics_sports.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
 
 
         View Card_View = (View) findViewById(R.id.Apuar_sports);
