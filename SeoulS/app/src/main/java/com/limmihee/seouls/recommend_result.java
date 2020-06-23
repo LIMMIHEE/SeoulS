@@ -21,9 +21,7 @@ public class recommend_result extends AppCompatActivity {
     List<Model> models ;
     public static Context context;
 
-    String [][] aqua_Sp = {};
 
-    Recommendation recommendation;
     TextView ResultText;
     TextView Info_Text;
     Button main_btn;
@@ -54,7 +52,22 @@ public class recommend_result extends AppCompatActivity {
             Info_Text.setText("아래의 집 모양을 눌러주세요!");
         }else{
             for(String value : result){
-                models.add(new Model(R.drawable.water_sports_4,value,"Test"));
+                int draw=0;
+                switch (value){
+                    case  "농구": draw = getDraw_id("drawable","basketball");break;
+                    case  "배구": draw = getDraw_id("drawable","volleyball");break;
+                    case  "배드민턴": draw = getDraw_id("drawable","badminton"); break;
+                    case  "야구": draw = getDraw_id("drawable","baseball");break;
+                    case  "양궁": draw = getDraw_id("drawable","archery");break;
+                    case  "인라인": draw = getDraw_id("drawable","inline");break;
+                    case  "족구": draw = getDraw_id("drawable","foot_volleyball");break;
+                    case  "축구": draw = getDraw_id("drawable","soccer");break;
+                    case  "테니스": draw = getDraw_id("drawable","tennis");break;
+                    default: draw = getDraw_id("drawable","water_sports_"+(int)((Math.random() * 7)+1)); break;
+
+                }
+
+                models.add(new Model(draw,value,"Test"));
             }
         }
 
@@ -72,4 +85,10 @@ public class recommend_result extends AppCompatActivity {
     {
         //super.onBackPressed();
     }
+
+    private int getDraw_id (String type, String name){
+        int getId = getResources().getIdentifier("com.limmihee.seouls:"+type+"/"+name,null,null);
+        return getId;
+    }
+
 }
