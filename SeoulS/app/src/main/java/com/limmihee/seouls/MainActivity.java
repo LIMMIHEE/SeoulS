@@ -89,9 +89,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         view_Humidity=(TextView)findViewById(R.id.Humidity);
         view_City= (TextView)findViewById(R.id.City_name);
-        view_City.setText("");
         view_temp= (TextView)findViewById(R.id.Temperature);
-        view_temp.setText("");
         view_wether=(ImageView) findViewById(R.id.wether_img) ;
         cardView =findViewById(R.id.slide);
         recom_btn= (Button) findViewById(R.id.button3);

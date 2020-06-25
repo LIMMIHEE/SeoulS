@@ -97,12 +97,12 @@ public class Adapter extends PagerAdapter {
                     }
                 }catch (Exception e){
                     Log.e(this.getClass().getName(),e+"오류 사랑");
-                    Toast.makeText(((Ani_test)Ani_test.context), "오류 : "+e, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(((recommend_result)recommend_result.context), "오류 : "+e, Toast.LENGTH_SHORT).show();
                 }
 
                 //Toast.makeText(((Ani_test)Ani_test.context), "클릭함 : "+models.get(position).getName(), Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(((Ani_test)Ani_test.context), Details_info.class);
-                ((Ani_test)Ani_test.context).startActivity(intent);
+                Intent intent = new Intent(((recommend_result)recommend_result.context), Details_info.class);
+                ((recommend_result)recommend_result.context).startActivity(intent);
             }
         });
 

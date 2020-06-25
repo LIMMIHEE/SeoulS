@@ -192,7 +192,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:background="@drawable/btn_bg_ex"
+            android:background="@drawable/btn_re_mian_red"
             android:text="나에게 어울리는 스포츠는...?" />
 
     </LinearLayout>
