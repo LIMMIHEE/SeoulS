@@ -170,9 +170,5 @@ public class Todo_info extends AppCompatActivity {
 
 
     }
-    @Override
-    public void onBackPressed(){
-        
-        //sss
-    }
+
 }

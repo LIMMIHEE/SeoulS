@@ -83,14 +83,14 @@ public class Adapter extends PagerAdapter {
                         }
                     }
 
-                   //Toast.makeText(((Ani_test)Ani_test.context), "테스트 : "+jsonArray, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(((Ani_test)Ani_test.context), "테스트 : "+jsonArray, Toast.LENGTH_SHORT).show();
                     if(IsVisi){
-                            JSONObject jsonObject = new JSONObject(getJson());
-                            JSONArray jsonArray = jsonObject.getJSONArray(name);
-                            Random rnd = new Random();
-                            int p = rnd.nextInt(jsonArray.length());
-                            databaseReference.child("현재운동").setValue(jsonArray.get(p));
-                            databaseReference.child("현재운동분야").setValue("수상");
+                        JSONObject jsonObject = new JSONObject(getJson());
+                        JSONArray jsonArray = jsonObject.getJSONArray(name);
+                        Random rnd = new Random();
+                        int p = rnd.nextInt(jsonArray.length());
+                        databaseReference.child("현재운동").setValue(jsonArray.get(p));
+                        databaseReference.child("현재운동분야").setValue("수상");
                     }else{
                         databaseReference.child("현재운동").setValue(name);
                         databaseReference.child("현재운동분야").setValue("육상");
@@ -121,7 +121,7 @@ public class Adapter extends PagerAdapter {
         String json="";
 
         try {
-            InputStream is = ((Ani_test)Ani_test.context).getAssets().open("aqua.json");
+            InputStream is = ((recommend_result)recommend_result.context).getAssets().open("aqua.json");
             int size = is.available();
             byte [] buffer = new  byte[size];
 
