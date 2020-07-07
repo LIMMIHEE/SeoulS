@@ -86,7 +86,7 @@ public class Todo_list extends AppCompatActivity {
 
         name_text.setText(name);
         info_text.setText(info);
-        time_text.setText(time);
+        time_text.setText(time+"분");
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override

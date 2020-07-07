@@ -23,8 +23,7 @@
         <activity android:name=".todo_add" />
         <activity android:name=".Todo_list" />
         <activity android:name=".recommend_result" />
-        <activity android:name=".Ani_test">
-        </activity>
+        <activity android:name=".Ani_test"></activity>
         <activity android:name=".Recommendation" />
 
         <meta-data
@@ -36,7 +35,7 @@
         <activity android:name=".Athletics_sports" />
         <activity android:name=".AquaticSports" />
         <activity android:name=".Details_info" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

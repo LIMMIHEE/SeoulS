@@ -121,7 +121,7 @@ public class Adapter extends PagerAdapter {
         String json="";
 
         try {
-            InputStream is = ((Ani_test)Ani_test.context).getAssets().open("aqua.json");
+            InputStream is = ((recommend_result)recommend_result.context).getAssets().open("aqua.json");
             int size = is.available();
             byte [] buffer = new  byte[size];
 

@@ -195,7 +195,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         }
 
     }
-
     private void setText (final TextView textView, final String value){
         runOnUiThread(new Runnable() {
             @Override
@@ -248,12 +247,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public void onSensorChanged(SensorEvent event) {
         if(event.sensor.getType() == Sensor.TYPE_STEP_COUNTER){
 
-            //stepcountsenersor는 앱이 꺼지더라도 초기화 되지않는다. 그러므로 우리는 초기값을 가지고 있어야한다.
+            //stepcountsenersor는 앱이 꺼지더라도 초기화 되지않는다. 그러므로 초기값을 가지고 있어야한다.
             if (CounterSteps < 1) {
                 CounterSteps = (int) event.values[0];
             }
             //리셋 안된 값 + 현재값 - 리셋 안된 값
-            Steps = (int) event.values[0] - CounterSteps;
+            Steps = (int) (CounterSteps+event.values[0]) - CounterSteps;
             Step_count.setText(Steps+"걸음");
 
         }

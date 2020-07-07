@@ -4,6 +4,7 @@ public class TODO {
     private String name;
     private  String info;
     private  int time;
+    private int advanced_time=0;
 
 
     public TODO(String name, String info, int time) {
@@ -34,5 +35,13 @@ public class TODO {
 
     public void setTime(int time) {
         this.time = time;
+    }
+
+    public int getAdvanced_time() {
+        return advanced_time;
+    }
+
+    public void setAdvanced_time(int advanced_time) {
+        this.advanced_time = advanced_time;
     }
 }

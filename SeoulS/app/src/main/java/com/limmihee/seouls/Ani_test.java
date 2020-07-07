@@ -16,61 +16,51 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Ani_test extends AppCompatActivity {
-    ViewPager viewPager;
-    CardView cardView;
-    Adapter adapter;
-    List<Model> models ;
-    public static Context context;
+public class Ani_test {
 
-    String [][] aqua_Sp = {};
+    private String Sp_name;
+    private String simple_info;
+    private  String long_ingo;
+    private String Image_name;
 
-    Recommendation recommendation;
-    TextView ResultText;
-    TextView Info_Text;
-    Button main_btn;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ani_test);
-        context=this;
-        ResultText = (TextView)findViewById(R.id.resultBtn);
-        Info_Text= (TextView)findViewById(R.id.info_text);
-        main_btn = (Button) findViewById(R.id.main_btn);
-
-        main_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Ani_test.this,MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        ArrayList<String> result = ((Recommendation)Recommendation.context).Reco_list;
-        models = new ArrayList<>();
-
-
-        if(result.isEmpty()){
-            ResultText.setText("맞는 스포츠가... 없습니다!");
-            Info_Text.setText("");
-        }else{
-            for(String value : result){
-                models.add(new Model(R.drawable.water_sports_4,value,"Test"));
-            }
-        }
-
-        adapter = new Adapter(models , this);
-
-
-
-        viewPager = findViewById(R.id.select);
-        viewPager.setAdapter(adapter);
-        viewPager.setPadding(150,0,150,0);
-
+    public Ani_test(String sp_name, String simple_info, String long_ingo, String image_name) {
+        Sp_name = sp_name;
+        this.simple_info = simple_info;
+        this.long_ingo = long_ingo;
+        Image_name = image_name;
     }
-    @Override public void onBackPressed()
-    {
-        //super.onBackPressed();
+
+    public String getSp_name() {
+        return Sp_name;
     }
+
+    public void setSp_name(String sp_name) {
+        Sp_name = sp_name;
+    }
+
+    public String getSimple_info() {
+        return simple_info;
+    }
+
+    public void setSimple_info(String simple_info) {
+        this.simple_info = simple_info;
+    }
+
+    public String getLong_ingo() {
+        return long_ingo;
+    }
+
+    public void setLong_ingo(String long_ingo) {
+        this.long_ingo = long_ingo;
+    }
+
+    public String getImage_name() {
+        return Image_name;
+    }
+
+    public void setImage_name(String image_name) {
+        Image_name = image_name;
+    }
+
 
 }

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class recommend_result extends AppCompatActivity {
-
+    CardView cardView;
     ViewPager viewPager;
     Adapter adapter;
     List<Model> models ;
@@ -67,7 +67,7 @@ public class recommend_result extends AppCompatActivity {
 
                 }
 
-                models.add(new Model(draw,value,"Test"));
+                models.add(new Model(draw,value," "));
             }
         }
 
@@ -76,6 +76,8 @@ public class recommend_result extends AppCompatActivity {
 
 
         viewPager = findViewById(R.id.select);
+        cardView = (CardView)findViewById(R.id.slide);
+
         viewPager.setAdapter(adapter);
         viewPager.setPadding(150,0,150,0);
 
