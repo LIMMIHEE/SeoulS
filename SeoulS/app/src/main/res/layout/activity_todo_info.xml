@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".Todo_info">
 
+    <Button
+        android:id="@+id/backBtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="55dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="522dp"
+        android:background="@drawable/ic_keyboard_arrow_left_black"
+        app:layout_constraintBottom_toTopOf="@+id/mapView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/todo_name"
         android:layout_width="305dp"

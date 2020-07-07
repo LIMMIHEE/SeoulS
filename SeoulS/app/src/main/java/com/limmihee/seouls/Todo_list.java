@@ -27,6 +27,8 @@ import java.util.ArrayList;
 public class Todo_list extends AppCompatActivity {
 
     Button todo_add_btn;
+    Button back_btn;
+
     LinearLayout layout;
     Context context;
 
@@ -44,6 +46,7 @@ public class Todo_list extends AppCompatActivity {
         context=this;
         layout = (LinearLayout) findViewById(R.id.Todo_list);
         todo_add_btn = (Button) findViewById(R.id.Todo_print);
+        back_btn = (Button) findViewById(R.id.backBtn2);
 
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -70,6 +73,13 @@ public class Todo_list extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent =  new Intent(Todo_list.this,todo_add.class);
+                startActivity(intent);
+            }
+        });
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Todo_list.this,MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -100,5 +110,10 @@ public class Todo_list extends AppCompatActivity {
 
         layout.addView(view);
 
+    }
+    @Override
+    public void onBackPressed(){
+
+        //sss
     }
 }

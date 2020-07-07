@@ -24,6 +24,7 @@ public class Todo_info extends AppCompatActivity {
     //파이어베이스에서 가져오면 안된다. 따로 방법을 갈구 해야할듯.
 
 
+
     private long CountDownTimer;
     private int Count_time=0;
     private  long TimeLeftIWillis = StartCountDownTimer;
@@ -40,6 +41,7 @@ public class Todo_info extends AppCompatActivity {
     Button Start_btn;
     Button Pause_btn;
     Button Del_Btn;
+    Button back_btn;
 
     TextView todo_name;
     TextView todo_info;
@@ -60,6 +62,7 @@ public class Todo_info extends AppCompatActivity {
         Start_btn = (Button) findViewById(R.id.timer_play);
         Pause_btn = (Button) findViewById(R.id.timer_pause);
         Del_Btn = (Button) findViewById(R.id.todo_del);
+        back_btn = (Button) findViewById(R.id.backBtn);
 
         Percent = (TextView) findViewById(R.id.Time_Percent);
         todo_name = (TextView) findViewById(R.id.todo_name);
@@ -183,7 +186,13 @@ public class Todo_info extends AppCompatActivity {
 
             }
         });
-
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Todo_info.this,Todo_list.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
@@ -202,9 +211,9 @@ public class Todo_info extends AppCompatActivity {
             time_second_view.setText(Count_time+"초");
         }
     }
-//    @Override
-//    public void onBackPressed(){
-//
-//        //sss
-//    }
+    @Override
+    public void onBackPressed(){
+
+        //sss
+    }
 }
