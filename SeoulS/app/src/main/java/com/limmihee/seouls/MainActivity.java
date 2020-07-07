@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             @Override
             public void onClick(View v) {
                 databaseReference.child("현재운동분야").setValue("육상");
-                Intent intent =  new Intent(MainActivity.this,Athletics_sports.class);
+                Intent intent =  new Intent(MainActivity.this,Athletics.class);
                 startActivity(intent);
             }
         });
@@ -261,5 +261,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
+    }
+    @Override public void onBackPressed()
+    {
+        //super.onBackPressed();
     }
 }

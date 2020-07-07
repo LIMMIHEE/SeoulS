@@ -73,4 +73,9 @@ public class AquaticSports extends AppCompatActivity {
         layout.addView(view);
 
     }
+    @Override public void onBackPressed()
+    {
+        Intent intent =  new Intent(  AquaticSports.this,MainActivity.class);
+        startActivity(intent);
+    }
 }

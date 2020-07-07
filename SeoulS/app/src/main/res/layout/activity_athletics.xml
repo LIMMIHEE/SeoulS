@@ -7,8 +7,6 @@
     android:orientation="vertical"
     android:background="#FFFFFF"
     android:padding="24dp">
-
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,6 +15,7 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="육상"
@@ -49,6 +48,5 @@
 
         </LinearLayout>
     </ScrollView>
-
 
 </LinearLayout>
