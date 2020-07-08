@@ -76,8 +76,4 @@ public class Athletics_sports extends AppCompatActivity {
         layout.addView(view);
 
     }
-    private int getDraw_id (String type, String name){
-        int getId = getResources().getIdentifier("com.limmihee.seouls:"+type+"/"+name,null,null);
-        return getId;
-    }
 }

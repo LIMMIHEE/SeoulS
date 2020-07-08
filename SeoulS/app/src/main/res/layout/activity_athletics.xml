@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,38 +15,32 @@
         android:padding="20dp">
 
         <TextView
+            android:id="@+id/one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="수상"
-            android:textColor="#486DDC"
+            android:text="육상"
+            android:textColor="#00BCD4"
             android:textSize="28sp"
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/twp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="7dp"
             android:text="스포츠"
             android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="414dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="공원별 업체 정보로 제공됩니다."
-            android:textSize="12sp" />
-
 
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="635dp"
+        android:layout_height="636dp"
         android:scrollbars="none">
 
         <LinearLayout
-            android:id="@+id/aqua_list"
+            android:id="@+id/athletics_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -55,6 +48,5 @@
 
         </LinearLayout>
     </ScrollView>
-
 
 </LinearLayout>
