@@ -22,7 +22,10 @@ public class Recommendation extends AppCompatActivity {
     RadioGroup radioGroup3;
     RadioGroup radioGroup4;
     RadioGroup radioGroup5;
+
     Button Print_Btn ;
+    Button main;
+    Button Restart;
 
     public static Context context;
 
@@ -73,6 +76,22 @@ public class Recommendation extends AppCompatActivity {
 
             }
         });
+        Restart = (Button) findViewById(R.id.backBtn3);
+        Restart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Recommendation.this,Recommendation.class);
+                startActivity(intent);
+            }
+        });
+        main = (Button) findViewById(R.id.backBtn4);
+        main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Recommendation.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
         // 농구 배구 배드민턴 야구 양궁 인라인 족구 축구 테니스
         // 요트  조정  모터보트 수상스키 웨이크 보드 윈드 서핑 바나나 보트
         // 튜브스터 카약 카누 딩기 요트 땅콩 보트 수상 오토바이 수상스키 웨이크보드 바나나보트 웨터보트 블롭 점프
@@ -80,6 +99,8 @@ public class Recommendation extends AppCompatActivity {
             radioGroup2 = (RadioGroup)findViewById(R.id.Group2);
             radioGroup3 = (RadioGroup)findViewById(R.id.Group3);         radioGroup4 = (RadioGroup)findViewById(R.id.Group4);
             radioGroup5 = (RadioGroup)findViewById(R.id.Group5);
+
+
 
             radioGroup2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
                 @Override
@@ -90,6 +111,8 @@ public class Recommendation extends AppCompatActivity {
                         case R.id.g_2_3: Reco_list = new ArrayList<>();for(int i=0; i< athletics.length; i++){Reco_list.add(athletics[i]);}
                                          for(int i=0; i< aqua.length; i++){Reco_list.add(aqua[i]);} isAquaOrAth=true; ;break;
                     }
+                    close_radioButton(2);
+                    radioGroup2.setEnabled(false);
                 }
             });
             radioGroup3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
@@ -106,6 +129,8 @@ public class Recommendation extends AppCompatActivity {
                             set_result(Body);isBody = true;
                             break;
                     }
+                    close_radioButton(3);
+                    radioGroup3.setEnabled(false);
                 }
              });
             radioGroup4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
@@ -120,6 +145,8 @@ public class Recommendation extends AppCompatActivity {
                             break;
                         case R.id.g_4_3: isUse=true;break;
                     }
+                    close_radioButton(4);
+                    radioGroup4.setEnabled(false);
                 }
             });
             radioGroup5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
@@ -134,6 +161,8 @@ public class Recommendation extends AppCompatActivity {
                             break;
                         case R.id.g_5_3: isRule=true;break;
                     }
+                    close_radioButton(5);
+                    radioGroup5.setEnabled(false);
                 }
             });
     }
@@ -151,5 +180,19 @@ public class Recommendation extends AppCompatActivity {
     }
     public ArrayList<String> get_result(){
         return Reco_list;
+    }
+    @Override
+    public void onBackPressed(){
+
+        //sss
+    }
+
+    private void close_radioButton(int i){
+        for(int n=1; n<=3;n++ ){
+            int getId = getResources().getIdentifier("g_"+i+"_"+n, "id",getPackageName());
+            RadioButton radioButton = (RadioButton) findViewById(getId);
+            radioButton.setEnabled(false);
+        }
+
     }
 }

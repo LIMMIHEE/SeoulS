@@ -2,6 +2,7 @@ package com.limmihee.seouls;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.GradientDrawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +36,7 @@ public class Adapter extends PagerAdapter {
     private Context context;
     private boolean IsVisi=false;
 
+
     private int num=1;
 
     public Adapter(List<Model> models, Context context) {
@@ -66,6 +68,7 @@ public class Adapter extends PagerAdapter {
         desc = view.findViewById(R.id.desc);
 
         imageView.setImageResource(models.get(position).getImg());
+
         title.setText(models.get(position).getTitle());
         desc.setText(models.get(position).getDesc());
 

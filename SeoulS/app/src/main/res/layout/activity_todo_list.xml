@@ -6,11 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".Todo_list">
 
+
+    <Button
+        android:id="@+id/backBtn2"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="55dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="522dp"
+        android:background="@drawable/ic_keyboard_arrow_left_black"
+        app:layout_constraintBottom_toTopOf="@+id/mapView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+>>>>>>> Stashed changes
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="68dp"
         android:text="당신의 운동일정"
         android:textColor="#03A9F4"
         android:textSize="24sp"
@@ -24,7 +39,7 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="108dp"
         android:text="당신의 운동일정을 정리하고 완료해보세요!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,8 +60,8 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
-        android:layout_width="410dp"
-        android:layout_height="620dp"
+        android:layout_width="412dp"
+        android:layout_height="641dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -54,7 +69,7 @@
         <LinearLayout
             android:id="@+id/Todo_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical" />
     </ScrollView>
 

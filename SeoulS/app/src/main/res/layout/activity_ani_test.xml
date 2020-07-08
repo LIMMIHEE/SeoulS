@@ -5,19 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Ani_test">
+
     <LinearLayout
-        android:layout_width="386dp"
-        android:layout_height="163dp"
+        android:layout_width="390dp"
+        android:layout_height="152dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="359dp"
-            android:layout_height="127dp"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="20dp" >
+            android:layout_width="351dp"
+            android:layout_height="129dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"
+            app:cardCornerRadius="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -26,54 +30,53 @@
 
                 <ImageView
                     android:id="@+id/imageView7"
-                    android:layout_width="130px"
+                    android:layout_width="76dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="1dp"
                     android:layout_weight="1"
-                    android:background="@drawable/card_corner_radius"
                     android:scaleType="centerCrop"
+                    android:src="@drawable/card_corner_radius"
                     app:srcCompat="@drawable/badminton" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="263dp"
+                    android:layout_width="247dp"
                     android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/info_s"
-                        android:layout_width="204dp"
-                        android:layout_height="22dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="55dp"
+                        android:layout_width="210dp"
+                        android:layout_height="19dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginEnd="20dp"
                         android:ellipsize="end"
                         android:text="TextView"
                         android:textColor="#787878"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/name"
-                        android:layout_width="204dp"
-                        android:layout_height="34dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="27dp"
+                        android:layout_width="219dp"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="12dp"
                         android:ellipsize="end"
                         android:text="TextView"
                         android:textColor="#363D42"
                         android:textSize="24sp"
                         android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/info_l"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginBottom="20dp"
+                        android:layout_width="218dp"
+                        android:layout_height="39dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="16dp"
                         android:text="TextView"
                         android:textColor="#959595"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintEnd_toEndOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
